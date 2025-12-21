@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mountain, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import Container from './ui/Container';
 
 export default function Footer() {
@@ -11,7 +12,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Mountain className="h-8 w-8 text-orange-600" />
+              <Image 
+                src="/logo.png" 
+                alt="Plus530 Adventure Logo" 
+                width={32} 
+                height={32} 
+                className="h-8 w-8"
+              />
               <span className="text-2xl font-bold">Plus530 Adventure</span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -55,6 +62,11 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/refund-policy" className="text-gray-400 hover:text-orange-600 transition-colors">
+                  Refund Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -64,15 +76,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">Kathmandu, Nepal</span>
+                <span className="text-gray-400">Bangalore, India & Kathmandu, Nepal</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-orange-600 flex-shrink-0" />
-                <span className="text-gray-400">+977 123 456 789</span>
+                <span className="text-gray-400">+91 9611975787</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-orange-600 flex-shrink-0" />
-                <span className="text-gray-400">info@plus530adventure.com</span>
+                <span className="text-gray-400">hi@plus530adventure.com</span>
               </li>
             </ul>
           </div>

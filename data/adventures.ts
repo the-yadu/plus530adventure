@@ -8,6 +8,7 @@ export interface Adventure {
   difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Difficult';
   price: string;
   image: string;
+  backgroundImage: string;
   highlights: string[];
   included: string[];
   itinerary: {
@@ -29,6 +30,7 @@ export const adventures: Adventure[] = [
     difficulty: 'Moderate',
     price: '₹2,90,500',
     image: '/images/adventures/bhutan.jpg',
+    backgroundImage: 'https://images.unsplash.com/photo-1609156842547-5f86d49711e0?q=80&w=2070',
     featured: true,
     highlights: [
       'Visit the iconic Tiger\'s Nest Monastery',
@@ -109,6 +111,7 @@ export const adventures: Adventure[] = [
     difficulty: 'Moderate',
     price: '₹2,32,400',
     image: '/images/adventures/nepal.jpg',
+    backgroundImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071',
     featured: true,
     highlights: [
       'Explore Kathmandu\'s UNESCO World Heritage Sites',
@@ -199,6 +202,7 @@ export const adventures: Adventure[] = [
     difficulty: 'Challenging',
     price: '₹3,48,600',
     image: '/images/adventures/ladakh.jpg',
+    backgroundImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=2070',
     featured: false,
     highlights: [
       'Cross Khardung La and Chang La passes',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Calendar, TrendingUp, DollarSign, Check, ArrowLeft } from 'lucide-react';
+import { Calendar, TrendingUp, BadgeInfo, Check, ArrowLeft } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { adventures, getAdventureBySlug } from '@/data/adventures';
@@ -41,13 +41,6 @@ export default function AdventurePage({ params }: AdventurePageProps) {
     notFound();
   }
 
-  const backgroundImage =
-    adventure.slug === 'bhutan-overland'
-      ? "url('https://images.unsplash.com/photo-1609156842547-5f86d49711e0?q=80&w=2070')"
-      : adventure.slug === 'nepal-himalayan-trail'
-      ? "url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071')"
-      : "url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=2070')";
-
   return (
     <div>
       {/* Hero Section */}
@@ -55,7 +48,7 @@ export default function AdventurePage({ params }: AdventurePageProps) {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage }}
+          style={{ backgroundImage: `url('${adventure.backgroundImage}')` }}
         />
         <Container className="relative z-20">
           <Link href="/adventures" className="inline-flex items-center text-white hover:text-orange-400 mb-6 transition-colors">
@@ -85,7 +78,7 @@ export default function AdventurePage({ params }: AdventurePageProps) {
                 <span className="font-semibold">{adventure.difficulty}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <DollarSign className="h-5 w-5 text-orange-600" />
+                <BadgeInfo className="h-5 w-5 text-orange-600" />
                 <span className="font-semibold text-orange-600 text-xl">{adventure.price}</span>
               </div>
             </div>
