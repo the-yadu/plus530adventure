@@ -27,7 +27,7 @@ export const adventures: Adventure[] = [
     longDescription: 'Embark on an unforgettable journey through the mystical Kingdom of Bhutan. This overland adventure takes you through pristine valleys, ancient monasteries, and stunning mountain passes. Experience the unique Bhutanese culture, witness the iconic Tiger\'s Nest Monastery, and drive through some of the most scenic landscapes in the Himalayas.',
     duration: '10 Days',
     difficulty: 'Moderate',
-    price: '$3,500',
+    price: '₹2,90,500',
     image: '/images/adventures/bhutan.jpg',
     featured: true,
     highlights: [
@@ -107,7 +107,7 @@ export const adventures: Adventure[] = [
     longDescription: 'Experience the diverse landscapes of Nepal on this epic overland journey. From the bustling streets of Kathmandu to the serene lakeside of Pokhara, this adventure combines cultural immersion with stunning mountain scenery. Drive through traditional villages, terraced farmlands, and alongside roaring rivers, all while being surrounded by some of the world\'s highest peaks.',
     duration: '12 Days',
     difficulty: 'Moderate',
-    price: '$2,800',
+    price: '₹2,32,400',
     image: '/images/adventures/nepal.jpg',
     featured: true,
     highlights: [
@@ -197,7 +197,7 @@ export const adventures: Adventure[] = [
     longDescription: 'This challenging expedition takes you through the remote and breathtaking landscapes of Ladakh. Drive across some of the world\'s highest motorable passes, visit ancient monasteries perched on mountain cliffs, and experience the unique Indo-Tibetan culture. This is the ultimate high-altitude adventure for experienced overlanders.',
     duration: '14 Days',
     difficulty: 'Challenging',
-    price: '$4,200',
+    price: '₹3,48,600',
     image: '/images/adventures/ladakh.jpg',
     featured: false,
     highlights: [

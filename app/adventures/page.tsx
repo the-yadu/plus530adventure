@@ -16,13 +16,23 @@ export default function AdventuresPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-orange-600 to-orange-700">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070')"
+          }}
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
+        
         <Container>
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <div className="relative z-10 text-center text-white">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">
               Our Adventures
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
               Choose from our curated selection of premium overlanding experiences
             </p>
           </div>

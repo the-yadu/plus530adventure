@@ -11,15 +11,38 @@ export default function HomePage() {
 
   return (
     <div>
+      {/* Top Banner - Trip to Bhutan is Live */}
+      <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 animate-pulse"></div>
+        <div className="relative z-10 flex items-center justify-center gap-3">
+          <span className="inline-block w-2 h-2 bg-white rounded-full animate-bounce"></span>
+          <span className="font-bold text-sm sm:text-base tracking-wide">
+            🇧🇹 TRIP TO BHUTAN 2025 IS LIVE
+          </span>
+          <span className="inline-block w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+        </div>
+        <Link href="/adventures/bhutan-overland" className="absolute inset-0 z-20" aria-label="View Bhutan adventure"></Link>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070')",
-          }}
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/home-banner-video.mp4" type="video/mp4" />
+          {/* Fallback background image for browsers that don't support video */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070')",
+            }}
+          />
+        </video>
         <Container className="relative z-20 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Discover the Adventure of a Lifetime
@@ -43,7 +66,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Adventures */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-cream-50">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Adventures</h2>
@@ -94,7 +117,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-cream-50">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Plus530 Adventure</h2>
@@ -144,7 +167,7 @@ export default function HomePage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-cream-50">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Gallery</h2>

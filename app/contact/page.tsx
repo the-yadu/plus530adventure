@@ -28,13 +28,23 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-orange-600 to-orange-700">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image - Communication/Support theme */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074')"
+          }}
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
+        
         <Container>
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <div className="relative z-10 text-center text-white">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">
               Get in Touch
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
               Ready to start your adventure? We're here to help plan your perfect journey
             </p>
           </div>
@@ -144,8 +154,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
                       <p className="text-gray-600">
-                        Thamel, Kathmandu<br />
-                        Nepal
+                        Bangalore<br />
+                        India
                       </p>
                     </div>
                   </div>
@@ -156,8 +166,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                       <p className="text-gray-600">
-                        +977 123 456 789<br />
-                        +977 987 654 321
+                        +91 9611975787
                       </p>
                     </div>
                   </div>
@@ -168,8 +177,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                       <p className="text-gray-600">
-                        info@plus530adventure.com<br />
-                        bookings@plus530adventure.com
+                        hi@plus530adventure.com
                       </p>
                     </div>
                   </div>
@@ -193,7 +201,7 @@ export default function ContactPage() {
       <section className="py-20 bg-white">
         <Container>
           <div className="bg-gray-200 rounded-xl overflow-hidden h-96 flex items-center justify-center">
-            <p className="text-gray-600">Map location: Thamel, Kathmandu, Nepal</p>
+            <p className="text-gray-600">Map location: Bangalore, India</p>
           </div>
         </Container>
       </section>

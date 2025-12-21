@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        cream: {
+          50: '#FBF4E6',
+        },
         orange: {
           50: '#fff7ed',
           100: '#ffedd5',

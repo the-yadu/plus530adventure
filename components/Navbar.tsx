@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Mountain } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import Container from './ui/Container';
 
 export default function Navbar() {
@@ -22,7 +23,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Mountain className="h-8 w-8 text-orange-600" />
+            <Image 
+              src="/logo.png" 
+              alt="Plus530 Adventure Logo" 
+              width={32} 
+              height={32} 
+              className="h-8 w-8"
+            />
             <span className="text-2xl font-bold text-gray-900">Plus530 Adventure</span>
           </Link>
 
