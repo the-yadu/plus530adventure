@@ -141,6 +141,20 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"4x4-self-drive-vs-escorted-convoy-expeditions.md": {
+	id: "4x4-self-drive-vs-escorted-convoy-expeditions.md";
+  slug: "4x4-self-drive-vs-escorted-convoy-expeditions";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"bangalore-sakleshpur-chikmagalur-4x4-trail-guide.md": {
+	id: "bangalore-sakleshpur-chikmagalur-4x4-trail-guide.md";
+  slug: "bangalore-sakleshpur-chikmagalur-4x4-trail-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "bhutan-next-adventure.md": {
 	id: "bhutan-next-adventure.md";
   slug: "bhutan-next-adventure";
@@ -148,9 +162,135 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"choosing-right-tires-himalayan-overlanding.md": {
+	id: "choosing-right-tires-himalayan-overlanding.md";
+  slug: "choosing-right-tires-himalayan-overlanding";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"conquering-umling-la-khardung-la-driving-guide.md": {
+	id: "conquering-umling-la-khardung-la-driving-guide.md";
+  slug: "conquering-umling-la-khardung-la-driving-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"convoy-dynamics-radio-communication-etiquette.md": {
+	id: "convoy-dynamics-radio-communication-etiquette.md";
+  slug: "convoy-dynamics-radio-communication-etiquette";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"essential-first-aid-medical-kit-checklist.md": {
+	id: "essential-first-aid-medical-kit-checklist.md";
+  slug: "essential-first-aid-medical-kit-checklist";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"essential-overland-off-road-recovery-equipment.md": {
+	id: "essential-overland-off-road-recovery-equipment.md";
+  slug: "essential-overland-off-road-recovery-equipment";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"family-overlanding-in-the-himalayas-guide.md": {
+	id: "family-overlanding-in-the-himalayas-guide.md";
+  slug: "family-overlanding-in-the-himalayas-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"high-altitude-sickness-ams-guide-for-overlanders.md": {
+	id: "high-altitude-sickness-ams-guide-for-overlanders.md";
+  slug: "high-altitude-sickness-ams-guide-for-overlanders";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"himalayan-expedition-photography-guide.md": {
+	id: "himalayan-expedition-photography-guide.md";
+  slug: "himalayan-expedition-photography-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-pack-organize-4x4-overland-expedition.md": {
+	id: "how-to-pack-organize-4x4-overland-expedition.md";
+  slug: "how-to-pack-organize-4x4-overland-expedition";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"inner-line-permits-ilp-guide-ladakh-spiti.md": {
+	id: "inner-line-permits-ilp-guide-ladakh-spiti.md";
+  slug: "inner-line-permits-ilp-guide-ladakh-spiti";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"monsoon-overlanding-western-ghats-water-crossings.md": {
+	id: "monsoon-overlanding-western-ghats-water-crossings.md";
+  slug: "monsoon-overlanding-western-ghats-water-crossings";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"navigating-nepal-by-4x4-border-crossing-guide.md": {
+	id: "navigating-nepal-by-4x4-border-crossing-guide.md";
+  slug: "navigating-nepal-by-4x4-border-crossing-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"overland-camping-in-ladakh-guide.md": {
+	id: "overland-camping-in-ladakh-guide.md";
+  slug: "overland-camping-in-ladakh-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"overland-power-systems-dual-battery-solar-guide.md": {
+	id: "overland-power-systems-dual-battery-solar-guide.md";
+  slug: "overland-power-systems-dual-battery-solar-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "overlanding-tips-himalayas.md": {
 	id: "overlanding-tips-himalayas.md";
   slug: "overlanding-tips-himalayas";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"self-driving-in-bhutan-complete-guide.md": {
+	id: "self-driving-in-bhutan-complete-guide.md";
+  slug: "self-driving-in-bhutan-complete-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"spiti-valley-vs-leh-ladakh-expedition-comparison.md": {
+	id: "spiti-valley-vs-leh-ladakh-expedition-comparison.md";
+  slug: "spiti-valley-vs-leh-ladakh-expedition-comparison";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sustainable-overlanding-responsible-tourism-guide.md": {
+	id: "sustainable-overlanding-responsible-tourism-guide.md";
+  slug: "sustainable-overlanding-responsible-tourism-guide";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"ultimate-4x4-vehicle-preparation-checklist.md": {
+	id: "ultimate-4x4-vehicle-preparation-checklist.md";
+  slug: "ultimate-4x4-vehicle-preparation-checklist";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
