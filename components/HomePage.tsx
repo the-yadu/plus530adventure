@@ -96,7 +96,10 @@ export default function HomePage() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
                     <p className="text-gray-600 mb-4">{adventure.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-orange-600">{adventure.price}</span>
+                      <div>
+                        <span className="text-2xl font-bold text-orange-600">{adventure.price}</span>
+                        <span className="text-xs text-gray-500 block">per person (Double Sharing)</span>
+                      </div>
                       <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
                         {adventure.difficulty}
                       </span>

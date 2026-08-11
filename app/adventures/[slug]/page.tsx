@@ -78,8 +78,11 @@ export default function AdventurePage({ params }: AdventurePageProps) {
                 <span className="font-semibold">{adventure.difficulty}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <BadgeInfo className="h-5 w-5 text-orange-600" />
-                <span className="font-semibold text-orange-600 text-xl">{adventure.price}</span>
+                <BadgeInfo className="h-5 w-5 text-orange-600 flex-shrink-0" />
+                <div>
+                  <span className="font-semibold text-orange-600 text-xl">{adventure.price}</span>
+                  <span className="text-xs text-gray-500 block font-medium">per person (Double Sharing)</span>
+                </div>
               </div>
             </div>
             <Link href="/contact">
@@ -93,6 +96,15 @@ export default function AdventurePage({ params }: AdventurePageProps) {
       <section className="py-16 bg-gray-50">
         <Container>
           <div className="max-w-4xl">
+            {/* Pricing & Occupancy Note */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8 flex items-start space-x-3">
+              <BadgeInfo className="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-amber-900 leading-relaxed">
+                <span className="font-bold block mb-1">Room Occupancy & Pricing Policy:</span>
+                Prices shared across all expeditions are <strong>per person on a double-sharing basis</strong> (2 persons sharing 1 room). In case you prefer <strong>single occupancy (no room sharing)</strong>, the price will be <strong>2x (doubled)</strong>.
+              </div>
+            </div>
+
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
               {adventure.longDescription}
