@@ -1,6 +1,7 @@
 ---
 import Container from './ui/Container.astro';
-import { Menu, X } from '@lucide/astro';
+import { Menu, X, Search } from '@lucide/astro';
+import { adventures } from '../data/adventures';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -11,13 +12,24 @@ const navLinks = [
 ];
 
 const currentPath = Astro.url.pathname;
+const searchDataJson = JSON.stringify(
+  adventures.map(a => ({
+    title: a.title,
+    slug: a.slug,
+    description: a.description,
+    duration: a.duration,
+    price: a.price,
+    image: a.image,
+    highlights: a.highlights.join(' ')
+  }))
+);
 ---
 
 <nav class="bg-white shadow-md sticky top-0 z-50">
   <Container>
-    <div class="flex justify-between items-center py-4">
+    <div class="flex justify-between items-center py-3 md:py-4 gap-2 md:gap-6">
       {/* Logo */}
-      <a href="/" class="flex items-center space-x-2">
+      <a href="/" class="flex items-center space-x-2 flex-shrink-0">
         <img 
           src="/logo.png" 
           alt="Plus530 Adventure Logo" 
@@ -25,11 +37,35 @@ const currentPath = Astro.url.pathname;
           height="32" 
           class="h-8 w-8"
         />
-        <span class="text-2xl font-bold text-gray-900">Plus530 Adventure</span>
+        <span class="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">Plus530 Adventure</span>
       </a>
 
+      {/* Global Desktop Search Bar */}
+      <div class="relative hidden md:block flex-1 max-w-md mx-2 lg:mx-4">
+        <div class="relative">
+          <input
+            type="text"
+            id="desktop-search-input"
+            placeholder="Search adventures (e.g. Bhutan, Sakleshpur, Ladakh)..."
+            class="w-full pl-10 pr-4 py-2 text-sm bg-gray-100 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-200"
+            autocomplete="off"
+          />
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+            <Search class="h-4 w-4" />
+          </div>
+        </div>
+
+        {/* Desktop Results Dropdown */}
+        <div
+          id="desktop-search-dropdown"
+          class="absolute left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden hidden z-50 max-h-96 overflow-y-auto"
+        >
+          <div id="desktop-search-results" class="divide-y divide-gray-100"></div>
+        </div>
+      </div>
+
       {/* Desktop Navigation */}
-      <div class="hidden md:flex space-x-8">
+      <div class="hidden lg:flex space-x-6 items-center flex-shrink-0">
         {navLinks.map((link) => (
           <a
             href={link.href}
@@ -44,20 +80,52 @@ const currentPath = Astro.url.pathname;
         ))}
       </div>
 
-      {/* Mobile Menu Button */}
-      <button
-        id="mobile-menu-button"
-        class="md:hidden text-gray-700 focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <Menu class="h-6 w-6 block" id="menu-icon-open" />
-        <X class="h-6 w-6 hidden" id="menu-icon-close" />
-      </button>
+      {/* Mobile Right Controls */}
+      <div class="flex items-center space-x-2 md:hidden">
+        <button
+          id="mobile-search-toggle"
+          class="text-gray-700 p-2 rounded-lg hover:bg-gray-100 focus:outline-none"
+          aria-label="Toggle search"
+        >
+          <Search class="h-5 w-5" />
+        </button>
+
+        <button
+          id="mobile-menu-button"
+          class="text-gray-700 focus:outline-none p-2"
+          aria-label="Toggle menu"
+        >
+          <Menu class="h-6 w-6 block" id="menu-icon-open" />
+          <X class="h-6 w-6 hidden" id="menu-icon-close" />
+        </button>
+      </div>
     </div>
 
-    {/* Mobile Navigation */}
+    {/* Mobile Expandable Search Bar */}
+    <div id="mobile-search-bar" class="hidden md:hidden pb-3">
+      <div class="relative">
+        <input
+          type="text"
+          id="mobile-search-input"
+          placeholder="Search trips (e.g. Nepal, Chikmagalur)..."
+          class="w-full pl-10 pr-4 py-2 text-sm bg-gray-100 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white"
+          autocomplete="off"
+        />
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+          <Search class="h-4 w-4" />
+        </div>
+      </div>
+      <div
+        id="mobile-search-dropdown"
+        class="mt-2 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden hidden max-h-80 overflow-y-auto"
+      >
+        <div id="mobile-search-results" class="divide-y divide-gray-100"></div>
+      </div>
+    </div>
+
+    {/* Mobile Navigation Menu */}
     <div id="mobile-menu" class="hidden md:hidden pb-4">
-      <div class="flex flex-col space-y-4">
+      <div class="flex flex-col space-y-3">
         {navLinks.map((link) => (
           <a
             href={link.href}
@@ -75,15 +143,158 @@ const currentPath = Astro.url.pathname;
   </Container>
 </nav>
 
+<script id="search-data-json" type="application/json" set:html={searchDataJson} />
+
 <script>
-  const btn = document.getElementById('mobile-menu-button');
-  const menu = document.getElementById('mobile-menu');
+  interface AdventureItem {
+    title: string;
+    slug: string;
+    description: string;
+    duration: string;
+    price: string;
+    image: string;
+    highlights: string;
+  }
+
+  // Parse adventure data from embedded JSON script
+  const jsonElement = document.getElementById('search-data-json');
+  let adventuresData: AdventureItem[] = [];
+  if (jsonElement && jsonElement.textContent) {
+    try {
+      adventuresData = JSON.parse(jsonElement.textContent);
+    } catch (e) {
+      console.error('Failed to parse search data', e);
+    }
+  }
+
+  // Mobile Menu Toggle logic
+  const menuBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('menu-icon-open');
   const iconClose = document.getElementById('menu-icon-close');
 
-  btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
     iconOpen?.classList.toggle('hidden');
     iconClose?.classList.toggle('hidden');
+  });
+
+  // Mobile Search Toggle logic
+  const searchToggleBtn = document.getElementById('mobile-search-toggle');
+  const mobileSearchBar = document.getElementById('mobile-search-bar');
+  const mobileInput = document.getElementById('mobile-search-input') as HTMLInputElement | null;
+
+  searchToggleBtn?.addEventListener('click', () => {
+    mobileSearchBar?.classList.toggle('hidden');
+    if (!mobileSearchBar?.classList.contains('hidden')) {
+      mobileInput?.focus();
+    }
+  });
+
+  // Helper function to render search results HTML
+  function renderResults(query: string, resultsContainer: HTMLElement, dropdown: HTMLElement) {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      dropdown.classList.add('hidden');
+      resultsContainer.innerHTML = '';
+      return;
+    }
+
+    const matches = adventuresData.filter((item) => {
+      return (
+        item.title.toLowerCase().includes(q) ||
+        item.description.toLowerCase().includes(q) ||
+        item.highlights.toLowerCase().includes(q) ||
+        item.duration.toLowerCase().includes(q) ||
+        item.price.toLowerCase().includes(q)
+      );
+    });
+
+    if (matches.length === 0) {
+      resultsContainer.innerHTML = `
+        <div class="p-4 text-center text-sm text-gray-500">
+          No adventures found matching "<span class="font-semibold text-gray-700">${query}</span>"
+        </div>
+      `;
+    } else {
+      resultsContainer.innerHTML = matches
+        .map(
+          (item) => `
+          <a
+            href="/adventures/${item.slug}"
+            class="flex items-center space-x-3 p-3 hover:bg-orange-50 transition-colors duration-150 group"
+          >
+            <img
+              src="${item.image}"
+              alt="${item.title}"
+              class="w-14 h-14 object-cover rounded-xl flex-shrink-0 group-hover:scale-105 transition-transform"
+            />
+            <div class="flex-1 min-w-0">
+              <h4 class="text-sm font-bold text-gray-900 group-hover:text-orange-600 truncate">${item.title}</h4>
+              <p class="text-xs text-gray-500 truncate mt-0.5">${item.description}</p>
+              <div class="flex items-center space-x-3 mt-1 text-xs">
+                <span class="text-orange-600 font-semibold">${item.duration}</span>
+                <span class="text-gray-300">•</span>
+                <span class="text-gray-900 font-bold">${item.price} <span class="text-[10px] font-normal text-gray-500">(Double Sharing)</span></span>
+              </div>
+            </div>
+          </a>
+        `
+        )
+        .join('');
+    }
+
+    dropdown.classList.remove('hidden');
+  }
+
+  // Setup Desktop Search Input
+  const desktopInput = document.getElementById('desktop-search-input') as HTMLInputElement | null;
+  const desktopResults = document.getElementById('desktop-search-results');
+  const desktopDropdown = document.getElementById('desktop-search-dropdown');
+
+  if (desktopInput && desktopResults && desktopDropdown) {
+    desktopInput.addEventListener('input', (e) => {
+      renderResults((e.target as HTMLInputElement).value, desktopResults, desktopDropdown);
+    });
+
+    desktopInput.addEventListener('focus', (e) => {
+      if ((e.target as HTMLInputElement).value.trim()) {
+        desktopDropdown.classList.remove('hidden');
+      }
+    });
+  }
+
+  // Setup Mobile Search Input
+  const mobileResults = document.getElementById('mobile-search-results');
+  const mobileDropdown = document.getElementById('mobile-search-dropdown');
+
+  if (mobileInput && mobileResults && mobileDropdown) {
+    mobileInput.addEventListener('input', (e) => {
+      renderResults((e.target as HTMLInputElement).value, mobileResults, mobileDropdown);
+    });
+
+    mobileInput.addEventListener('focus', (e) => {
+      if ((e.target as HTMLInputElement).value.trim()) {
+        mobileDropdown.classList.remove('hidden');
+      }
+    });
+  }
+
+  // Close dropdowns on outside click or Escape key
+  document.addEventListener('click', (e) => {
+    const target = e.target as Node;
+    if (desktopDropdown && !desktopInput?.contains(target) && !desktopDropdown.contains(target)) {
+      desktopDropdown.classList.add('hidden');
+    }
+    if (mobileDropdown && !mobileInput?.contains(target) && !mobileDropdown.contains(target)) {
+      mobileDropdown.classList.add('hidden');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      desktopDropdown?.classList.add('hidden');
+      mobileDropdown?.classList.add('hidden');
+    }
   });
 </script>
