@@ -11,6 +11,7 @@ export interface Adventure {
   backgroundImage: string;
   highlights: string[];
   included: string[];
+  gallery?: string[];
   itinerary: {
     day: number;
     title: string;
@@ -29,9 +30,15 @@ export const adventures: Adventure[] = [
     duration: '10 Days',
     difficulty: 'Moderate',
     price: '₹2,90,500',
-    image: '/images/adventures/bhutan.jpg',
-    backgroundImage: 'https://images.unsplash.com/photo-1609156842547-5f86d49711e0?q=80&w=2070',
+    image: '/images/adventures/bhutan-1.jpg',
+    backgroundImage: '/images/adventures/bhutan-1.jpg',
     featured: true,
+    gallery: [
+      '/images/adventures/bhutan-1.jpg',
+      '/images/adventures/bhutan-2.jpg',
+      '/images/adventures/bhutan-3.jpg',
+      '/images/adventures/bhutan-4.jpg',
+    ],
     highlights: [
       'Visit the iconic Tiger\'s Nest Monastery',
       'Explore Punakha Dzong and Paro Valley',
@@ -110,9 +117,15 @@ export const adventures: Adventure[] = [
     duration: '12 Days',
     difficulty: 'Moderate',
     price: '₹2,32,400',
-    image: '/images/adventures/nepal.jpg',
-    backgroundImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071',
+    image: '/images/adventures/nepal-1.jpg',
+    backgroundImage: '/images/adventures/nepal-1.jpg',
     featured: true,
+    gallery: [
+      '/images/adventures/nepal-1.jpg',
+      '/images/adventures/nepal-2.jpg',
+      '/images/adventures/nepal-3.jpg',
+      '/images/adventures/nepal-4.jpg',
+    ],
     highlights: [
       'Explore Kathmandu\'s UNESCO World Heritage Sites',
       'Drive the scenic Prithvi Highway',
@@ -201,9 +214,15 @@ export const adventures: Adventure[] = [
     duration: '14 Days',
     difficulty: 'Challenging',
     price: '₹3,48,600',
-    image: '/images/adventures/ladakh.jpg',
-    backgroundImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=2070',
+    image: '/images/adventures/ladakh-1.jpg',
+    backgroundImage: '/images/adventures/ladakh-1.jpg',
     featured: false,
+    gallery: [
+      '/images/adventures/ladakh-1.jpg',
+      '/images/adventures/ladakh-2.jpg',
+      '/images/adventures/ladakh-3.jpg',
+      '/images/adventures/ladakh-4.jpg',
+    ],
     highlights: [
       'Cross Khardung La and Chang La passes',
       'Visit Pangong Tso and Tso Moriri lakes',
@@ -303,8 +322,11 @@ export const adventures: Adventure[] = [
     difficulty: 'Moderate',
     price: '₹38,500',
     image: '/images/adventures/sakleshpur-chikmagalur.jpg',
-    backgroundImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070',
+    backgroundImage: '/images/adventures/sakleshpur-chikmagalur.jpg',
     featured: true,
+    gallery: [
+      '/images/adventures/sakleshpur-chikmagalur.jpg',
+    ],
     highlights: [
       '4-Star Luxury Resort stays in Sakleshpur & Chikmagalur',
       'Self-drive convoy led by Plus530 professional 4x4 support team',
