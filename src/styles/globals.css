@@ -11,6 +11,7 @@
 :root {
   --background: #FBF4E6;
   --foreground: #31291E;
+  --brand-orange: #e55039;
 }
 
 body {
@@ -39,10 +40,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ea580c;
+  background: #e55039;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c2410c;
+  background: #cf3c25;
 }
