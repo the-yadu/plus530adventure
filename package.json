@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "wrangler pages deploy dist --project-name plus530adventure"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^11.0.0",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "wrangler": "^3.109.0"
   }
 }
