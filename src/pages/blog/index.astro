@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/ui/Container.astro';
+import Card from '../../components/ui/Card.astro';
+import { getCollection } from 'astro:content';
+import { Calendar, User, ArrowRight } from '@lucide/astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+---
+
+<Layout title="Adventure Blog | Plus530 Adventure" description="Guides, overlanding tips, and stories from our Himalayan expeditions.">
+  <div>
+    {/* Header */}
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Adventure Blog</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Overlanding tips, expedition stories, and vehicle prep guides from the Himalayas
+        </p>
+      </Container>
+    </section>
+
+    {/* Blog Posts Grid */}
+    <section class="py-16 bg-cream-50">
+      <Container>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <a href={`/blog/${post.slug}`}>
+              <Card hover className="h-full flex flex-col">
+                <div class="relative h-48 overflow-hidden">
+                  <img
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                  <div class="flex items-center text-xs text-gray-500 gap-4 mb-3">
+                    <span class="flex items-center gap-1">
+                      <Calendar class="h-4 w-4 text-orange-600" />
+                      {post.data.date}
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <User class="h-4 w-4 text-orange-600" />
+                      {post.data.author}
+                    </span>
+                  </div>
+                  <h2 class="text-xl font-bold text-gray-900 mb-2 hover:text-orange-600 transition-colors">
+                    {post.data.title}
+                  </h2>
+                  <p class="text-gray-600 text-sm mb-4 flex-1">
+                    {post.data.excerpt}
+                  </p>
+                  <span class="inline-flex items-center text-orange-600 font-semibold text-sm">
+                    Read Story <ArrowRight class="ml-1 h-4 w-4" />
+                  </span>
+                </div>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>

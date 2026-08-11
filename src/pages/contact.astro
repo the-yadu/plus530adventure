@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/ui/Container.astro';
+import Button from '../components/ui/Button.astro';
+import { Mail, Phone, MapPin, Send } from '@lucide/astro';
+---
+
+<Layout title="Contact Us | Plus530 Adventure" description="Get in touch with Plus530 Adventure to book or customize your overland expedition.">
+  <div>
+    {/* Header */}
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Have questions or want to customize your expedition? We are here to help.
+        </p>
+      </Container>
+    </section>
+
+    {/* Form & Info Section */}
+    <section class="py-16 bg-cream-50">
+      <Container>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Details */}
+          <div class="space-y-8">
+            <h2 class="text-3xl font-bold text-gray-900">Get in Touch</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Whether you are planning to join an upcoming self-drive convoy or want to organize a custom private overland trail, reach out to our team!
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="p-3 bg-orange-100 text-orange-600 rounded-lg">
+                  <MapPin class="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">Address</h3>
+                  <p class="text-gray-600">Bangalore, Karnataka, India</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="p-3 bg-orange-100 text-orange-600 rounded-lg">
+                  <Phone class="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">Phone</h3>
+                  <p class="text-gray-600">+91 98765 43210</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="p-3 bg-orange-100 text-orange-600 rounded-lg">
+                  <Mail class="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">Email</h3>
+                  <p class="text-gray-600">info@plus530adventure.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div class="bg-white rounded-2xl p-8 shadow-md">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <input
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                <input
+                  type="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <input
+                  type="tel"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  placeholder="+91 98765 43210"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  placeholder="Tell us which adventure you are interested in..."
+                ></textarea>
+              </div>
+
+              <Button type="submit" className="w-full">
+                Send Message <Send class="ml-2 h-4 w-4 inline-block" />
+              </Button>
+            </form>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/ui/Container.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+import { adventures } from '../../data/adventures';
+import { ArrowRight } from '@lucide/astro';
+---
+
+<Layout title="All Expeditions | Plus530 Adventure" description="Explore our catalog of self-drive overland expeditions across Bhutan, Nepal, Ladakh, Sakleshpur & Chikmagalur.">
+  <div>
+    {/* Header */}
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Expeditions</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Explore self-drive 4x4 convoys and luxury overland journeys
+        </p>
+      </Container>
+    </section>
+
+    {/* Catalog Grid */}
+    <section class="py-16 bg-cream-50">
+      <Container>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {adventures.map((adventure) => (
+            <a href={`/adventures/${adventure.slug}`}>
+              <Card hover className="h-full flex flex-col">
+                <div class="relative h-64">
+                  <div
+                    class="absolute inset-0 bg-cover bg-center"
+                    style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
+                  ></div>
+                  <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {adventure.duration}
+                  </div>
+                  {adventure.featured && (
+                    <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured
+                    </div>
+                  )}
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
+                  <p class="text-gray-600 mb-4 flex-1">{adventure.description}</p>
+                  <div class="flex items-center justify-between mb-4">
+                    <div>
+                      <span class="text-2xl font-bold text-orange-600">{adventure.price}</span>
+                      <span class="text-xs text-gray-500 block">per person (Double Sharing)</span>
+                    </div>
+                    <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                      {adventure.difficulty}
+                    </span>
+                  </div>
+                  <Button className="w-full">
+                    View Details <ArrowRight class="ml-2 h-4 w-4 inline-block" />
+                  </Button>
+                </div>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>

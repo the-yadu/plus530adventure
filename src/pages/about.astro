@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/ui/Container.astro';
+import Button from '../components/ui/Button.astro';
+import { Mountain, Users, Shield, Compass } from '@lucide/astro';
+---
+
+<Layout title="About Us | Plus530 Adventure" description="Learn about Plus530 Adventure, our story, mission, and passion for leading high-altitude Himalayan overlanding expeditions.">
+  <div>
+    {/* Hero Section */}
+    <section class="relative py-24 bg-gray-900 text-white overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070')"></div>
+      <Container className="relative z-10 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">About Plus530 Adventure</h1>
+        <p class="text-xl max-w-3xl mx-auto text-gray-200">
+          We are passionate overlanders, explorers, and expedition leaders dedicated to curating self-drive journeys across the high Himalayas and scenic mountain trails.
+        </p>
+      </Container>
+    </section>
+
+    {/* Story Section */}
+    <section class="py-20 bg-white">
+      <Container>
+        <div class="max-w-4xl mx-auto space-y-8">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Plus530 Adventure was born out of a deep love for off-road travel, high-altitude mountain passes, and remote cultural landscapes. Named after the high-country spirit of adventure, we specialize in organizing guided 4x4 self-drive convoys and luxury overland expeditions.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Our mission is to enable fellow adventure enthusiasts to experience remote Himalayan kingdoms like Bhutan, Nepal, and Ladakh, as well as misty Western Ghats trails, with complete safety, 4-star resort comfort, and professional convoy support.
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>

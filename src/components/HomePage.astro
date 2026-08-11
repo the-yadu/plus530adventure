@@ -1,0 +1,146 @@
+---
+import Container from './ui/Container.astro';
+import Card from './ui/Card.astro';
+import Button from './ui/Button.astro';
+import { getFeaturedAdventures } from '../data/adventures';
+import { ArrowRight, Mountain, Users, Shield, Calendar } from '@lucide/astro';
+
+const featuredAdventures = getFeaturedAdventures();
+---
+
+<div>
+  {/* Top Banner - Trip to Bhutan is Live */}
+  <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 animate-pulse"></div>
+    <div class="relative z-10 flex items-center justify-center gap-3">
+      <span class="inline-block w-2 h-2 bg-white rounded-full animate-bounce"></span>
+      <span class="font-bold text-sm sm:text-base tracking-wide">
+        🇧🇹 TRIP TO BHUTAN 2025 IS LIVE
+      </span>
+      <span class="inline-block w-2 h-2 bg-white rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+    </div>
+    <a href="/adventures/bhutan-overland" class="absolute inset-0 z-20" aria-label="View Bhutan adventure"></a>
+  </div>
+
+  {/* Hero Section */}
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/home-banner-video.mp4" type="video/mp4" />
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070')"
+      ></div>
+    </video>
+    <Container className="relative z-20 text-center text-white">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">
+        Discover the Adventure of a Lifetime
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Premium overlanding and self-drive expeditions across the Himalayas and beyond
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/adventures">
+          <Button size="lg">
+            Explore Adventures <ArrowRight class="ml-2 h-5 w-5 inline-block" />
+          </Button>
+        </a>
+        <a href="/contact">
+          <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-orange-600">
+            Get in Touch
+          </Button>
+        </a>
+      </div>
+    </Container>
+  </section>
+
+  {/* Featured Adventures */}
+  <section class="py-20 bg-cream-50">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Adventures</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Embark on extraordinary journeys to the world's most stunning destinations
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {featuredAdventures.map((adventure) => (
+          <a href={`/adventures/${adventure.slug}`}>
+            <Card hover className="h-full">
+              <div class="relative h-64">
+                <div
+                  class="absolute inset-0 bg-cover bg-center"
+                  style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
+                ></div>
+                <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  {adventure.duration}
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
+                <p class="text-gray-600 mb-4">{adventure.description}</p>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-2xl font-bold text-orange-600">{adventure.price}</span>
+                    <span class="text-xs text-gray-500 block">per person (Double Sharing)</span>
+                  </div>
+                  <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                    {adventure.difficulty}
+                  </span>
+                </div>
+              </div>
+            </Card>
+          </a>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  {/* Why Choose Us */}
+  <section class="py-20 bg-white">
+    <Container>
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Plus530 Adventure?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          We craft unforgettable overland experiences with safety, comfort, and luxury at the forefront
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Mountain class="h-8 w-8" />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Expert Routes</h3>
+          <p class="text-gray-600">Carefully curated trails through private estates & mountain passes.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Shield class="h-8 w-8" />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Lead & Support</h3>
+          <p class="text-gray-600">Lead support vehicle with recovery gear & spotters on standby.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Users class="h-8 w-8" />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Convoy Community</h3>
+          <p class="text-gray-600">Connect with like-minded overlanders and self-drive enthusiasts.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Calendar class="h-8 w-8" />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Seamless Booking</h3>
+          <p class="text-gray-600">4-Star luxury resort stays and hassle-free expedition coordination.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+</div>

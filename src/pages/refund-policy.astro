@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/ui/Container.astro';
+---
+
+<Layout title="Refund Policy | Plus530 Adventure" description="Cancellation and refund policies for Plus530 Adventure trips and expeditions.">
+  <div>
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Refund & Cancellation Policy</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Clear and transparent terms for booking cancellations and refunds
+        </p>
+      </Container>
+    </section>
+
+    <section class="py-16 bg-white">
+      <Container className="max-w-4xl">
+        <div class="prose prose-lg text-gray-800 space-y-6">
+          <h2 class="text-2xl font-bold text-gray-900">1. Booking & Deposits</h2>
+          <p>
+            To confirm your slot on a Plus530 Adventure expedition, a booking deposit is required at the time of registration. The remaining balance must be cleared at least 30 days prior to the departure date.
+          </p>
+
+          <h2 class="text-2xl font-bold text-gray-900">2. Cancellation Schedule</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>30+ days prior to departure:</strong> 90% refund of the total trip cost.</li>
+            <li><strong>15–29 days prior to departure:</strong> 50% refund of the total trip cost.</li>
+            <li><strong>Less than 15 days prior to departure:</strong> No refund will be issued due to non-refundable 4-star resort and permit bookings.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-gray-900">3. Event Postponement or Force Majeure</h2>
+          <p>
+            In the event of severe weather, natural disasters, landslide blockades, or government restrictions, Plus530 Adventure reserves the right to adjust routes or reschedule the expedition. In such cases, full trip credit will be issued towards a future expedition.
+          </p>
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>
