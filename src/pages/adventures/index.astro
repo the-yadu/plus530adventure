@@ -5,6 +5,7 @@ import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
 import { adventures } from '../../data/adventures';
 import { ArrowRight, Calendar } from '@lucide/astro';
+import { getUpcomingBatchDates } from '../../utils/dates';
 ---
 
 <Layout title="All Expeditions | Plus530 Adventure" description="Explore our catalog of self-drive overland expeditions across Bhutan, Nepal, Ladakh, Sakleshpur & Chikmagalur.">
@@ -23,29 +24,31 @@ import { ArrowRight, Calendar } from '@lucide/astro';
     <section class="py-16 bg-cream-50">
       <Container>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {adventures.map((adventure) => (
-            <a href={`/adventures/${adventure.slug}`}>
-              <Card hover className="h-full flex flex-col">
-                <div class="relative h-64">
-                  <div
-                    class="absolute inset-0 bg-cover bg-center"
-                    style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
-                  ></div>
-                  <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {adventure.duration}
+          {adventures.map((adventure) => {
+            const upcoming = getUpcomingBatchDates(adventure.nextBatchDates);
+            return (
+              <a href={`/adventures/${adventure.slug}`}>
+                <Card hover className="h-full flex flex-col">
+                  <div class="relative h-64">
+                    <div
+                      class="absolute inset-0 bg-cover bg-center"
+                      style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
+                    ></div>
+                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {adventure.duration}
+                    </div>
+                    {adventure.featured && (
+                      <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Featured
+                      </div>
+                    )}
+                    {upcoming.length > 0 && (
+                      <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
+                        <Calendar class="w-3.5 h-3.5 text-orange-400" />
+                        <span>Next: {upcoming[0]}</span>
+                      </div>
+                    )}
                   </div>
-                  {adventure.featured && (
-                    <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Featured
-                    </div>
-                  )}
-                  {adventure.nextBatchDates && adventure.nextBatchDates.length > 0 && (
-                    <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
-                      <Calendar class="w-3.5 h-3.5 text-orange-400" />
-                      <span>Next: {adventure.nextBatchDates[0]}</span>
-                    </div>
-                  )}
-                </div>
                 <div class="p-6 flex-1 flex flex-col">
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
                   <p class="text-gray-600 mb-4 flex-1">{adventure.description}</p>
@@ -64,7 +67,8 @@ import { ArrowRight, Calendar } from '@lucide/astro';
                 </div>
               </Card>
             </a>
-          ))}
+          );
+        })}
         </div>
       </Container>
     </section>

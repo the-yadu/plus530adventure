@@ -6,6 +6,8 @@ import { adventures } from '../../data/adventures';
 import { WHATSAPP_COMMUNITY_URL } from '../../data/config';
 import { Calendar, Clock, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucide/astro';
 
+import { getUpcomingBatchDates } from '../../utils/dates';
+
 export async function getStaticPaths() {
   return adventures.map((adventure) => ({
     params: { slug: adventure.slug },
@@ -14,6 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { adventure } = Astro.props;
+const upcomingBatchDates = getUpcomingBatchDates(adventure.nextBatchDates);
 
 const adventureSchema = {
   "@context": "https://schema.org",
@@ -22,7 +25,7 @@ const adventureSchema = {
   "description": adventure.description,
   "image": `https://plus530adventure.com${adventure.image}`,
   "touristType": ["Overland Travelers", "Off-Road Enthusiasts", "Adventure Travelers"],
-  ...(adventure.nextBatchDates && adventure.nextBatchDates.length > 0 ? { "startDate": adventure.nextBatchDates } : {}),
+  ...(upcomingBatchDates.length > 0 ? { "startDate": upcomingBatchDates } : {}),
   "offers": {
     "@type": "Offer",
     "price": adventure.price.replace(/[^0-9]/g, ''),
@@ -85,8 +88,8 @@ const adventureSchema = {
               <div>
                 <span class="text-xs text-gray-500 block font-medium">Next Batch</span>
                 <span class="font-semibold text-gray-900 text-sm">
-                  {adventure.nextBatchDates && adventure.nextBatchDates.length > 0
-                    ? adventure.nextBatchDates.join(' | ')
+                  {upcomingBatchDates.length > 0
+                    ? upcomingBatchDates.join(' | ')
                     : 'Dates on Request'}
                 </span>
               </div>

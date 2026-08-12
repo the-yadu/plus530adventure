@@ -5,6 +5,7 @@ import Button from './ui/Button.astro';
 import { getFeaturedAdventures } from '../data/adventures';
 import { WHATSAPP_COMMUNITY_URL } from '../data/config';
 import { ArrowRight, Mountain, Users, Shield, Calendar } from '@lucide/astro';
+import { getUpcomingBatchDates } from '../utils/dates';
 
 const featuredAdventures = getFeaturedAdventures();
 ---
@@ -87,40 +88,43 @@ const featuredAdventures = getFeaturedAdventures();
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {featuredAdventures.map((adventure) => (
-          <a href={`/adventures/${adventure.slug}`}>
-            <Card hover className="h-full">
-              <div class="relative h-64">
-                <div
-                  class="absolute inset-0 bg-cover bg-center"
-                  style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
-                ></div>
-                <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  {adventure.duration}
-                </div>
-                {adventure.nextBatchDates && adventure.nextBatchDates.length > 0 && (
-                  <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
-                    <Calendar class="w-3.5 h-3.5 text-orange-400" />
-                    <span>Next: {adventure.nextBatchDates[0]}</span>
+        {featuredAdventures.map((adventure) => {
+          const upcoming = getUpcomingBatchDates(adventure.nextBatchDates);
+          return (
+            <a href={`/adventures/${adventure.slug}`}>
+              <Card hover className="h-full">
+                <div class="relative h-64">
+                  <div
+                    class="absolute inset-0 bg-cover bg-center"
+                    style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
+                  ></div>
+                  <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {adventure.duration}
                   </div>
-                )}
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
-                <p class="text-gray-600 mb-4">{adventure.description}</p>
-                <div class="flex items-center justify-between">
-                  <div>
-                    <span class="text-2xl font-bold text-orange-600">{adventure.price}</span>
-                    <span class="text-xs text-gray-500 block">per person (Double Sharing)</span>
-                  </div>
-                  <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                    {adventure.difficulty}
-                  </span>
+                  {upcoming.length > 0 && (
+                    <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
+                      <Calendar class="w-3.5 h-3.5 text-orange-400" />
+                      <span>Next: {upcoming[0]}</span>
+                    </div>
+                  )}
                 </div>
-              </div>
-            </Card>
-          </a>
-        ))}
+                <div class="p-6">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
+                  <p class="text-gray-600 mb-4">{adventure.description}</p>
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <span class="text-2xl font-bold text-orange-600">{adventure.price}</span>
+                      <span class="text-xs text-gray-500 block">per person (Double Sharing)</span>
+                    </div>
+                    <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                      {adventure.difficulty}
+                    </span>
+                  </div>
+                </div>
+              </Card>
+            </a>
+          );
+        })}
       </div>
     </Container>
   </section>
