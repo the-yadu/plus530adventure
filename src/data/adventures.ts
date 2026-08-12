@@ -9,6 +9,7 @@ export interface Adventure {
   price: string;
   image: string;
   backgroundImage: string;
+  nextBatchDates?: string[];
   highlights: string[];
   included: string[];
   gallery?: string[];
@@ -32,6 +33,7 @@ export const adventures: Adventure[] = [
     price: '₹1,45,250',
     image: '/images/adventures/bhutan-card.jpg',
     backgroundImage: '/images/adventures/bhutan-1.jpg',
+    nextBatchDates: ['15th Oct 2026', '05th Nov 2026'],
     featured: true,
     gallery: [
       '/images/adventures/bhutan-1.jpg',
@@ -119,6 +121,7 @@ export const adventures: Adventure[] = [
     price: '₹1,16,200',
     image: '/images/adventures/nepal-card.jpg',
     backgroundImage: '/images/adventures/nepal-1.jpg',
+    nextBatchDates: ['10th Nov 2026', '01st Dec 2026'],
     featured: true,
     gallery: [
       '/images/adventures/nepal-1.jpg',
@@ -216,6 +219,7 @@ export const adventures: Adventure[] = [
     price: '₹1,74,300',
     image: '/images/adventures/ladakh-card.jpg',
     backgroundImage: '/images/adventures/ladakh-1.jpg',
+    nextBatchDates: ['15th Jun 2026', '10th Jul 2026'],
     featured: false,
     gallery: [
       '/images/adventures/ladakh-1.jpg',
@@ -323,6 +327,7 @@ export const adventures: Adventure[] = [
     price: '₹38,500',
     image: '/images/adventures/sakleshpur-card.jpg',
     backgroundImage: '/images/adventures/sakleshpur-chikmagalur.jpg',
+    nextBatchDates: ['02nd Oct 2026', '20th Nov 2026'],
     featured: true,
     gallery: [
       '/images/adventures/sakleshpur-chikmagalur.jpg',
@@ -372,6 +377,7 @@ export const adventures: Adventure[] = [
     price: '₹2,85,000',
     image: '/images/adventures/northeast-card.jpg',
     backgroundImage: '/images/adventures/northeast-hero.jpg',
+    nextBatchDates: ['15th Jan 2027', '20th Feb 2027'],
     featured: true,
     gallery: [
       '/images/adventures/northeast-hero.jpg',
@@ -439,6 +445,7 @@ export const adventures: Adventure[] = [
     price: '₹98,500',
     image: '/images/adventures/spiti-card.jpg',
     backgroundImage: '/images/adventures/spiti-hero.jpg',
+    nextBatchDates: ['10th Sep 2026', '05th Oct 2026'],
     featured: true,
     gallery: [
       '/images/adventures/spiti-hero.jpg',
@@ -485,6 +492,7 @@ export const adventures: Adventure[] = [
     price: '₹85,000',
     image: '/images/adventures/rajasthan-card.jpg',
     backgroundImage: '/images/adventures/rajasthan-hero.jpg',
+    nextBatchDates: ['15th Dec 2026', '10th Jan 2027'],
     featured: true,
     gallery: [
       '/images/adventures/rajasthan-hero.jpg',
@@ -529,6 +537,7 @@ export const adventures: Adventure[] = [
     price: '₹52,500',
     image: '/images/adventures/coastal-card.jpg',
     backgroundImage: '/images/adventures/coastal-hero.jpg',
+    nextBatchDates: ['12th Aug 2026', '25th Sep 2026'],
     featured: true,
     gallery: [
       '/images/adventures/coastal-hero.jpg',
@@ -571,6 +580,7 @@ export const adventures: Adventure[] = [
     price: '₹1,95,000',
     image: '/images/adventures/mustang-card.jpg',
     backgroundImage: '/images/adventures/mustang-hero.jpg',
+    nextBatchDates: ['05th Oct 2026', '01st Nov 2026'],
     featured: true,
     gallery: [
       '/images/adventures/mustang-hero.jpg',
