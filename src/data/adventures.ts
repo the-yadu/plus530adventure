@@ -370,7 +370,7 @@ export const adventures: Adventure[] = [
     duration: '28 Days / 27 Nights',
     difficulty: 'Challenging',
     price: '₹2,85,000',
-    image: '/images/adventures/northeast-hero.jpg',
+    image: '/images/adventures/northeast-card.jpg',
     backgroundImage: '/images/adventures/northeast-hero.jpg',
     featured: true,
     gallery: [
