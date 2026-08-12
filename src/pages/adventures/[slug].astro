@@ -4,7 +4,7 @@ import Container from '../../components/ui/Container.astro';
 import Button from '../../components/ui/Button.astro';
 import { adventures } from '../../data/adventures';
 import { WHATSAPP_COMMUNITY_URL } from '../../data/config';
-import { Calendar, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucide/astro';
+import { Calendar, Clock, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucide/astro';
 
 export async function getStaticPaths() {
   return adventures.map((adventure) => ({
@@ -14,9 +14,37 @@ export async function getStaticPaths() {
 }
 
 const { adventure } = Astro.props;
+
+const adventureSchema = {
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": adventure.title,
+  "description": adventure.description,
+  "image": `https://plus530adventure.com${adventure.image}`,
+  "touristType": ["Overland Travelers", "Off-Road Enthusiasts", "Adventure Travelers"],
+  ...(adventure.nextBatchDates && adventure.nextBatchDates.length > 0 ? { "startDate": adventure.nextBatchDates } : {}),
+  "offers": {
+    "@type": "Offer",
+    "price": adventure.price.replace(/[^0-9]/g, ''),
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock",
+    "url": Astro.url.href
+  },
+  "provider": {
+    "@type": "TravelAgency",
+    "name": "Plus530 Adventure",
+    "url": "https://plus530adventure.com"
+  },
+  "itinerary": adventure.itinerary.map((item: { day: number; title: string; description: string }) => ({
+    "@type": "City",
+    "name": `Day ${item.day}: ${item.title}`,
+    "description": item.description
+  }))
+};
 ---
 
 <Layout title={`${adventure.title} | Plus530 Adventure`} description={adventure.description}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(adventureSchema)} />
   <div>
     {/* Hero Section */}
     <section class="relative h-[60vh] flex items-center justify-center">
@@ -43,14 +71,25 @@ const { adventure } = Astro.props;
     <section class="bg-white shadow-md sticky top-16 z-40">
       <Container>
         <div class="flex flex-wrap items-center justify-between py-4 gap-4">
-          <div class="flex items-center space-x-6">
+          <div class="flex flex-wrap items-center gap-6">
             <div class="flex items-center space-x-2">
-              <Calendar class="h-5 w-5 text-orange-600" />
+              <Clock class="h-5 w-5 text-orange-600 flex-shrink-0" />
               <span class="font-semibold">{adventure.duration}</span>
             </div>
             <div class="flex items-center space-x-2">
-              <TrendingUp class="h-5 w-5 text-orange-600" />
+              <TrendingUp class="h-5 w-5 text-orange-600 flex-shrink-0" />
               <span class="font-semibold">{adventure.difficulty}</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <Calendar class="h-5 w-5 text-orange-600 flex-shrink-0" />
+              <div>
+                <span class="text-xs text-gray-500 block font-medium">Next Batch</span>
+                <span class="font-semibold text-gray-900 text-sm">
+                  {adventure.nextBatchDates && adventure.nextBatchDates.length > 0
+                    ? adventure.nextBatchDates.join(' | ')
+                    : 'Dates on Request'}
+                </span>
+              </div>
             </div>
             <div class="flex items-center space-x-2">
               <BadgeInfo class="h-5 w-5 text-orange-600 flex-shrink-0" />
@@ -84,15 +123,6 @@ const { adventure } = Astro.props;
     <section class="py-16 bg-gray-50">
       <Container>
         <div class="max-w-4xl">
-          {/* Pricing & Occupancy Note */}
-          <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8 flex items-start space-x-3">
-            <BadgeInfo class="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
-            <div class="text-sm text-amber-900 leading-relaxed">
-              <span class="font-bold block mb-1">Room Occupancy & Pricing Policy:</span>
-              Prices shared across all expeditions are <strong>per person on a double-sharing basis</strong> (2 persons sharing 1 room). In case you prefer <strong>single occupancy (no room sharing)</strong>, the price will be <strong>2x (doubled)</strong>.
-            </div>
-          </div>
-
           <h2 class="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
           <p class="text-lg text-gray-700 leading-relaxed">
             {adventure.longDescription}
@@ -175,6 +205,21 @@ const { adventure } = Astro.props;
               </div>
             </div>
           ))}
+        </div>
+      </Container>
+    </section>
+
+    {/* Pricing & Occupancy Policy Section */}
+    <section class="py-8 bg-gray-50 border-t border-gray-200">
+      <Container>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-start space-x-3">
+            <BadgeInfo class="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
+            <div class="text-sm text-amber-900 leading-relaxed">
+              <span class="font-bold block mb-1">Room Occupancy & Pricing Policy:</span>
+              Prices shared across all expeditions are <strong>per person on a double-sharing basis</strong> (2 persons sharing 1 room). In case you prefer <strong>single occupancy (no room sharing)</strong>, the price will be <strong>2x (doubled)</strong>.
+            </div>
+          </div>
         </div>
       </Container>
     </section>
