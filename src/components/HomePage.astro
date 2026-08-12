@@ -98,6 +98,12 @@ const featuredAdventures = getFeaturedAdventures();
                 <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {adventure.duration}
                 </div>
+                {adventure.nextBatchDates && adventure.nextBatchDates.length > 0 && (
+                  <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
+                    <Calendar class="w-3.5 h-3.5 text-orange-400" />
+                    <span>Next: {adventure.nextBatchDates[0]}</span>
+                  </div>
+                )}
               </div>
               <div class="p-6">
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
