@@ -30,7 +30,7 @@ export const adventures: Adventure[] = [
     duration: '10 Days',
     difficulty: 'Moderate',
     price: '₹1,45,250',
-    image: '/images/adventures/bhutan-1.jpg',
+    image: '/images/adventures/bhutan-card.jpg',
     backgroundImage: '/images/adventures/bhutan-1.jpg',
     featured: true,
     gallery: [
@@ -117,7 +117,7 @@ export const adventures: Adventure[] = [
     duration: '12 Days',
     difficulty: 'Moderate',
     price: '₹1,16,200',
-    image: '/images/adventures/nepal-1.jpg',
+    image: '/images/adventures/nepal-card.jpg',
     backgroundImage: '/images/adventures/nepal-1.jpg',
     featured: true,
     gallery: [
@@ -214,7 +214,7 @@ export const adventures: Adventure[] = [
     duration: '14 Days',
     difficulty: 'Challenging',
     price: '₹1,74,300',
-    image: '/images/adventures/ladakh-1.jpg',
+    image: '/images/adventures/ladakh-card.jpg',
     backgroundImage: '/images/adventures/ladakh-1.jpg',
     featured: false,
     gallery: [
@@ -321,7 +321,7 @@ export const adventures: Adventure[] = [
     duration: '3 Days / 2 Nights',
     difficulty: 'Moderate',
     price: '₹38,500',
-    image: '/images/adventures/sakleshpur-chikmagalur.jpg',
+    image: '/images/adventures/sakleshpur-card.jpg',
     backgroundImage: '/images/adventures/sakleshpur-chikmagalur.jpg',
     featured: true,
     gallery: [
