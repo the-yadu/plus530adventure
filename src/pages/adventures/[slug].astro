@@ -103,7 +103,7 @@ const adventureSchema = {
             </div>
           </div>
           <div class="flex items-center space-x-3">
-            <a href="/contact">
+            <a href={`/contact?adventure=${adventure.slug}${upcomingBatchDates.length > 0 ? `&batch=${encodeURIComponent(upcomingBatchDates[0])}` : ''}`}>
               <Button>Book Now</Button>
             </a>
             <a
@@ -236,7 +236,7 @@ const adventureSchema = {
             Get in touch with us to book your spot or customize this adventure to your preferences
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact">
+            <a href={`/contact?adventure=${adventure.slug}${upcomingBatchDates.length > 0 ? `&batch=${encodeURIComponent(upcomingBatchDates[0])}` : ''}`}>
               <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100">
                 Book This Adventure
               </Button>
