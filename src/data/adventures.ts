@@ -518,6 +518,48 @@ export const adventures: Adventure[] = [
       { day: 7, title: 'Shekhawati to Jaipur Return Convoy', description: 'Morning heritage walk and return convoy drive to Jaipur. Expedition flag-in.' },
     ],
   },
+  {
+    id: '8',
+    slug: 'coastal-western-ghats-trail',
+    title: 'Coastal & Western Ghats Luxury 4x4 Trail',
+    description: 'A 5-Day / 4-Night luxury getaway driving through Amboli & Chorla Ghat passes, private estate off-road trails, secret waterfalls, and beachfront resorts.',
+    longDescription: 'Experience the ultimate 5-Day / 4-Night Western Ghats to Goa overland journey. Drive your 4x4 or AWD SUV through rainforest mountain ridge roads (Amboli & Chorla Ghats), private tea/spice estate trails, and hidden waterfall stream crossings. Unwind each evening in handpicked 4-star beachfront resorts and luxury hill lodges, backed by Plus530 lead 4x4 support, water crossing spotters, and walkie-talkie communication.',
+    duration: '5 Days / 4 Nights',
+    difficulty: 'Moderate',
+    price: '₹52,500',
+    image: '/images/adventures/coastal-card.jpg',
+    backgroundImage: '/images/adventures/coastal-hero.jpg',
+    featured: true,
+    gallery: [
+      '/images/adventures/coastal-hero.jpg',
+      '/images/adventures/coastal-card.jpg',
+      '/images/adventures/sakleshpur-card.jpg',
+      '/images/adventures/sakleshpur-chikmagalur.jpg',
+    ],
+    highlights: [
+      'Private estate off-road trail driving through monsoon rainforests & tea gardens',
+      'Scenic mountain ridge road drive along Amboli Ghat & Chorla Ghat passes',
+      'Off-road stream crossings & hidden waterfall trail discovery',
+      'Luxury 4-star beachfront resort stays in North/South Goa hinterlands',
+      'Self-drive 4x4 convoy led by Plus530 professional support team',
+      'Walkie-talkie radio setup, water crossing spotters & standby recovery',
+    ],
+    included: [
+      '4 Nights accommodation in luxury estate lodges & 4-star beachfront resorts (Double Occupancy)',
+      'All Breakfasts, Estate Trail Lunches & Seafood Dinner Barbecues',
+      'Plus530 Lead 4x4 Support Vehicle & Certified Expedition Leader',
+      'Water crossing spotters & standby recovery equipment',
+      'Vehicle walkie-talkie radio setup for convoy communication',
+      'All private estate trail access permits & taxes',
+    ],
+    itinerary: [
+      { day: 1, title: 'Bangalore / Mumbai Assembly & Drive to Belgaum Foothills', description: 'Convoy assembly, vehicle briefing, walkie-talkie setup, drive to Western Ghats foothills hotel.' },
+      { day: 2, title: 'Belgaum to Amboli Ghat & Private Estate Trail', description: 'Drive up misty Amboli Ghat pass, 4x4 estate trail driving through private tea and spice plantations.' },
+      { day: 3, title: 'Amboli to North Goa Coastal Resort via Chorla Ghat', description: 'Scenic mountain ridge drive through Chorla Ghat rainforest down to North Goa beachfront resort.' },
+      { day: 4, title: 'South Goa Coastal Trails & Secret Waterfalls', description: 'Off-road trail drive through South Goa hinterland forests and hidden natural pool waterfalls. Seafood beach dinner.' },
+      { day: 5, title: 'Goa Beach Breakfast & Convoy Return', description: 'Farewell breakfast on the beach and return convoy drive back. Expedition flag-in.' },
+    ],
+  },
 ];
 
 export function getAdventureBySlug(slug: string): Adventure | undefined {
