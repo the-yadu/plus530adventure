@@ -1,0 +1,325 @@
+# Plus530 Adventure - Complete Machine-Readable LLM Knowledge Base
+
+> Plus530 Adventure is South Asia's premier Himalayan overlanding, self-drive 4x4 expedition, and guided motorcycle tour operator. We specialize in luxury guided convoy trips across Bhutan, Nepal, Upper Mustang, Ladakh, Spiti Valley, Rajasthan, Northeast India, and the Western Ghats.
+
+## Quick Index & Essential Links
+- **Official Website**: https://plus530adventure.com
+- **Expedition Timeline & Schedule**: https://plus530adventure.com/timeline
+- **4x4 Car Convoy Expeditions Catalog**: https://plus530adventure.com/car-tours
+- **Guided Motorcycle Expeditions Catalog**: https://plus530adventure.com/motorcycle-tours
+- **About Us**: https://plus530adventure.com/about
+- **Contact & Bookings**: https://plus530adventure.com/contact
+- **WhatsApp Support Group**: https://chat.whatsapp.com/CloTTI8qWW286dzvlbGAZW
+- **Standard LLM Summary**: https://plus530adventure.com/llms.txt
+
+---
+
+## Complete Expedition Catalog (4x4 Car Convoys)
+
+### 1. Bhutan Overland Adventure
+- **URL**: https://plus530adventure.com/car-tours/bhutan-overland
+- **Vehicle Type**: Self-drive 4x4 / AWD Car Convoy
+- **Duration**: 10 Days / 9 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹1,45,250 per person (Double Sharing)
+- **Highlights**:
+  - Visit the iconic Tiger's Nest Monastery (Taktsang)
+  - Explore Punakha Dzong, Paro Valley, and Thimphu capital
+  - Drive over Dochula Pass (10,200 ft) with 108 memorial chortens and Himalayan panoramas
+  - Day trip to the hidden Haa Valley
+  - Authentic Bhutanese cultural dining and boutique hotel stays
+- **Inclusions**: Professional guide & lead 4x4 support vehicle, boutique hotel accommodations, all meals & sustainable development fee (SDF) permits, 4x4 vehicle rental, entry fees.
+- **Itinerary Overview**:
+  - Day 1: Arrival in Paro, vehicle pickup, acclimatization & welcome dinner.
+  - Day 2: Paro to Thimphu, visit National Memorial Chorten.
+  - Day 3: Thimphu exploration: Buddha Dordenma, Tashichho Dzong, local markets.
+  - Day 4: Thimphu to Punakha across Dochula Pass, visit Punakha Dzong.
+  - Day 5: Punakha Valley exploration, Chimi Lhakhang & riverside trail.
+  - Day 6: Punakha to Paro scenic mountain road drive.
+  - Day 7: Hike to Tiger's Nest Monastery (Taktsang).
+  - Day 8: Paro Valley exploration, Rinpung Dzong & National Museum.
+  - Day 9: Day trip to remote Haa Valley.
+  - Day 10: Departure from Paro International Airport.
+
+### 2. Nepal Himalayan Trail
+- **URL**: https://plus530adventure.com/car-tours/nepal-himalayan-trail
+- **Vehicle Type**: Self-drive 4x4 / AWD Car Convoy
+- **Duration**: 12 Days / 11 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹1,16,200 per person (Double Sharing)
+- **Highlights**:
+  - Explore Kathmandu's UNESCO World Heritage Sites (Swayambhunath, Pashupatinath, Bhaktapur)
+  - Drive scenic highway trails along roaring rivers to Pokhara lakeside
+  - Sarangkot sunrise over Annapurna Himalayan range
+  - Chitwan National Park wildlife safari (rhinos, tigers, jungle walks)
+  - Preserved Newari hill town of Bandipur
+- **Inclusions**: Experienced driver-guide, 4x4 vehicle with fuel, 4-star hotel accommodations, daily breakfast & select meals, national park permits, all entrance fees.
+- **Itinerary Overview**:
+  - Day 1: Arrival in Kathmandu, team welcome dinner & vehicle briefing.
+  - Day 2: Kathmandu Valley heritage tour.
+  - Day 3: Kathmandu to Bhaktapur and Nagarkot for sunset views.
+  - Day 4: Nagarkot sunrise, drive to Chitwan National Park.
+  - Day 5: Chitwan National Park full-day jungle safari.
+  - Day 6: Chitwan to Pokhara scenic drive, lakeside stroll.
+  - Day 7: Pokhara exploration: Davis Falls, Gupteshwor Cave, Mountain Museum.
+  - Day 8: Sarangkot Annapurna sunrise & Phewa Lake boating.
+  - Day 9: Pokhara to hilltop town of Bandipur.
+  - Day 10: Bandipur return drive to Kathmandu.
+  - Day 11: Kathmandu leisure & shopping day, farewell dinner.
+  - Day 12: Departure from Kathmandu Tribhuvan International Airport.
+
+### 3. Upper Mustang Forbidden Kingdom 4x4 Expedition
+- **URL**: https://plus530adventure.com/car-tours/upper-mustang-expedition
+- **Vehicle Type**: Self-drive 4x4 Car Convoy
+- **Duration**: 10 Days / 9 Nights
+- **Difficulty**: Difficult
+- **Base Price**: ₹1,95,000 per person (Double Sharing)
+- **Highlights**:
+  - Overland 4x4 drive into the once-forbidden walled city of Lo Manthang (12,600 ft)
+  - Drive through Kali Gandaki River canyon (world's deepest gorge)
+  - Explore 2,500-year-old cliffside Chhoser Sky Caves & Tibetan border pass (Kora La)
+  - Visit sacred Muktinath temple (12,172 ft) and apple orchards of Marpha
+  - Breathtaking vistas of Annapurna, Dhaulagiri, and Nilgiri peaks
+- **Inclusions**: 9 Nights in luxury mountain lodges & boutique heritage resorts, all meals, Plus530 lead 4x4 support vehicle & expedition leader, medical oxygen, walkie-talkie radio setup, Restricted Area Permit (RAP for Upper Mustang, $500 value) & ACAP permits.
+- **Itinerary Overview**:
+  - Day 1: Arrival in Kathmandu, 4x4 vehicle pickup, briefing & Thamel welcome dinner.
+  - Day 2: Kathmandu to Pokhara lakeside.
+  - Day 3: Pokhara to Tatopani natural hot springs.
+  - Day 4: Tatopani to Jomsom & Kagbeni via Kali Gandaki canyon.
+  - Day 5: Kagbeni to Ghami across Syangboche Pass (12,500 ft).
+  - Day 6: Ghami to historic walled city of Lo Manthang (12,600 ft).
+  - Day 7: Lo Manthang, Chhoser Sky Caves & Kora La Tibet border pass.
+  - Day 8: Lo Manthang to Muktinath temple & Marpha.
+  - Day 9: Marpha descent to Pokhara lakeside celebration dinner.
+  - Day 10: Pokhara return drive to Kathmandu & departure.
+
+### 4. Ladakh High Altitude Expedition
+- **URL**: https://plus530adventure.com/car-tours/ladakh-expedition
+- **Vehicle Type**: Self-drive 4x4 Car Convoy
+- **Duration**: 14 Days / 13 Nights
+- **Difficulty**: Challenging
+- **Base Price**: ₹1,74,300 per person (Double Sharing)
+- **Highlights**:
+  - Cross Khardung La (18,380 ft), Chang La, and drive to Umling La (world's highest motorable pass at 19,024 ft)
+  - Turquoise waters of Pangong Tso Lake and remote Tso Moriri
+  - Nubra Valley sand dunes & double-humped Bactrian camel safari
+  - Historic monasteries of Thiksey, Hemis, and Diskit
+- **Inclusions**: Expert mountain guide, modified 4x4 vehicles, camping & 4-star hotel accommodations, all meals, inner line permits (ILP), emergency medical oxygen & recovery gear.
+- **Itinerary Overview**:
+  - Day 1: Arrival in Leh, rest for acclimatization.
+  - Day 2: Leh local sightseeing: Shanti Stupa, Leh Palace, local market.
+  - Day 3: Leh to Sham Valley: Magnetic Hill, Gurudwara Pathar Sahib, Alchi Monastery.
+  - Day 4: Leh to Nubra Valley over Khardung La (18,380 ft).
+  - Day 5: Nubra Valley: Diskit Monastery & Hunder sand dunes.
+  - Day 6: Nubra to Pangong Tso via Shyok Valley river road.
+  - Day 7: Full day at Pangong Lake, lakeside glamping.
+  - Day 8: Pangong to Leh via Chang La & Hemis Monastery.
+  - Day 9: Leh to remote Tso Moriri Lake.
+  - Day 10: Tso Moriri to Sarchu high plains camp.
+  - Day 11: Sarchu to Jispa in Lahaul Valley.
+  - Day 12: Jispa to Manali across Rohtang Pass / Atal Tunnel.
+  - Day 13: Manali leisure day.
+  - Day 14: Departure from Manali.
+
+### 5. Spiti Valley High Altitude Circuit Expedition
+- **URL**: https://plus530adventure.com/car-tours/spiti-valley-circuit
+- **Vehicle Type**: Self-drive 4x4 Car Convoy
+- **Duration**: 9 Days / 8 Nights
+- **Difficulty**: Challenging
+- **Base Price**: ₹98,500 per person (Double Sharing)
+- **Highlights**:
+  - Cross Chicham Bridge (Asia's highest suspension bridge gorge)
+  - Mail a postcard from Hikkim (world's highest post office at 14,567 ft)
+  - Visit Langza fossil village, Komic monastery, and 1,000-year-old Tabo Monastery
+  - Drive over Kunzum Pass (14,931 ft) to Chandratal Lake ("Moon Lake") glamping
+- **Inclusions**: 8 Nights in 4-star boutique stays & eco-lodges, all breakfasts & dinners, lead 4x4 support vehicle, walkie-talkie sets, emergency oxygen, standby recovery gear, Inner Line Permits.
+- **Itinerary Overview**:
+  - Day 1: Chandigarh assembly, briefing, drive to Narkanda.
+  - Day 2: Narkanda along Sutlej canyon to Sangla & Chitkul (last Indian village).
+  - Day 3: Chitkul to Kalpa with views of Kinnaur Kailash.
+  - Day 4: Kalpa into Spiti Valley: Nako Lake & Tabo Monastery.
+  - Day 5: Tabo to Dhankar cliffside monastery & Kaza.
+  - Day 6: High-altitude village loop: Hikkim, Komic, Langza.
+  - Day 7: Kaza to Key Monastery, Chicham Bridge, Kunzum Pass & Chandratal Lake.
+  - Day 8: Chandratal water crossings to Manali via Atal Tunnel.
+  - Day 9: Manali to Chandigarh return convoy flag-in.
+
+### 6. Sakleshpur & Chikmagalur Western Ghats Luxury Overland
+- **URL**: https://plus530adventure.com/car-tours/sakleshpur-chikmagalur-luxury-overland
+- **Vehicle Type**: Self-drive 4x4 / AWD Car Convoy
+- **Duration**: 3 Days / 2 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹38,500 per person (Double Sharing)
+- **Highlights**:
+  - Private coffee & tea estate off-road 4x4 trail drive
+  - Sunset drive up Mullayanagiri Peak (Karnataka's highest peak at 6,317 ft)
+  - Explore Baba Budangiri mountain ridge & estate waterfalls
+  - Luxury 4-star coffee estate resort stays
+- **Inclusions**: 2 Nights in 4-star luxury resorts, all meals, lead 4x4 support vehicle, spotters, recovery gear, walkie-talkies, trail permits.
+- **Itinerary Overview**:
+  - Day 1: Bangalore departure at 6:00 AM, drive to Sakleshpur resort, afternoon private coffee estate off-road trail, welcome dinner.
+  - Day 2: Ghats ridge drive to Chikmagalur resort, afternoon ascent of Mullayanagiri Peak & Baba Budangiri, stargazing dinner.
+  - Day 3: Coffee estate walk, tea plantation trail, farewell lunch & return drive to Bangalore by 8:00 PM.
+
+### 7. Coastal & Western Ghats Luxury 4x4 Trail
+- **URL**: https://plus530adventure.com/car-tours/coastal-western-ghats-trail
+- **Vehicle Type**: Self-drive 4x4 / AWD Car Convoy
+- **Duration**: 5 Days / 4 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹52,500 per person (Double Sharing)
+- **Highlights**:
+  - Drive rainforest mountain pass ridge roads along Amboli Ghat & Chorla Ghat
+  - Off-road stream crossings & secret waterfall discoveries
+  - Luxury 4-star beachfront resort stays in North and South Goa hinterlands
+- **Inclusions**: 4 Nights in luxury estate lodges & beachfront resorts, all meals & trail lunches, lead 4x4 support vehicle, water crossing spotters, walkie-talkies, trail access permits.
+- **Itinerary Overview**:
+  - Day 1: Bangalore/Mumbai departure to Belgaum foothills resort.
+  - Day 2: Drive up Amboli Ghat, private spice & tea estate 4x4 trails.
+  - Day 3: Chorla Ghat rainforest drive to North Goa beachfront resort.
+  - Day 4: South Goa hinterland forest trails & secret natural pool waterfalls, beach barbecue dinner.
+  - Day 5: Beachfront breakfast & return convoy drive flag-in.
+
+### 8. Rajasthan Royal Desert & Dune Overland Expedition
+- **URL**: https://plus530adventure.com/car-tours/rajasthan-royal-desert-dune
+- **Vehicle Type**: Self-drive 4x4 Car Convoy
+- **Duration**: 7 Days / 6 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹85,000 per person (Double Sharing)
+- **Highlights**:
+  - Private Sam Sand Dunes 4x4 dune bashing & desert trail driving
+  - Stays in 4-star royal heritage havelis & luxury desert glamping camps
+  - Jaipur Pink City, Jodhpur Blue City, Jaisalmer Golden Fort, Bikaner
+- **Inclusions**: 6 Nights in heritage palaces & desert glamping, all meals & fort dinners, lead 4x4 support vehicle, sand recovery traction boards & compressors, walkie-talkies, fort entrance fees.
+- **Itinerary Overview**:
+  - Day 1: Jaipur assembly, briefing, walkie-talkie setup, welcome haveli dinner.
+  - Day 2: Jaipur to Jodhpur via Sambhar Salt Lake highway.
+  - Day 3: Mehrangarh Fort tour, Thar Desert drive to Jaisalmer.
+  - Day 4: Jaisalmer Fort tour, afternoon Sam Sand Dunes 4x4 dune bashing & luxury glamping.
+  - Day 5: Jaisalmer across scrubland to Bikaner, Junagarh Fort.
+  - Day 6: Bikaner to Mandawa (Shekhawati painted havelis), gala dinner.
+  - Day 7: Morning heritage walk, return drive to Jaipur flag-in.
+
+### 9. Northeast India Grand Overland Expedition 2027
+- **URL**: https://plus530adventure.com/car-tours/northeast-expedition-2027
+- **Vehicle Type**: Self-drive 4x4 Car Convoy
+- **Duration**: 28 Days / 27 Nights
+- **Difficulty**: Challenging
+- **Base Price**: ₹2,85,000 per person (Double Sharing)
+- **Highlights**:
+  - 2 Nights in remote Mechuka Valley near Tibet border
+  - 2 Nights in high-altitude Tawang & snow-clad Sela Pass (13,700 ft)
+  - Kaziranga National Park safari (One-Horned Rhino)
+  - Cherrapunji canyons, Nohkalikai waterfalls & Dawki crystal river
+  - Sikkim capital Gangtok & glacial Tsomgo Lake (12,400 ft)
+- **Inclusions**: 27 Nights in 4-star luxury resorts & boutique eco-lodges, all breakfasts & convoy dinners, lead 4x4 support vehicle, recovery equipment, walkie-talkies, Inner Line Permits (ILP) & RAP permits.
+- **Itinerary Overview**:
+  - Days 1-3: Bangalore flag-off & highway transit via Siliguri gateway.
+  - Days 4-6: Shillong, Cherrapunji waterfalls, Dawki crystal river.
+  - Days 7-8: Kaziranga National Park elephant & 4x4 jeep rhino safari.
+  - Days 9-13: Arunachal Pradesh entry, Dirang, Sela Pass (13,700 ft), Tawang Monastery, Bum La border trail.
+  - Days 14-18: Central Arunachal river valleys, Aalo, remote Mechuka Valley off-road trails.
+  - Days 19-21: Pasighat, Bogibeel Bridge over Brahmaputra, Assam tea estates.
+  - Days 22-25: Sikkim ascent to Gangtok, glacial Tsomgo Lake (12,400 ft) & organic cuisine.
+  - Days 26-28: Teesta valley descent, return convoy drive to Bangalore arrival ceremony.
+
+---
+
+## Complete Expedition Catalog (Guided Motorcycle Tours)
+
+### 1. Ladakh Motorcycle Expedition
+- **URL**: https://plus530adventure.com/motorcycle-tours/ladakh-motorcycle-expedition
+- **Vehicle Type**: Motorcycle Tour (Rental Bike Included)
+- **Duration**: 12 Days / 11 Nights
+- **Difficulty**: Challenging
+- **Base Price**: ₹1,35,000 per person (Double Sharing)
+- **Highlights**:
+  - Ride Royal Enfield Himalayan 450 over Khardung La (18,380 ft) & Chang La
+  - Camp under starry skies at Pangong Tso lakeside & remote Tso Moriri
+  - Ride through Nubra Valley sand dunes with full chase vehicle & mechanic support
+- **Inclusions**: Royal Enfield Himalayan 450 bike, fuel, chase support vehicle with mechanic & spare parts, hotel & camping stays, all meals, Inner Line Permits, medical oxygen kit.
+- **Itinerary Overview**:
+  - Day 1: Arrival in Leh, bike handover, gear check & safety briefing.
+  - Day 2: Leh acclimatization ride: Shanti Stupa & Magnetic Hill.
+  - Day 3: Leh to Nubra Valley over Khardung La (18,380 ft).
+  - Day 4: Nubra Valley sand dunes & Panamik hot springs ride.
+  - Day 5: Nubra to Pangong Tso via Shyok Valley river route.
+  - Day 6: Pangong Tso lakeside rest & maintenance day.
+  - Day 7: Pangong to Leh across Chang La & Hemis Monastery.
+  - Day 8: Leh to remote Tso Moriri Lake.
+  - Day 9: Tso Moriri across high plains to Sarchu campsite.
+  - Day 10: Sarchu over Baralacha La & Rohtang Pass into Manali.
+  - Day 11: Manali rest day, bike return & farewell dinner.
+  - Day 12: Departure from Manali.
+
+### 2. Rajasthan Royal Motorcycle Tour
+- **URL**: https://plus530adventure.com/motorcycle-tours/rajasthan-royal-motorcycle-tour
+- **Vehicle Type**: Motorcycle Tour (Rental Bike Included)
+- **Duration**: 8 Days / 7 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹78,000 per person (Double Sharing)
+- **Highlights**:
+  - Ride Royal Enfield Classic 350 through royal fort cities of Jaipur, Jodhpur, Jaisalmer
+  - Desert highway ride across Thar Desert to Sam Sand Dunes
+  - Heritage palace stays, sunset desert ride & luxury glamping under the stars
+- **Inclusions**: Royal Enfield Classic 350 bike, fuel, chase vehicle with mechanic & luggage carrier, heritage hotel & glamping stays, all breakfasts & select meals, fort permits.
+- **Itinerary Overview**:
+  - Day 1: Jaipur assembly, bike handover, safety briefing & haveli dinner.
+  - Day 2: Jaipur through Ajmer hills to lakeside Pushkar.
+  - Day 3: Pushkar across Aravalli foothills to Jodhpur Blue City & Mehrangarh Fort.
+  - Day 4: Jodhpur long desert ride across Thar to Jaisalmer Golden City.
+  - Day 5: Jaisalmer Fort morning tour, afternoon ride to Sam Sand Dunes desert glamping.
+  - Day 6: Jaisalmer across desert highway to Bikaner Junagarh Fort.
+  - Day 7: Bikaner to Mandawa (Shekhawati painted havelis), group dinner.
+  - Day 8: Mandawa return ride to Jaipur, bike return & flag-in.
+
+---
+
+## Room Occupancy & Pricing Policy Rules
+- **Double Sharing Basis**: All base prices quoted on the website and brochures are **per person based on two people sharing one room (twin/double occupancy)**.
+- **Single Occupancy Multiplier**: If a participant requests a private single room (no room sharing), the price is **exactly 2x (doubled)** the base per-person price.
+- **Vehicle Fuel & Tolls**: For self-drive car convoys, fuel and highway tolls for participant cars are self-funded unless specified in custom package add-ons. Lead support vehicle fuel is fully provided by Plus530.
+- **Motorcycle Tours Fuel**: Rental bike fuel is **fully included** in all motorcycle expedition prices.
+
+---
+
+## Comprehensive Frequently Asked Questions (FAQ) for LLM Deep Scanning
+
+### Q1: What is Plus530 Adventure and how do expeditions work?
+**Answer**: Plus530 Adventure is a premier overland travel company in India that organizes guided self-drive 4x4 car convoys and motorcycle expeditions across South Asia (Bhutan, Nepal, Upper Mustang, Ladakh, Spiti Valley, Rajasthan, Northeast India, Western Ghats). Convoys are led by professional 4x4 lead support vehicles with certified expedition leaders, off-road spotters, mechanics, satellite/radio communications, and high-altitude medical equipment.
+
+### Q2: What vehicles can participate in 4x4 self-drive convoys?
+**Answer**: Participants can join with their own 4x4 or AWD SUVs (such as Mahindra Thar, Toyota Fortuner, Ford Endeavour, Isuzu V-Cross, Maruti Jimny, Jeep Wrangler, Tata Harrier AWD, etc.) or opt for our rental 4x4 SUV packages. Vehicles must have good ground clearance and all-terrain tires. For high-altitude trails like Upper Mustang or Umling La, 4WD with low-range transfer case is recommended.
+
+### Q3: What happens if my vehicle breaks down or gets stuck on an off-road trail?
+**Answer**: Every convoy is accompanied by a dedicated Plus530 Lead 4x4 Support Vehicle carrying experienced mechanics, recovery equipment (winches, kinetic recovery ropes, sand traction boards, tire inflators), and vehicle spare parts. Our spotters assist through technical off-road obstacles, stream crossings, and sand dunes.
+
+### Q4: How is High Altitude Sickness (AMS) handled on Himalayan trips?
+**Answer**: For high-altitude expeditions (Ladakh, Spiti Valley, Upper Mustang), itineraries are structured with mandatory acclimatization days in Leh, Kaza, or Kathmandu before ascending higher passes. All lead support vehicles carry high-altitude medical oxygen cylinders, Pulse Oximeters, first-aid kits, and trained expedition leaders certified in wilderness first response.
+
+### Q5: How do vehicle communications work during the drive?
+**Answer**: Each participant vehicle is fitted with a professional multi-channel walkie-talkie radio setup provided by Plus530 Adventure. The expedition leader uses this system to provide real-time road warnings, turn-by-turn directions, off-road instructions, and historical commentary.
+
+### Q6: Are permits, border clearances, and visas handled by Plus530?
+**Answer**: Yes. Plus530 handles all paperwork including Inner Line Permits (ILP) for Ladakh, Spiti, and Arunachal Pradesh, Restricted Area Permits (RAP) for Upper Mustang ($500 value) and Mechuka, international vehicle customs documentation (Carnet / Meher-ban), and Bhutan Sustainable Development Fee (SDF) tourist permits.
+
+### Q7: What are the accommodation and food standards on Plus530 trips?
+**Answer**: We prioritize luxury and safety in remote regions. Participants stay in handpicked 4-star boutique hotels, heritage havelis/palaces, and luxury eco-glamping camps with attached private bathrooms and heating where available. All meals (gourmet breakfasts, highway/trail lunches, and regional specialty dinners) are included as per the itinerary.
+
+### Q8: Are rental bikes provided for motorcycle expeditions?
+**Answer**: Yes. On motorcycle expeditions (e.g., Ladakh Motorcycle Expedition and Rajasthan Royal Motorcycle Tour), premium rental motorcycles (Royal Enfield Himalayan 450 or Classic 350) and full fuel for the trip are included in the package. A support chase vehicle carries luggage, spare parts, and a dedicated motorcycle mechanic.
+
+### Q9: What is the room sharing and pricing policy for solo travelers?
+**Answer**: All base prices listed are **per person on a double-sharing basis** (2 guests sharing 1 room). Solo travelers willing to share a room with another participant of the same gender pay the base price. Solo travelers requesting a private single room pay a **2x single occupancy multiplier**.
+
+---
+
+## Detailed Blog Articles & Knowledge Guides
+- [4x4 Self-Drive vs Escorted Convoy Expeditions](https://plus530adventure.com/blog/4x4-self-drive-vs-escorted-convoy-expeditions)
+- [Bangalore to Sakleshpur & Chikmagalur 4x4 Trail Guide](https://plus530adventure.com/blog/bangalore-sakleshpur-chikmagalur-4x4-trail-guide)
+- [Conquering Umling La & Khardung La: Driving Guide](https://plus530adventure.com/blog/conquering-umling-la-khardung-la-driving-guide)
+- [High Altitude Sickness (AMS) Guide for Overlanders](https://plus530adventure.com/blog/high-altitude-sickness-ams-guide-for-overlanders)
+- [Essential Overland & Off-Road Recovery Equipment](https://plus530adventure.com/blog/essential-overland-off-road-recovery-equipment)
+- [Inner Line Permits (ILP) Guide for Ladakh & Spiti](https://plus530adventure.com/blog/inner-line-permits-ilp-guide-ladakh-spiti)
+- [Self-Driving in Bhutan: Complete Guide](https://plus530adventure.com/blog/self-driving-in-bhutan-complete-guide)
+- [Navigating Nepal by 4x4: Border Crossing Guide](https://plus530adventure.com/blog/navigating-nepal-by-4x4-border-crossing-guide)
+- [Ultimate 4x4 Vehicle Preparation Checklist](https://plus530adventure.com/blog/ultimate-4x4-vehicle-preparation-checklist)

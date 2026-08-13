@@ -1,0 +1,118 @@
+# Plus530 Adventure
+
+> Plus530 Adventure is a premium Himalayan overlanding, self-drive 4x4 expedition, and guided motorcycle tour company running curated convoy trips across Bhutan, Nepal, Upper Mustang, Ladakh, Spiti Valley, Rajasthan, Northeast India, and the Western Ghats.
+
+## About Plus530 Adventure
+Plus530 Adventure specializes in guided self-drive 4x4 overland expeditions, high-altitude mountain passes, motorcycle tours, off-road trails, and luxury remote travel in South Asia. Each expedition includes lead support vehicles, satellite/radio communications, medical gear/oxygen, high-altitude logistics, and boutique 4-star accommodations.
+
+- **Website**: https://plus530adventure.com
+- **Expedition Calendar / Timeline**: https://plus530adventure.com/timeline
+- **Car Expeditions Catalog**: https://plus530adventure.com/car-tours
+- **Motorcycle Tours Catalog**: https://plus530adventure.com/motorcycle-tours
+- **Contact / Booking**: https://plus530adventure.com/contact
+- **WhatsApp Support**: https://chat.whatsapp.com/CloTTI8qWW286dzvlbGAZW
+- **Full LLM Context File**: https://plus530adventure.com/llms-full.txt
+
+---
+
+## Featured 4x4 Car Expeditions
+
+### 1. Bhutan Overland Adventure
+- **URL**: https://plus530adventure.com/car-tours/bhutan-overland
+- **Duration**: 10 Days
+- **Difficulty**: Moderate
+- **Base Price**: ₹1,45,250 per person (Double Sharing)
+- **Highlights**: Tiger's Nest Monastery, Punakha Dzong, Dochula Pass, authentic Bhutanese culture, full 4x4 convoy support.
+
+### 2. Nepal Himalayan Trail
+- **URL**: https://plus530adventure.com/car-tours/nepal-himalayan-trail
+- **Duration**: 12 Days
+- **Difficulty**: Moderate
+- **Base Price**: ₹1,16,200 per person (Double Sharing)
+- **Highlights**: Kathmandu to Pokhara, Annapurna views, Chitwan safari, Phewa Lake, Sarangkot sunrise.
+
+### 3. Upper Mustang Forbidden Kingdom 4x4 Expedition
+- **URL**: https://plus530adventure.com/car-tours/upper-mustang-expedition
+- **Duration**: 10 Days / 9 Nights
+- **Difficulty**: Difficult
+- **Base Price**: ₹1,95,000 per person (Double Sharing)
+- **Highlights**: Walled city of Lo Manthang, Kali Gandaki River canyon, 2,500-year-old Chhoser Sky Caves, Annapurna & Dhaulagiri views.
+
+### 4. Ladakh High Altitude Expedition
+- **URL**: https://plus530adventure.com/car-tours/ladakh-expedition
+- **Duration**: 14 Days
+- **Difficulty**: Challenging
+- **Base Price**: ₹1,74,300 per person (Double Sharing)
+- **Highlights**: Khardung La pass, Umling La (world's highest motorable pass), Pangong Tso Lake, Nubra Valley, Zanskar Valley.
+
+### 5. Spiti Valley High Altitude Circuit Expedition
+- **URL**: https://plus530adventure.com/car-tours/spiti-valley-circuit
+- **Duration**: 9 Days / 8 Nights
+- **Difficulty**: Challenging
+- **Base Price**: ₹98,500 per person (Double Sharing)
+- **Highlights**: Chicham Bridge, Hikkim highest post office, Key Monastery, Chandratal Lake glamping, Kunzum Pass.
+
+### 6. Sakleshpur & Chikmagalur Western Ghats Luxury Overland
+- **URL**: https://plus530adventure.com/car-tours/sakleshpur-chikmagalur-luxury-overland
+- **Duration**: 3 Days / 2 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹38,500 per person (Double Sharing)
+- **Highlights**: Private coffee estate 4x4 trails, luxury resort stay, misty peak drives, waterfalls.
+
+### 7. Coastal & Western Ghats Luxury 4x4 Trail
+- **URL**: https://plus530adventure.com/car-tours/coastal-western-ghats-trail
+- **Duration**: 5 Days / 4 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹52,500 per person (Double Sharing)
+- **Highlights**: Amboli & Chorla Ghat passes, secret waterfall trails, beachfront resort stay.
+
+### 8. Rajasthan Royal Desert & Dune Overland Expedition
+- **URL**: https://plus530adventure.com/car-tours/rajasthan-royal-desert-dune
+- **Duration**: 7 Days / 6 Nights
+- **Difficulty**: Moderate
+- **Base Price**: ₹85,000 per person (Double Sharing)
+- **Highlights**: Sam Sand Dunes 4x4 dune bashing, Jaisalmer heritage fort stays, luxury desert glamping.
+
+### 9. Northeast India Grand Overland Expedition 2027
+- **URL**: https://plus530adventure.com/car-tours/northeast-expedition-2027
+- **Duration**: 28 Days / 27 Nights
+- **Difficulty**: Challenging
+- **Base Price**: ₹2,85,000 per person (Double Sharing)
+- **Highlights**: Meghalaya waterfalls, Kaziranga National Park safari, Arunachal Pradesh, Mechuka Valley, Tawang Monastery, Sikkim.
+
+---
+
+## Featured Motorcycle Expeditions
+
+### 1. Ladakh Motorcycle Expedition
+- **URL**: https://plus530adventure.com/motorcycle-tours/ladakh-motorcycle-expedition
+- **Duration**: 12 Days
+- **Difficulty**: Challenging
+- **Base Price**: ₹1,35,000 per person (Double Sharing)
+- **Highlights**: Khardung La (18,380 ft), Chang La, Pangong Tso, Royal Enfield Himalayan 450 bike included, chase vehicle with mechanic support.
+
+### 2. Rajasthan Royal Motorcycle Tour
+- **URL**: https://plus530adventure.com/motorcycle-tours/rajasthan-royal-motorcycle-tour
+- **Duration**: 8 Days
+- **Difficulty**: Moderate
+- **Base Price**: ₹78,000 per person (Double Sharing)
+- **Highlights**: Jaipur, Jodhpur, Jaisalmer, Thar Desert ride, Sam Sand Dunes glamping, Royal Enfield Classic 350 included, chase vehicle support.
+
+---
+
+## Room Occupancy & Pricing Policy
+All expedition prices listed are **per person on a double-sharing basis** (2 persons sharing 1 room). For **single occupancy (no room sharing)**, the price is **2x (doubled)**.
+
+---
+
+## Key Guides & Articles
+
+- [4x4 Self-Drive vs Escorted Convoy Expeditions](https://plus530adventure.com/blog/4x4-self-drive-vs-escorted-convoy-expeditions)
+- [Bangalore to Sakleshpur & Chikmagalur 4x4 Trail Guide](https://plus530adventure.com/blog/bangalore-sakleshpur-chikmagalur-4x4-trail-guide)
+- [Conquering Umling La & Khardung La: Driving Guide](https://plus530adventure.com/blog/conquering-umling-la-khardung-la-driving-guide)
+- [High Altitude Sickness (AMS) Guide for Overlanders](https://plus530adventure.com/blog/high-altitude-sickness-ams-guide-for-overlanders)
+- [Essential Overland & Off-Road Recovery Equipment](https://plus530adventure.com/blog/essential-overland-off-road-recovery-equipment)
+- [Inner Line Permits (ILP) Guide for Ladakh & Spiti](https://plus530adventure.com/blog/inner-line-permits-ilp-guide-ladakh-spiti)
+- [Self-Driving in Bhutan: Complete Guide](https://plus530adventure.com/blog/self-driving-in-bhutan-complete-guide)
+- [Navigating Nepal by 4x4: Border Crossing Guide](https://plus530adventure.com/blog/navigating-nepal-by-4x4-border-crossing-guide)
+- [Ultimate 4x4 Vehicle Preparation Checklist](https://plus530adventure.com/blog/ultimate-4x4-vehicle-preparation-checklist)
