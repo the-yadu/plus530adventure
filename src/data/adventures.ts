@@ -1,6 +1,9 @@
+export type AdventureType = 'car' | 'motorcycle' | 'hiking';
+
 export interface Adventure {
   id: string;
   slug: string;
+  type: AdventureType;
   title: string;
   description: string;
   longDescription: string;
@@ -21,10 +24,39 @@ export interface Adventure {
   featured?: boolean;
 }
 
+export function getRoutePrefix(type: AdventureType): string {
+  switch (type) {
+    case 'car': return '/car-tours';
+    case 'motorcycle': return '/motorcycle-tours';
+    case 'hiking': return '/hiking';
+  }
+}
+
+export function getAdventureUrl(adventure: Adventure): string {
+  return `${getRoutePrefix(adventure.type)}/${adventure.slug}`;
+}
+
+export function getTypeLabel(type: AdventureType): string {
+  switch (type) {
+    case 'car': return 'Car Convoy';
+    case 'motorcycle': return 'Motorcycle Tour';
+    case 'hiking': return 'Hiking';
+  }
+}
+
+export function getTypeEmoji(type: AdventureType): string {
+  switch (type) {
+    case 'car': return '🚗';
+    case 'motorcycle': return '🏍️';
+    case 'hiking': return '🥾';
+  }
+}
+
 export const adventures: Adventure[] = [
   {
     id: '1',
     slug: 'bhutan-overland',
+    type: 'car',
     title: 'Bhutan Overland Adventure',
     description: 'Experience the magic of the Thunder Dragon Kingdom on this incredible self-drive journey through Bhutan.',
     longDescription: 'Embark on an unforgettable journey through the mystical Kingdom of Bhutan. This overland adventure takes you through pristine valleys, ancient monasteries, and stunning mountain passes. Experience the unique Bhutanese culture, witness the iconic Tiger\'s Nest Monastery, and drive through some of the most scenic landscapes in the Himalayas.',
@@ -113,6 +145,7 @@ export const adventures: Adventure[] = [
   {
     id: '2',
     slug: 'nepal-himalayan-trail',
+    type: 'car',
     title: 'Nepal Himalayan Trail',
     description: 'Drive through the heart of Nepal, from Kathmandu to Pokhara, exploring the majestic Himalayas.',
     longDescription: 'Experience the diverse landscapes of Nepal on this epic overland journey. From the bustling streets of Kathmandu to the serene lakeside of Pokhara, this adventure combines cultural immersion with stunning mountain scenery. Drive through traditional villages, terraced farmlands, and alongside roaring rivers, all while being surrounded by some of the world\'s highest peaks.',
@@ -211,6 +244,7 @@ export const adventures: Adventure[] = [
   {
     id: '3',
     slug: 'ladakh-expedition',
+    type: 'car',
     title: 'Ladakh High Altitude Expedition',
     description: 'Conquer the world\'s highest motorable passes in the stunning Ladakh region of India.',
     longDescription: 'This challenging expedition takes you through the remote and breathtaking landscapes of Ladakh. Drive across some of the world\'s highest motorable passes, visit ancient monasteries perched on mountain cliffs, and experience the unique Indo-Tibetan culture. This is the ultimate high-altitude adventure for experienced overlanders.',
@@ -319,6 +353,7 @@ export const adventures: Adventure[] = [
   {
     id: '4',
     slug: 'sakleshpur-chikmagalur-luxury-overland',
+    type: 'car',
     title: 'Sakleshpur & Chikmagalur Western Ghats Luxury Overland',
     description: 'A 3-Day / 2-Night luxury self-drive convoy through tea estates, misty peaks, and off-road trails of Sakleshpur & Chikmagalur with 4-star resort stays.',
     longDescription: 'Embark on a premium 3-Day / 2-Night Western Ghats overland expedition from Bangalore to Sakleshpur and Chikmagalur (Oct 2 – Oct 4, 2026). Drive your own 4x4 or AWD SUV behind our expert lead support vehicle, exploring private coffee plantations, mountain passes, and waterfalls, while unwinding each evening in handpicked 4-star luxury resorts.',
@@ -369,6 +404,7 @@ export const adventures: Adventure[] = [
   {
     id: '5',
     slug: 'northeast-expedition-2027',
+    type: 'car',
     title: 'Northeast India Grand Overland Expedition 2027',
     description: 'An epic 28-Day luxury self-drive overland expedition across Meghalaya, Kaziranga, Arunachal Pradesh, Mechuka, Tawang & Sikkim.',
     longDescription: 'Get ready for an epic luxury self-drive overland expedition to Northeast India with Plus530 Adventure! Spanning 28 days and 27 nights, this cross-country journey takes you from Bangalore through the lush hills of Meghalaya, wildlife safaris in Kaziranga, remote valleys of Mechuka, high-altitude passes of Tawang in Arunachal Pradesh, and the serene peaks of Sikkim. Accompanied by our lead 4x4 support vehicle, expert expedition leaders, walkie-talkie communication, and handpicked 4-star boutique stays.',
@@ -437,6 +473,7 @@ export const adventures: Adventure[] = [
   {
     id: '6',
     slug: 'spiti-valley-circuit',
+    type: 'car',
     title: 'Spiti Valley High Altitude Circuit Expedition',
     description: 'Drive through the Middle Land: cross Chicham Bridge, visit the world\'s highest post office at Hikkim, and camp near Chandratal Lake.',
     longDescription: 'Conquer the rugged and remote terrains of Spiti Valley on this 9-Day / 8-Night high-altitude self-drive overland expedition. Journey across dramatic river gorges, ancient 1,000-year-old monasteries, high mountain passes like Kunzum Pass (14,931 ft), and the iconic Chicham Bridge. Drive your 4x4 behind our expert lead support vehicle, equipped with walkie-talkie communication, emergency oxygen, and standby recovery, while unwinding each evening in boutique mountain lodges.',
@@ -484,6 +521,7 @@ export const adventures: Adventure[] = [
   {
     id: '7',
     slug: 'rajasthan-royal-desert-dune',
+    type: 'car',
     title: 'Rajasthan Royal Desert & Dune Overland Expedition',
     description: 'Explore the Thar Desert: 4x4 sand dune bashing in Sam Sand Dunes, heritage fort stays, and luxury desert glamping.',
     longDescription: 'Embark on a grand 7-Day / 6-Night winter overland expedition across Rajasthan. Drive your 4x4 vehicle through historic forts, vibrant bazaars, and into the deep Thar Desert. Experience private sand dune bashing at Sam Sand Dunes, unwind in 4-star heritage havelis and luxury desert glamping camps under starry nights, backed by Plus530 lead 4x4 support, sand recovery gear, and walkie-talkie communication.',
@@ -529,6 +567,7 @@ export const adventures: Adventure[] = [
   {
     id: '8',
     slug: 'coastal-western-ghats-trail',
+    type: 'car',
     title: 'Coastal & Western Ghats Luxury 4x4 Trail',
     description: 'A 5-Day / 4-Night luxury getaway driving through Amboli & Chorla Ghat passes, private estate off-road trails, secret waterfalls, and beachfront resorts.',
     longDescription: 'Experience the ultimate 5-Day / 4-Night Western Ghats to Goa overland journey. Drive your 4x4 or AWD SUV through rainforest mountain ridge roads (Amboli & Chorla Ghats), private tea/spice estate trails, and hidden waterfall stream crossings. Unwind each evening in handpicked 4-star beachfront resorts and luxury hill lodges, backed by Plus530 lead 4x4 support, water crossing spotters, and walkie-talkie communication.',
@@ -572,6 +611,7 @@ export const adventures: Adventure[] = [
   {
     id: '9',
     slug: 'upper-mustang-expedition',
+    type: 'car',
     title: 'Upper Mustang Forbidden Kingdom 4x4 Expedition',
     description: 'An epic 10-Day / 9-Night high-altitude expedition into the once-forbidden walled city of Lo Manthang near the Tibet border.',
     longDescription: 'Embark on an extraordinary 10-Day / 9-Night international 4x4 overland expedition into Nepal’s once-forbidden walled kingdom of Upper Mustang. Drive your 4x4 across Kali Gandaki river canyon (world\'s deepest gorge), ancient red cliff passes, 2,500-year-old Chhoser Sky Caves, and the historic walled capital of Lo Manthang (12,600 ft). Accompanied by Plus530 lead 4x4 support, high-altitude medical oxygen, Restricted Area Permits (RAP), and luxury mountain lodges.',
@@ -615,6 +655,92 @@ export const adventures: Adventure[] = [
       { day: 8, title: 'Lo Manthang to Muktinath & Marpha', description: 'Return drive via Muktinath sacred temple (12,172 ft) to apple orchard village of Marpha.' },
       { day: 9, title: 'Marpha to Pokhara Return Convoy', description: 'Descend back to Pokhara lakeside. Celebration dinner.' },
       { day: 10, title: 'Pokhara to Kathmandu Departure', description: 'Final highway drive back to Kathmandu for departure.' },
+    ],
+  },
+  {
+    id: '10',
+    slug: 'ladakh-motorcycle-expedition',
+    title: 'Ladakh Motorcycle Expedition',
+    type: 'motorcycle',
+    description: 'Ride through the world\'s highest motorable passes on two wheels across the stunning Ladakh region.',
+    longDescription: 'Experience the raw thrill of riding through Ladakh on a powerful motorcycle. This 12-day expedition takes you across Khardung La, Chang La, and through the mesmerizing Nubra and Pangong landscapes. Ride alongside fellow bikers in a supported convoy with chase vehicle, mechanic, and medical support.',
+    duration: '12 Days',
+    difficulty: 'Challenging',
+    price: '₹1,35,000',
+    image: '/images/adventures/ladakh-card.jpg',
+    backgroundImage: '/images/adventures/ladakh-1.jpg',
+    nextBatchDates: ['01st Sep 2026', '20th Sep 2026'],
+    featured: true,
+    highlights: [
+      'Ride over Khardung La (18,380 ft) and Chang La passes',
+      'Motorcycle convoy with chase vehicle and mechanic support',
+      'Camp under stars at Pangong Tso lakeside',
+      'Ride through Nubra Valley sand dunes',
+      'Experience Tibetan Buddhist culture in ancient monasteries',
+      'Professional riding briefing and safety gear provided',
+    ],
+    included: [
+      'Royal Enfield Himalayan 450 motorcycle (or equivalent)',
+      'Fuel for entire expedition',
+      'Chase vehicle with mechanic and spare parts',
+      'Hotel and camping accommodations',
+      'All meals during the expedition',
+      'Inner line permits and medical oxygen kit',
+    ],
+    itinerary: [
+      { day: 1, title: 'Arrival in Leh & Bike Handover', description: 'Arrive in Leh, rest for acclimatization. Evening bike handover, safety briefing, and gear check.' },
+      { day: 2, title: 'Leh Acclimatization Ride', description: 'Short acclimatization ride to Shanti Stupa and Magnetic Hill. Bike familiarization.' },
+      { day: 3, title: 'Leh to Nubra Valley via Khardung La', description: 'Ride over Khardung La (18,380 ft) into Nubra Valley. Visit Diskit Monastery.' },
+      { day: 4, title: 'Nubra Valley Exploration', description: 'Ride through sand dunes, visit hot springs at Panamik. Chase vehicle support on standby.' },
+      { day: 5, title: 'Nubra to Pangong via Shyok Route', description: 'Epic riding day through Shyok Valley to the stunning Pangong Tso lake.' },
+      { day: 6, title: 'Pangong Lake Rest Day', description: 'Full day at Pangong Lake. Bike maintenance and photography.' },
+      { day: 7, title: 'Pangong to Leh via Chang La', description: 'Return ride crossing Chang La pass. Visit Hemis Monastery en route.' },
+      { day: 8, title: 'Leh to Tso Moriri', description: 'Long ride to the remote Tso Moriri lake through Chumathang.' },
+      { day: 9, title: 'Tso Moriri to Sarchu', description: 'Ride through high-altitude plains to Sarchu campsite.' },
+      { day: 10, title: 'Sarchu to Manali via Rohtang', description: 'Ride through Baralacha La and cross Rohtang Pass into Manali.' },
+      { day: 11, title: 'Manali Rest Day', description: 'Rest day in Manali. Optional activities, bike return, farewell dinner.' },
+      { day: 12, title: 'Departure from Manali', description: 'Transfer to airport or continue onward journey.' },
+    ],
+  },
+  {
+    id: '11',
+    slug: 'rajasthan-royal-motorcycle-tour',
+    title: 'Rajasthan Royal Motorcycle Tour',
+    type: 'motorcycle',
+    description: 'Ride through the royal desert state of Rajasthan — historic forts, vibrant bazaars, and golden sand dunes on two wheels.',
+    longDescription: 'Cruise through Rajasthan on a motorcycle convoy, exploring majestic forts of Jaipur, Jodhpur, and Jaisalmer, and riding across the Thar Desert to Sam Sand Dunes. This 8-day tour combines heritage palace stays with thrilling desert riding, supported by a chase vehicle and experienced ride captain.',
+    duration: '8 Days',
+    difficulty: 'Moderate',
+    price: '₹78,000',
+    image: '/images/adventures/rajasthan-card.jpg',
+    backgroundImage: '/images/adventures/rajasthan-hero.jpg',
+    nextBatchDates: ['01st Dec 2026', '15th Jan 2027'],
+    featured: false,
+    highlights: [
+      'Ride through Jaipur, Jodhpur, and Jaisalmer historic fort cities',
+      'Desert riding to Sam Sand Dunes with chase vehicle support',
+      'Heritage palace and haveli accommodation',
+      'Sunset desert ride and overnight glamping under the stars',
+      'Professional ride captain leading the convoy',
+      'Royal Rajasthani cuisine and cultural experiences',
+    ],
+    included: [
+      'Royal Enfield Classic 350 motorcycle (or equivalent)',
+      'Fuel for entire tour',
+      'Chase vehicle with mechanic and luggage carrier',
+      'Heritage hotel and desert glamping accommodations',
+      'All breakfasts and select meals',
+      'Fort entrance fees and desert safari permits',
+    ],
+    itinerary: [
+      { day: 1, title: 'Jaipur Assembly & Bike Handover', description: 'Arrive in Jaipur, bike handover, safety briefing, and welcome dinner at heritage haveli.' },
+      { day: 2, title: 'Jaipur to Pushkar', description: 'Ride through Ajmer hills to the sacred lakeside town of Pushkar.' },
+      { day: 3, title: 'Pushkar to Jodhpur', description: 'Scenic ride across Aravalli foothills to the Blue City. Evening Mehrangarh Fort visit.' },
+      { day: 4, title: 'Jodhpur to Jaisalmer', description: 'Long desert ride across the Thar to the Golden City of Jaisalmer.' },
+      { day: 5, title: 'Jaisalmer Fort & Sam Sand Dunes Ride', description: 'Morning fort exploration. Afternoon convoy ride to Sam Sand Dunes for desert glamping.' },
+      { day: 6, title: 'Jaisalmer to Bikaner', description: 'Desert highway ride to Bikaner, visit Junagarh Fort.' },
+      { day: 7, title: 'Bikaner to Mandawa (Shekhawati)', description: 'Ride to the painted haveli region of Shekhawati. Farewell group dinner.' },
+      { day: 8, title: 'Mandawa to Jaipur Return', description: 'Final ride back to Jaipur. Bike return and expedition flag-in.' },
     ],
   },
 ];
