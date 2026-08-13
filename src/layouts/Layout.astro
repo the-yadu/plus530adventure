@@ -6,12 +6,17 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const {
   title = "Plus530 Adventure | Himalayan Expeditions & Overland Trips",
-  description = "Join Plus530 Adventure for luxury Himalayan overland expeditions, self-drive 4x4 trips, and high-altitude mountain journeys across Bhutan, Nepal, Ladakh, and Western Ghats."
+  description = "Join Plus530 Adventure for luxury Himalayan overland expeditions, self-drive 4x4 trips, and high-altitude mountain journeys across Bhutan, Nepal, Ladakh, and Western Ghats.",
+  image = "/images/adventures/bhutan-car-convoy.jpg"
 } = Astro.props;
+
+const siteUrl = "https://plus530adventure.com";
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 
 <!DOCTYPE html>
@@ -22,6 +27,43 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url.href} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:site_name" content="Plus530 Adventure" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url.href} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={fullImageUrl} />
+
+    <!-- Organization & TravelAgency JSON-LD Schema for Search & LLMs -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Plus530 Adventure",
+      "url": "https://plus530adventure.com",
+      "logo": "https://plus530adventure.com/logo.png",
+      "description": "Premium Himalayan overlanding and self-drive 4x4 expedition company operating in Bhutan, Nepal, Ladakh, Spiti, Rajasthan, and Western Ghats.",
+      "sameAs": [
+        "https://chat.whatsapp.com/CloTTI8qWW286dzvlbGAZW"
+      ],
+      "areaServed": ["India", "Bhutan", "Nepal"],
+      "knowsAbout": [
+        "Overland Expeditions",
+        "4x4 Self-Drive Convoy",
+        "Himalayan Travel",
+        "High Altitude Off-Roading"
+      ]
+    })} />
 
     {/* Microsoft Clarity Analytics Script */}
     <script type="text/javascript" is:inline>
