@@ -9,11 +9,12 @@ import { Calendar, Clock, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucid
 import { getUpcomingBatchDates } from '../../utils/dates';
 
 export async function getStaticPaths() {
-  return adventures.map((adventure) => ({
+  return adventures.filter(a => a.type === 'car').map((adventure) => ({
     params: { slug: adventure.slug },
     props: { adventure },
   }));
 }
+
 
 const { adventure } = Astro.props;
 const upcomingBatchDates = getUpcomingBatchDates(adventure.nextBatchDates);
