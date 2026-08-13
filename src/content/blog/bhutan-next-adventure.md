@@ -121,4 +121,4 @@ Bhutan offers an adventure unlike any other - a perfect blend of natural beauty,
 
 The country's commitment to preserving its heritage while embracing sustainable development makes it not just a destination, but a glimpse into how the world could be.
 
-Ready to explore the Land of the Thunder Dragon? [Check out our Bhutan Overland Adventure](/adventures/bhutan-overland) or [contact us](/contact) for a custom itinerary.
+Ready to explore the Land of the Thunder Dragon? [Check out our Bhutan Overland Adventure](/car-tours/bhutan-overland) or [contact us](/contact) for a custom itinerary.

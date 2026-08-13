@@ -2,7 +2,7 @@
 import Container from './ui/Container.astro';
 import Card from './ui/Card.astro';
 import Button from './ui/Button.astro';
-import { getFeaturedAdventures } from '../data/adventures';
+import { getFeaturedAdventures, getAdventureUrl } from '../data/adventures';
 import { WHATSAPP_COMMUNITY_URL } from '../data/config';
 import { ArrowRight, Mountain, Users, Shield, Calendar } from '@lucide/astro';
 import { getUpcomingBatchDates } from '../utils/dates';
@@ -21,8 +21,9 @@ const featuredAdventures = getFeaturedAdventures();
       </span>
       <span class="inline-block w-2 h-2 bg-white rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
     </div>
-    <a href="/adventures/bhutan-overland" class="absolute inset-0 z-20" aria-label="View Bhutan adventure"></a>
+    <a href="/car-tours/bhutan-overland" class="absolute inset-0 z-20" aria-label="View Bhutan adventure"></a>
   </div>
+
 
   {/* Hero Section */}
   <section class="relative h-screen flex items-center justify-center overflow-hidden">
@@ -91,7 +92,8 @@ const featuredAdventures = getFeaturedAdventures();
         {featuredAdventures.map((adventure) => {
           const upcoming = getUpcomingBatchDates(adventure.nextBatchDates);
           return (
-            <a href={`/adventures/${adventure.slug}`}>
+            <a href={getAdventureUrl(adventure)}>
+
               <Card hover className="h-full">
                 <div class="relative h-64">
                   <div

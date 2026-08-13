@@ -17,6 +17,7 @@ const searchDataJson = JSON.stringify(
   adventures.map(a => ({
     title: a.title,
     slug: a.slug,
+    type: a.type,
     description: a.description,
     duration: a.duration,
     price: a.price,
@@ -24,6 +25,7 @@ const searchDataJson = JSON.stringify(
     highlights: a.highlights.join(' ')
   }))
 );
+
 ---
 
 <nav class="bg-white shadow-md sticky top-0 z-50">
@@ -173,12 +175,23 @@ const searchDataJson = JSON.stringify(
   interface AdventureItem {
     title: string;
     slug: string;
+    type: string;
     description: string;
     duration: string;
     price: string;
     image: string;
     highlights: string;
   }
+
+  function getRoutePrefixClient(type: string): string {
+    switch (type) {
+      case 'car': return '/car-tours';
+      case 'motorcycle': return '/motorcycle-tours';
+      case 'hiking': return '/hiking';
+      default: return '/car-tours';
+    }
+  }
+
 
   // Parse adventure data from embedded JSON script
   const jsonElement = document.getElementById('search-data-json');
@@ -245,9 +258,10 @@ const searchDataJson = JSON.stringify(
         .map(
           (item) => `
           <a
-            href="/adventures/${item.slug}"
+            href="${getRoutePrefixClient(item.type)}/${item.slug}"
             class="flex items-center space-x-3 p-3 hover:bg-orange-50 transition-colors duration-150 group"
           >
+
             <img
               src="${item.image}"
               alt="${item.title}"

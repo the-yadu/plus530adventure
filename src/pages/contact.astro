@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/ui/Container.astro';
 import { Mail, Phone, MapPin, Send } from '@lucide/astro';
-import { adventures } from '../data/adventures';
+import { adventures, getTypeLabel } from '../data/adventures';
 import { getUpcomingBatchDates } from '../utils/dates';
 ---
+
 
 <Layout title="Contact Us | Plus530 Adventure" description="Get in touch with Plus530 Adventure to book or customize your overland expedition.">
   <div>
@@ -117,9 +118,10 @@ import { getUpcomingBatchDates } from '../utils/dates';
                   <option value="">General Inquiry / Custom Expedition</option>
                   {adventures.map((adv) => (
                     <option value={adv.slug} data-batches={JSON.stringify(getUpcomingBatchDates(adv.nextBatchDates))}>
-                      {adv.title}
+                      [{getTypeLabel(adv.type)}] {adv.title}
                     </option>
                   ))}
+
                 </select>
               </div>
 
