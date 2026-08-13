@@ -4,7 +4,7 @@ import Container from '../../components/ui/Container.astro';
 import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
 import { adventures, getAdventureUrl } from '../../data/adventures';
-import { ArrowRight, Calendar } from '@lucide/astro';
+import { ArrowRight, Calendar, Clock } from '@lucide/astro';
 import { getUpcomingBatchDates } from '../../utils/dates';
 ---
 
@@ -54,6 +54,12 @@ import { getUpcomingBatchDates } from '../../utils/dates';
                         </span>
                       </div>
                     )}
+                    <div class="absolute top-4 right-4">
+                      <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md flex items-center gap-1">
+                        <Clock class="w-3.5 h-3.5" />
+                        <span>{adventure.duration}</span>
+                      </span>
+                    </div>
                     {upcoming.length > 0 && (
                       <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
                         <Calendar class="w-3.5 h-3.5 text-orange-400" />
