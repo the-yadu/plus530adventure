@@ -44,13 +44,6 @@ export function getTypeLabel(type: AdventureType): string {
   }
 }
 
-export function getTypeEmoji(type: AdventureType): string {
-  switch (type) {
-    case 'car': return '🚗';
-    case 'motorcycle': return '🏍️';
-    case 'hiking': return '🥾';
-  }
-}
 
 export const adventures: Adventure[] = [
   {

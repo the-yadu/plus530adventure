@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
-import { adventures, getAdventureUrl, getTypeLabel, getTypeEmoji } from '../../data/adventures';
+import { adventures, getAdventureUrl } from '../../data/adventures';
 import { ArrowRight, Calendar } from '@lucide/astro';
 import { getUpcomingBatchDates } from '../../utils/dates';
 ---
@@ -29,10 +29,10 @@ import { getUpcomingBatchDates } from '../../utils/dates';
             All Adventures
           </button>
           <button data-filter="car" class="filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-white border border-gray-200 text-gray-700 hover:bg-orange-50 hover:text-orange-600 shadow-sm">
-            🚗 Car Convoy
+            Car Convoy
           </button>
           <button data-filter="motorcycle" class="filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-white border border-gray-200 text-gray-700 hover:bg-orange-50 hover:text-orange-600 shadow-sm">
-            🏍️ Motorcycle Tours
+            Motorcycle Tours
           </button>
         </div>
 
@@ -47,19 +47,13 @@ import { getUpcomingBatchDates } from '../../utils/dates';
                       class="absolute inset-0 bg-cover bg-center"
                       style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
                     ></div>
-                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-                      {adventure.duration}
-                    </div>
-                    <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                      {adventure.featured && (
+                    {adventure.featured && (
+                      <div class="absolute top-4 left-4">
                         <span class="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md">
                           Featured
                         </span>
-                      )}
-                      <span class="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-md">
-                        {getTypeEmoji(adventure.type)} {getTypeLabel(adventure.type)}
-                      </span>
-                    </div>
+                      </div>
+                    )}
                     {upcoming.length > 0 && (
                       <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
                         <Calendar class="w-3.5 h-3.5 text-orange-400" />
@@ -67,6 +61,7 @@ import { getUpcomingBatchDates } from '../../utils/dates';
                       </div>
                     )}
                   </div>
+
                 <div class="p-6 flex-1 flex flex-col">
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">{adventure.title}</h3>
                   <p class="text-gray-600 mb-4 flex-1">{adventure.description}</p>
