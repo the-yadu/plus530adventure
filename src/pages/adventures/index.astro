@@ -3,45 +3,63 @@ import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
-import { adventures } from '../../data/adventures';
+import { adventures, getAdventureUrl, getTypeLabel, getTypeEmoji } from '../../data/adventures';
 import { ArrowRight, Calendar } from '@lucide/astro';
 import { getUpcomingBatchDates } from '../../utils/dates';
 ---
 
-<Layout title="All Expeditions | Plus530 Adventure" description="Explore our catalog of self-drive overland expeditions across Bhutan, Nepal, Ladakh, Sakleshpur & Chikmagalur.">
+<Layout title="All Adventures & Expeditions | Plus530 Adventure" description="Explore our catalog of car convoy expeditions and motorcycle tours across Bhutan, Nepal, Ladakh, Spiti, Rajasthan & Western Ghats.">
   <div>
     {/* Header */}
     <section class="bg-gray-900 text-white py-16">
       <Container className="text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Expeditions</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Adventures</h1>
         <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          Explore self-drive 4x4 convoys and luxury overland journeys
+          Explore car convoys, motorcycle tours, and epic overland journeys
         </p>
       </Container>
     </section>
 
-    {/* Catalog Grid */}
+    {/* Catalog Grid with Filters */}
     <section class="py-16 bg-cream-50">
       <Container>
+        {/* Tab Filters */}
+        <div class="flex flex-wrap gap-3 mb-10 justify-center" id="filter-tabs">
+          <button data-filter="all" class="filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-orange-600 text-white shadow-md">
+            All Adventures
+          </button>
+          <button data-filter="car" class="filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-white border border-gray-200 text-gray-700 hover:bg-orange-50 hover:text-orange-600 shadow-sm">
+            🚗 Car Convoy
+          </button>
+          <button data-filter="motorcycle" class="filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-white border border-gray-200 text-gray-700 hover:bg-orange-50 hover:text-orange-600 shadow-sm">
+            🏍️ Motorcycle Tours
+          </button>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {adventures.map((adventure) => {
             const upcoming = getUpcomingBatchDates(adventure.nextBatchDates);
             return (
-              <a href={`/adventures/${adventure.slug}`}>
+              <a href={getAdventureUrl(adventure)} data-type={adventure.type} class="adventure-card">
                 <Card hover className="h-full flex flex-col">
                   <div class="relative h-64">
                     <div
                       class="absolute inset-0 bg-cover bg-center"
                       style={`background-image: url('${adventure.image || adventure.backgroundImage}')`}
                     ></div>
-                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                       {adventure.duration}
                     </div>
-                    {adventure.featured && (
-                      <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Featured
-                      </div>
-                    )}
+                    <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                      {adventure.featured && (
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md">
+                          Featured
+                        </span>
+                      )}
+                      <span class="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                        {getTypeEmoji(adventure.type)} {getTypeLabel(adventure.type)}
+                      </span>
+                    </div>
                     {upcoming.length > 0 && (
                       <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/10 shadow-md">
                         <Calendar class="w-3.5 h-3.5 text-orange-400" />
@@ -74,3 +92,28 @@ import { getUpcomingBatchDates } from '../../utils/dates';
     </section>
   </div>
 </Layout>
+
+<script>
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const adventureCards = document.querySelectorAll('.adventure-card');
+
+  filterTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const filter = tab.getAttribute('data-filter');
+
+      filterTabs.forEach((t) => {
+        t.className = 'filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-white border border-gray-200 text-gray-700 hover:bg-orange-50 hover:text-orange-600 shadow-sm';
+      });
+      tab.className = 'filter-tab px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200 bg-orange-600 text-white shadow-md';
+
+      adventureCards.forEach((card) => {
+        const cardType = card.getAttribute('data-type');
+        if (filter === 'all' || cardType === filter) {
+          (card as HTMLElement).style.display = '';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
