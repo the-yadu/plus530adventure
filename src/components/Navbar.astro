@@ -7,10 +7,12 @@ import { WHATSAPP_COMMUNITY_URL } from '../data/config';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/adventures', label: 'Adventures' },
+  { href: '/timeline', label: 'Timeline' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
+
 
 const currentPath = Astro.url.pathname;
 const searchDataJson = JSON.stringify(
