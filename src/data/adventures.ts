@@ -660,10 +660,13 @@ export const adventures: Adventure[] = [
     duration: '12 Days',
     difficulty: 'Challenging',
     price: '₹1,35,000',
-    image: '/images/adventures/ladakh-card.jpg',
-    backgroundImage: '/images/adventures/ladakh-1.jpg',
+    image: '/images/adventures/ladakh-motorcycle-convoy.jpg',
+    backgroundImage: '/images/adventures/ladakh-motorcycle-convoy.jpg',
     nextBatchDates: ['01st Sep 2026', '20th Sep 2026'],
     featured: true,
+    gallery: [
+      '/images/adventures/ladakh-motorcycle-convoy.jpg',
+    ],
     highlights: [
       'Ride over Khardung La (18,380 ft) and Chang La passes',
       'Motorcycle convoy with chase vehicle and mechanic support',
@@ -705,10 +708,14 @@ export const adventures: Adventure[] = [
     duration: '8 Days',
     difficulty: 'Moderate',
     price: '₹78,000',
-    image: '/images/adventures/rajasthan-card.jpg',
-    backgroundImage: '/images/adventures/rajasthan-hero.jpg',
+    image: '/images/adventures/rajasthan-motorcycle-convoy.jpg',
+    backgroundImage: '/images/adventures/rajasthan-motorcycle-convoy.jpg',
     nextBatchDates: ['01st Dec 2026', '15th Jan 2027'],
     featured: false,
+    gallery: [
+      '/images/adventures/rajasthan-motorcycle-convoy.jpg',
+    ],
+
     highlights: [
       'Ride through Jaipur, Jodhpur, and Jaisalmer historic fort cities',
       'Desert riding to Sam Sand Dunes with chase vehicle support',
