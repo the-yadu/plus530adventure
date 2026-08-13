@@ -148,7 +148,8 @@ export const adventures: Adventure[] = [
     image: '/images/adventures/nepal-car-convoy.jpg',
     backgroundImage: '/images/adventures/nepal-car-convoy.jpg',
     nextBatchDates: ['10th Nov 2026', '01st Dec 2026'],
-    featured: true,
+    featured: false,
+
     gallery: [
       '/images/adventures/nepal-car-convoy.jpg',
       '/images/adventures/nepal-1.jpg',
@@ -466,6 +467,7 @@ export const adventures: Adventure[] = [
   },
   {
     id: '6',
+
     slug: 'spiti-valley-circuit',
     type: 'car',
     title: 'Spiti Valley High Altitude Circuit Expedition',
@@ -477,7 +479,7 @@ export const adventures: Adventure[] = [
     image: '/images/adventures/spiti-car-convoy.jpg',
     backgroundImage: '/images/adventures/spiti-car-convoy.jpg',
     nextBatchDates: ['10th Sep 2026', '05th Oct 2026'],
-    featured: true,
+    featured: false,
     gallery: [
       '/images/adventures/spiti-car-convoy.jpg',
       '/images/adventures/spiti-hero.jpg',
@@ -524,7 +526,7 @@ export const adventures: Adventure[] = [
     image: '/images/adventures/rajasthan-car-convoy.jpg',
     backgroundImage: '/images/adventures/rajasthan-car-convoy.jpg',
     nextBatchDates: ['15th Dec 2026', '10th Jan 2027'],
-    featured: true,
+    featured: false,
     gallery: [
       '/images/adventures/rajasthan-car-convoy.jpg',
       '/images/adventures/rajasthan-hero.jpg',
@@ -569,13 +571,12 @@ export const adventures: Adventure[] = [
     image: '/images/adventures/coastal-car-convoy.jpg',
     backgroundImage: '/images/adventures/coastal-car-convoy.jpg',
     nextBatchDates: ['12th Aug 2026', '25th Sep 2026'],
-    featured: true,
+    featured: false,
     gallery: [
       '/images/adventures/coastal-car-convoy.jpg',
       '/images/adventures/coastal-hero.jpg',
       '/images/adventures/coastal-card.jpg',
     ],
-
     highlights: [
       'Private estate off-road trail driving through monsoon rainforests & tea gardens',
       'Scenic mountain ridge road drive along Amboli Ghat & Chorla Ghat passes',
@@ -613,8 +614,9 @@ export const adventures: Adventure[] = [
     image: '/images/adventures/mustang-card.jpg',
     backgroundImage: '/images/adventures/mustang-hero.jpg',
     nextBatchDates: ['05th Oct 2026', '01st Nov 2026'],
-    featured: true,
+    featured: false,
     gallery: [
+
       '/images/adventures/mustang-hero.jpg',
       '/images/adventures/mustang-card.jpg',
       '/images/adventures/nepal-card.jpg',
