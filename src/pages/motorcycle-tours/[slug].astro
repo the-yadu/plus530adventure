@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Button from '../../components/ui/Button.astro';
+import FAQAccordion from '../../components/ui/FAQAccordion.astro';
 import { adventures } from '../../data/adventures';
 import { WHATSAPP_COMMUNITY_URL } from '../../data/config';
 import { Calendar, Clock, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucide/astro';
@@ -46,6 +47,25 @@ const adventureSchema = {
     "description": item.description
   }))
 };
+
+const motorcycleTourFaqs = [
+  {
+    question: "Which motorcycle models are included in the expedition?",
+    answer: "We provide dual-purpose adventure motorcycles such as the Royal Enfield Himalayan 450 / 411, fully prepped and serviced for high-altitude mountain terrain. Fuel, maintenance, and backup parts are included."
+  },
+  {
+    question: "Is there a chase vehicle and mechanic support provided?",
+    answer: "Yes! Every motorcycle tour is accompanied by a dedicated 4x4 luggage chase vehicle carrying participant luggage, spare parts, tools, extra fuel, medical oxygen, and an expert motorcycle mechanic."
+  },
+  {
+    question: "What riding gear and safety equipment are required?",
+    answer: "All riders must wear an ECE or DOT-certified full-face helmet, armored riding jacket and pants (CE Level 1/2 approved), riding gloves, and sturdy ankle-protecting riding boots. Waterproof rain liners are highly recommended."
+  },
+  {
+    question: "How does single occupancy pricing work for solo riders?",
+    answer: "All motorcycle tour package prices are per person on a double-sharing basis (2 riders sharing 1 room). If you prefer single room occupancy throughout the trip, the price is 2x (doubled)."
+  }
+];
 ---
 
 <Layout title={`${adventure.title} | Plus530 Adventure`} description={adventure.description}>
@@ -210,6 +230,15 @@ const adventureSchema = {
               </div>
             </div>
           ))}
+        </div>
+      </Container>
+    </section>
+
+    {/* FAQ Section */}
+    <section class="py-16 bg-gray-50 border-t border-gray-100">
+      <Container>
+        <div class="max-w-4xl mx-auto">
+          <FAQAccordion faqs={motorcycleTourFaqs} title="Motorcycle Tour FAQs" />
         </div>
       </Container>
     </section>

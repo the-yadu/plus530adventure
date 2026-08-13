@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Button from '../../components/ui/Button.astro';
+import FAQAccordion from '../../components/ui/FAQAccordion.astro';
 import { adventures } from '../../data/adventures';
 import { WHATSAPP_COMMUNITY_URL } from '../../data/config';
 import { Calendar, Clock, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucide/astro';
@@ -45,6 +46,25 @@ const adventureSchema = {
     "description": item.description
   }))
 };
+
+const carConvoyFaqs = [
+  {
+    question: "What vehicle requirements are needed for 4x4 car convoy expeditions?",
+    answer: "We recommend high-ground-clearance 4x4 or AWD vehicles equipped with all-terrain tires. Self-drive participants can join in their own vehicles or reserve an expedition-prepped 4x4 through Plus530 Adventure."
+  },
+  {
+    question: "What support team accompanies the car convoy?",
+    answer: "Every convoy is led by an experienced Lead Expedition Leader, a dedicated sweep vehicle, lead mechanic team with spare parts, radio communication equipment, and a certified medical responder."
+  },
+  {
+    question: "How does single occupancy pricing work for solo drivers/travelers?",
+    answer: "All expedition prices are per person on a double-sharing basis (2 persons sharing 1 room). If you prefer single occupancy (a private room throughout the trip), the price is 2x (doubled)."
+  },
+  {
+    question: "What high altitude medical support and emergency protocols are in place?",
+    answer: "All expedition vehicles carry portable supplemental oxygen cylinders, medical first-aid kits, pulse oximeters, and AMS (Acute Mountain Sickness) emergency response protocols. Crew members are trained in high-altitude emergency care."
+  }
+];
 ---
 
 <Layout title={`${adventure.title} | Plus530 Adventure`} description={adventure.description}>
@@ -209,6 +229,15 @@ const adventureSchema = {
               </div>
             </div>
           ))}
+        </div>
+      </Container>
+    </section>
+
+    {/* FAQ Section */}
+    <section class="py-16 bg-gray-50 border-t border-gray-100">
+      <Container>
+        <div class="max-w-4xl mx-auto">
+          <FAQAccordion faqs={carConvoyFaqs} title="Expedition & Car Convoy FAQs" />
         </div>
       </Container>
     </section>
