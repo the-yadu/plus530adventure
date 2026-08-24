@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "wrangler pages deploy dist --project-name plus530adventure"
+    "deploy": "wrangler pages deploy dist --project-name plus530adventure",
+    "verify": "node scripts/verify-agentic.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^11.0.0",

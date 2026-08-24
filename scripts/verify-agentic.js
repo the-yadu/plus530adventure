@@ -33,11 +33,11 @@ const textContent = html.replace(/<script[\s\S]*?<\/script>/gi, '')
                         .replace(/\s+/g, ' ')
                         .trim();
 
-console.log(`PASS: Raw static HTML text length: ${textContent.length} characters.`);
 if (textContent.length < 500) {
   console.error('FAIL: Static HTML text length is under 500 characters.');
   process.exit(1);
 }
+console.log(`PASS: Raw static HTML text length: ${textContent.length} characters.`);
 
 // 4. Verify JSON-LD schemas
 if (!html.includes('"WebSite"') || !html.includes('"Organization"')) {
