@@ -48,11 +48,23 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
     <!-- Organization & TravelAgency JSON-LD Schema for Search & LLMs -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "TravelAgency",
+      "@type": ["Organization", "TravelAgency"],
       "name": "Plus530 Adventure",
       "url": "https://plus530adventure.com",
       "logo": "https://plus530adventure.com/logo.png",
-      "description": "Premium Himalayan overlanding and self-drive 4x4 expedition company operating in Bhutan, Nepal, Ladakh, Spiti, Rajasthan, and Western Ghats.",
+      "description": "Premium Himalayan overlanding, self-drive 4x4 expedition, and guided motorcycle tour company running curated convoy trips across Bhutan, Nepal, Upper Mustang, Ladakh, Spiti Valley, Rajasthan, and Western Ghats.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "addressRegion": "Karnataka",
+        "addressLocality": "Bengaluru"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "expeditions@plus530adventure.com",
+        "url": "https://plus530adventure.com/contact"
+      },
       "sameAs": [
         "https://chat.whatsapp.com/CloTTI8qWW286dzvlbGAZW"
       ],
@@ -61,7 +73,8 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
         "Overland Expeditions",
         "4x4 Self-Drive Convoy",
         "Himalayan Travel",
-        "High Altitude Off-Roading"
+        "High Altitude Off-Roading",
+        "Motorcycle Tours"
       ]
     })} />
 
