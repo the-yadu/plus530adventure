@@ -7,8 +7,8 @@ Plus530 Adventure specializes in guided self-drive 4x4 overland expeditions, hig
 
 - **Website**: https://plus530adventure.com
 - **Expedition Calendar / Timeline**: https://plus530adventure.com/timeline
-- **Car Expeditions Catalog**: https://plus530adventure.com/car-tours
-- **Motorcycle Tours Catalog**: https://plus530adventure.com/motorcycle-tours
+- **Car Expeditions Catalog**: https://plus530adventure.com/adventures
+- **Motorcycle Tours Catalog**: https://plus530adventure.com/adventures
 - **Contact / Booking**: https://plus530adventure.com/contact
 - **WhatsApp Support**: https://chat.whatsapp.com/CloTTI8qWW286dzvlbGAZW
 - **Full LLM Context File**: https://plus530adventure.com/llms-full.txt

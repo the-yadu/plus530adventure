@@ -1,18 +1,25 @@
 interface EventContext {
   request: Request;
-  env: { ASSETS: { fetch: typeof fetch } };
+  env?: { ASSETS?: { fetch: typeof fetch } };
   next: () => Promise<Response>;
 }
 
 export async function onRequest(context: EventContext): Promise<Response> {
   const request = context.request;
   const accept = request.headers.get('accept') || '';
+  const url = new URL(request.url);
 
-  // Check if client explicitly requests Markdown
-  if (accept.includes('text/markdown')) {
+  // Only negotiate for GET requests on HTML/root pages, excluding existing static files like /llms-full.txt, .xml, .txt
+  if (
+    request.method === 'GET' &&
+    accept.includes('text/markdown') &&
+    !url.pathname.endsWith('.txt') &&
+    !url.pathname.endsWith('.xml')
+  ) {
     const llmsUrl = new URL('/llms.txt', request.url);
-    const assetFetcher = context.env?.ASSETS?.fetch ? context.env.ASSETS : { fetch };
-    const llmsResponse = await assetFetcher.fetch(llmsUrl.toString());
+    const llmsResponse = context.env?.ASSETS?.fetch
+      ? await context.env.ASSETS.fetch(llmsUrl.toString())
+      : await fetch(llmsUrl.toString());
     
     if (llmsResponse.ok) {
       const body = await llmsResponse.text();
