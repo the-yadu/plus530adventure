@@ -1,5 +1,6 @@
 interface EventContext {
   request: Request;
+  env: { ASSETS: { fetch: typeof fetch } };
   next: () => Promise<Response>;
 }
 
@@ -10,7 +11,8 @@ export async function onRequest(context: EventContext): Promise<Response> {
   // Check if client explicitly requests Markdown
   if (accept.includes('text/markdown')) {
     const llmsUrl = new URL('/llms.txt', request.url);
-    const llmsResponse = await fetch(llmsUrl.toString());
+    const assetFetcher = context.env?.ASSETS?.fetch ? context.env.ASSETS : { fetch };
+    const llmsResponse = await assetFetcher.fetch(llmsUrl.toString());
     
     if (llmsResponse.ok) {
       const body = await llmsResponse.text();
@@ -26,6 +28,7 @@ export async function onRequest(context: EventContext): Promise<Response> {
   }
 
   const response = await context.next();
-  response.headers.set('Vary', 'Accept, Accept-Encoding');
-  return response;
+  const newResponse = new Response(response.body, response);
+  newResponse.headers.set('Vary', 'Accept, Accept-Encoding');
+  return newResponse;
 }
