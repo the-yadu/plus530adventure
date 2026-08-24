@@ -2,20 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="404 - Page Not Found | Plus530 Adventure" description="The requested page could not be found. View our sitemap or expedition catalog.">
-  <div class="max-w-4xl mx-auto px-4 py-20 text-center flex-grow flex flex-col items-center justify-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">404 - Page Not Found</h1>
-    <p class="text-slate-300 text-lg mb-8 max-w-lg">The requested path does not exist on Plus530 Adventure.</p>
-    
-    <div class="bg-slate-900/80 p-8 rounded-xl text-left max-w-lg w-full text-slate-200 border border-slate-800 shadow-xl">
-      <h2 class="text-xl font-semibold text-amber-500 mb-4 border-b border-slate-800 pb-2">AI Agent & Resource Links</h2>
-      <ul class="space-y-3 text-base">
-        <li>• <strong class="text-white">Sitemap Index</strong>: <a href="/sitemap-index.xml" class="text-amber-400 hover:underline font-mono text-sm ml-1">/sitemap-index.xml</a></li>
-        <li>• <strong class="text-white">LLM Context File</strong>: <a href="/llms.txt" class="text-amber-400 hover:underline font-mono text-sm ml-1">/llms.txt</a></li>
-        <li>• <strong class="text-white">Car Expeditions</strong>: <a href="/car-tours" class="text-amber-400 hover:underline font-mono text-sm ml-1">/car-tours</a></li>
-        <li>• <strong class="text-white">Motorcycle Tours</strong>: <a href="/motorcycle-tours" class="text-amber-400 hover:underline font-mono text-sm ml-1">/motorcycle-tours</a></li>
-        <li>• <strong class="text-white">Contact & Support</strong>: <a href="/contact" class="text-amber-400 hover:underline font-mono text-sm ml-1">/contact</a></li>
-      </ul>
+<Layout title="404 - Page Not Found | Plus530 Adventure" description="The requested page could not be found. View our sitemap, blog, or expedition catalog.">
+  <section class="bg-slate-950 min-h-[70vh] py-16 px-4 flex items-center justify-center">
+    <div class="max-w-4xl mx-auto text-center w-full">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">404 - Page Not Found</h1>
+      <p class="text-slate-300 text-lg mb-8 max-w-lg mx-auto">The requested path does not exist on Plus530 Adventure.</p>
+      
+      <div class="bg-slate-900 p-8 rounded-xl text-left max-w-lg mx-auto w-full text-slate-200 border border-slate-800 shadow-xl">
+        <h2 class="text-xl font-semibold text-amber-500 mb-4 border-b border-slate-800 pb-2">AI Agent & Resource Links</h2>
+        <ul class="space-y-3 text-base">
+          <li>• <strong class="text-white">Sitemap Index</strong>: <a href="/sitemap-index.xml" class="text-amber-400 hover:underline font-mono text-sm ml-1">/sitemap-index.xml</a></li>
+          <li>• <strong class="text-white">LLM Context File</strong>: <a href="/llms.txt" class="text-amber-400 hover:underline font-mono text-sm ml-1">/llms.txt</a></li>
+          <li>• <strong class="text-white">Expeditions Catalog</strong>: <a href="/adventures" class="text-amber-400 hover:underline font-mono text-sm ml-1">/adventures</a></li>
+          <li>• <strong class="text-white">Overland Blog</strong>: <a href="/blog" class="text-amber-400 hover:underline font-mono text-sm ml-1">/blog</a></li>
+          <li>• <strong class="text-white">Contact & Support</strong>: <a href="/contact" class="text-amber-400 hover:underline font-mono text-sm ml-1">/contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
 </Layout>
