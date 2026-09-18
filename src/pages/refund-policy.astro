@@ -1,38 +1,125 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/ui/Container.astro';
+import { LEGAL_BUSINESS_NAME, SITE_PHONE, SITE_PHONE_RAW, SITE_EMAIL, SITE_ADDRESS, GRIEVANCE_EMAIL } from '../data/config';
 ---
 
-<Layout title="Refund Policy | Plus530 Adventure" description="Cancellation and refund policies for Plus530 Adventure trips and expeditions.">
+<Layout
+  title={`Refund & Cancellation Policy | ${LEGAL_BUSINESS_NAME}`}
+  description={`Cancellation and refund policies for ${LEGAL_BUSINESS_NAME}. Clear details on slot booking deposits, cancellation schedules, and our 5 to 7 working days refund turnaround time.`}
+>
   <div>
+    <!-- Hero Header -->
     <section class="bg-gray-900 text-white py-16">
       <Container className="text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+          Cancellation & Refund Terms
+        </div>
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Refund & Cancellation Policy</h1>
         <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          Clear and transparent terms for booking cancellations and refunds
+          Clear, transparent cancellation terms and verified refund processing timelines for all {LEGAL_BUSINESS_NAME} expeditions.
         </p>
       </Container>
     </section>
 
+    <!-- Content Section -->
     <section class="py-16 bg-white">
       <Container className="max-w-4xl">
-        <div class="prose prose-lg text-gray-800 space-y-6">
-          <h2 class="text-2xl font-bold text-gray-900">1. Booking & Deposits</h2>
-          <p>
-            To confirm your slot on a Plus530 Adventure expedition, a booking deposit is required at the time of registration. The remaining balance must be cleared at least 30 days prior to the departure date.
-          </p>
+        <div class="prose prose-lg text-gray-800 space-y-8 max-w-4xl">
+          <!-- Notice Callout Card -->
+          <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg text-sm text-gray-700 not-prose">
+            <p class="font-semibold text-gray-900 mb-1">Transparent Cancellation & Refund Commitment</p>
+            <p>
+              At <strong>{LEGAL_BUSINESS_NAME}</strong>, we maintain a clear, fair, and transparent cancellation policy. All booking transactions and refund reversals are processed securely via our RBI-authorized payment gateway partner, <strong>Cashfree Payments India Pvt. Ltd.</strong>, in strict compliance with payment aggregator standards, banking guidelines, and consumer protection regulations.
+            </p>
+          </div>
 
-          <h2 class="text-2xl font-bold text-gray-900">2. Cancellation Schedule</h2>
-          <ul class="list-disc pl-6 space-y-2">
-            <li><strong>30+ days prior to departure:</strong> 90% refund of the total trip cost.</li>
-            <li><strong>15–29 days prior to departure:</strong> 50% refund of the total trip cost.</li>
-            <li><strong>Less than 15 days prior to departure:</strong> No refund will be issued due to non-refundable 4-star resort and permit bookings.</li>
-          </ul>
+          <!-- Section 1 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Booking & Payment Deposits</h2>
+            <p>
+              To confirm and secure your slot on any <strong>{LEGAL_BUSINESS_NAME}</strong> expedition—including self-drive 4x4 overland convoys, high-altitude mountain circuits, and escorted motorcycle tours—a slot registration advance deposit is required at the time of reservation.
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Advance Registration Deposit:</strong> An initial advance deposit (as specified on the expedition booking page or custom quotation) must be paid to confirm your vehicle slot or rider entry.</li>
+              <li class="leading-relaxed"><strong>Balance Payment Deadline:</strong> The remaining balance of the total trip cost must be cleared at least <strong>30 calendar days prior to the scheduled departure date</strong>.</li>
+              <li class="leading-relaxed"><strong>Late Balance Clearance:</strong> Failure to clear the outstanding balance by the 30-day deadline may result in automatic cancellation of the reservation, with forfeiture of the advance deposit, allowing waitlisted participants to secure the slot.</li>
+              <li class="leading-relaxed"><strong>Last-Minute Registrations:</strong> For bookings made within 30 days of the expedition departure date, 100% of the total tour fee must be paid at the time of reservation.</li>
+            </ul>
+          </div>
 
-          <h2 class="text-2xl font-bold text-gray-900">3. Event Postponement or Force Majeure</h2>
-          <p>
-            In the event of severe weather, natural disasters, landslide blockades, or government restrictions, Plus530 Adventure reserves the right to adjust routes or reschedule the expedition. In such cases, full trip credit will be issued towards a future expedition.
-          </p>
+          <!-- Section 2 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Cancellation Schedule & Refund Tiers</h2>
+            <p>
+              Due to the intricate advance logistics involved in high-altitude and overland travel—including remote 4-star / boutique hotel reservations, campsite equipment allocation, military Inner Line Permits, mechanical sweep crew dispatch, and lead marshal staging—cancellations are subject to the following tiered schedule:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>30 or More Days Prior to Departure:</strong> 90% refund of the total expedition package cost. (10% retained towards non-refundable administrative processing, slot hold fees, and payment gateway charges).</li>
+              <li class="leading-relaxed"><strong>15 to 29 Days Prior to Departure:</strong> 50% refund of the total expedition package cost. (50% retained towards advance hotel bookings, local logistics staging, permit preparation, and operational commitments).</li>
+              <li class="leading-relaxed"><strong>Less than 15 Days Prior to Departure:</strong> Non-refundable (0% refund). Due to advance hotel lock-ins, vehicle recovery staging, guide allocations, and restricted-area permit filings that cannot be reversed or reclaimed, no refund will be issued.</li>
+            </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Refund Processing Timeline (TAT) & Payment Modes</h2>
+            <p>
+              In accordance with Reserve Bank of India (RBI) payment aggregator guidelines and commercial banking compliance standards, all approved refunds are processed systematically through our authorized payment partner, <strong>Cashfree Payments India Pvt. Ltd.</strong>:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Mandatory Turnaround Time (TAT):</strong> Once a cancellation is formally reviewed and approved by our finance desk, the refund is initiated within 24 to 48 hours and credited back to the customer's account within <strong>5 to 7 working days</strong> (excluding bank holidays and weekends).</li>
+              <li class="leading-relaxed"><strong>Credit Back to Original Payment Source:</strong> All refunds are routed strictly back to the <strong>original payment source</strong> used during checkout—whether that was a Bank Account (Net Banking / NEFT / IMPS), Credit Card, Debit Card, or UPI ID.</li>
+              <li class="leading-relaxed"><strong>Banking Cycles & Card Networks:</strong> The exact date of credit reflection on your statement depends on your issuing bank's clearing cycles, card network settlement rules (Visa, Mastercard, RuPay), or UPI service provider processing times.</li>
+              <li class="leading-relaxed"><strong>Strict Zero Cash Payout Policy:</strong> Under no circumstances will refunds be issued in physical cash, handed over in person, or transferred to third-party or alternate bank accounts not associated with the original transaction. This ensures absolute transparency and compliance with Indian anti-money laundering and financial regulations.</li>
+            </ul>
+          </div>
+
+          <!-- Section 4 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">4. Cancellation Request Procedure</h2>
+            <p>
+              To ensure prompt recording and prevent any dispute regarding eligibility windows, all cancellation requests must follow our verified submission procedure:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Written Email Notice:</strong> The participant must send an official cancellation request from their registered email address to <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:text-orange-700 underline font-medium">{SITE_EMAIL}</a> with the subject line <em>"Cancellation Request - [Booking Reference ID] - [Participant Name]"</em>.</li>
+              <li class="leading-relaxed"><strong>Required Information:</strong> The request must include your full name, registered mobile number, unique Booking ID or Cashfree Payment Reference, expedition name, scheduled travel dates, and the specific reason for cancellation.</li>
+              <li class="leading-relaxed"><strong>Phone / WhatsApp Assistance:</strong> For expedited acknowledgement or assistance, you may notify our support desk via call or WhatsApp at <a href={`tel:${SITE_PHONE_RAW}`} class="text-orange-600 hover:text-orange-700 underline font-medium">{SITE_PHONE}</a>. However, formal cancellation is dated based on the email timestamp received by our system.</li>
+              <li class="leading-relaxed"><strong>Cancellation Effective Date:</strong> The official date of cancellation is determined by the timestamp when the written email request is received on our server, which establishes the applicable refund tier.</li>
+            </ul>
+          </div>
+
+          <!-- Section 5 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">5. Route Adjustments & Force Majeure Policy</h2>
+            <p>
+              Overland expeditions navigate rugged terrains and high-altitude mountain environments that are inherently subject to unpredictable external factors beyond human control:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Force Majeure Events:</strong> Events beyond reasonable operational control include severe weather phenomena (cloudbursts, heavy snowfall, blizzards, flash floods), active landslides, mudslides, bridge washouts, road closures, government or military border permit revocations, pandemics, strikes, or statutory travel advisories.</li>
+              <li class="leading-relaxed"><strong>Route Adjustments for Convoy Safety:</strong> In any situation impacting participant safety, {LEGAL_BUSINESS_NAME} and the Lead Marshal reserve the complete operational right to alter routes, substitute accommodation, halt the convoy, or reschedule travel legs in real time.</li>
+              <li class="leading-relaxed"><strong>Trip Credit Policy for Event Cancellation:</strong> If an entire expedition must be cancelled or postponed prior to commencement due to an unavoidable Force Majeure event, participants will be issued a <strong>100% Trip Credit Voucher</strong>. This credit remains valid for <strong>12 months</strong> from the date of issue and can be applied toward any future scheduled {LEGAL_BUSINESS_NAME} expedition.</li>
+              <li class="leading-relaxed"><strong>Incidental Personal Costs:</strong> The Company is not liable for indirect personal expenses incurred outside the tour package, including personal flight bookings, train tickets, private vehicle shipping, or hotel stays booked independently before or after the expedition.</li>
+            </ul>
+          </div>
+
+          <!-- Section 6 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">6. Refund Support & Grievance Redressal</h2>
+            <p>
+              If you have any questions regarding a pending refund, cancellation status, or transaction clarification, our support desk and grievance officer are available to assist you:
+            </p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-2 not-prose text-gray-700">
+              <p><strong class="text-gray-900">Legal Entity:</strong> {LEGAL_BUSINESS_NAME}</p>
+              <p><strong class="text-gray-900">Phone & WhatsApp:</strong> <a href={`tel:${SITE_PHONE_RAW}`} class="text-orange-600 hover:underline">{SITE_PHONE}</a></p>
+              <p><strong class="text-gray-900">Support & Refund Email:</strong> <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:underline">{SITE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Grievance Redressal:</strong> <a href={`mailto:${GRIEVANCE_EMAIL}`} class="text-orange-600 hover:underline">{GRIEVANCE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Operational Address:</strong> {SITE_ADDRESS}</p>
+              <p class="text-sm text-gray-500 pt-2 border-t border-gray-200 mt-3">
+                All written refund inquiries sent to <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:underline">{SITE_EMAIL}</a> or <a href={`mailto:${GRIEVANCE_EMAIL}`} class="text-orange-600 hover:underline">{GRIEVANCE_EMAIL}</a> are acknowledged within 24 to 48 business hours. Approved refunds are credited back to your original payment method within 5 to 7 working days.
+              </p>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
