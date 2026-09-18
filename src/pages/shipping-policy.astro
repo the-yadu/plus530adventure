@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/ui/Container.astro';
+import { LEGAL_BUSINESS_NAME, SITE_PHONE, SITE_PHONE_RAW, SITE_EMAIL, SITE_ADDRESS, GRIEVANCE_EMAIL } from '../data/config';
+---
+
+<Layout
+  title={`Shipping & Delivery Policy | ${LEGAL_BUSINESS_NAME}`}
+  description={`Shipping and digital service delivery policy for ${LEGAL_BUSINESS_NAME}. Details on digital booking vouchers, tax invoice timelines, permit clearances, and expedition dossiers.`}
+>
+  <div>
+    <!-- Hero Header -->
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+          Fulfillment & Booking Policy
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Shipping & Delivery Policy</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Digital fulfillment and confirmation timelines for overland expeditions, 4x4 convoys, and guided motorcycle tours with {LEGAL_BUSINESS_NAME}.
+        </p>
+      </Container>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <Container className="max-w-4xl">
+        <div class="prose prose-lg text-gray-800 space-y-8 max-w-4xl">
+          <!-- Notice Callout Card -->
+          <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg text-sm text-gray-700 not-prose">
+            <p class="font-semibold text-gray-900 mb-1">Electronic Delivery Notice</p>
+            <p>
+              <strong>{LEGAL_BUSINESS_NAME}</strong> provides experiential adventure travel, self-drive 4x4 overland convoys, and guided motorcycle tours. We do not sell or ship physical goods via postal mail or courier. All booking confirmations, travel vouchers, tax invoices, and expedition operational dossiers are fulfilled <strong>100% digitally</strong> via email and WhatsApp.
+            </p>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Service Nature & Scope</h2>
+            <p>
+              <strong>{LEGAL_BUSINESS_NAME}</strong> specializes in curating and operating guided self-drive 4x4 overland expeditions, high-altitude mountain circuits, and escorted motorcycle tours across India and neighboring Himalayan frontiers (including Ladakh, Spiti Valley, Western Ghats, Rajasthan, Bhutan, and Nepal).
+            </p>
+            <p>
+              Our offerings represent experiential services that encompass trail scouting, professional convoy marshaling, emergency vehicle recovery, wilderness first-aid coordination, curated hotel and boutique campsite stays, high-altitude logistics, and regulatory permit clearances.
+            </p>
+            <p>
+              Because our services are experiential and event-based, we do not warehouse, package, or dispatch tangible merchandise, physical parcels, or physical products.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Electronic / Digital Fulfillment Notice</h2>
+            <p>
+              In accordance with commercial compliance standards and payment gateway regulations, we explicitly affirm that:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>No Physical Dispatch:</strong> No physical goods, parcel consignments, or printed materials are shipped via postal mail, freight carriers, or courier services (e.g., Blue Dart, India Post, FedEx, or Delhivery).</li>
+              <li class="leading-relaxed"><strong>100% Digital Delivery:</strong> All deliverables associated with your booking—including payment transaction receipts, booking vouchers, GST tax invoices, expedition preparation packs, and convoy dossiers—are transmitted electronically to the primary email address and WhatsApp number provided during reservation.</li>
+              <li class="leading-relaxed"><strong>Legally Binding Digital Confirmations:</strong> Digital booking vouchers and tax invoices issued by {LEGAL_BUSINESS_NAME} carry valid electronic verification codes and are recognized as official proof of reservation across all partner accommodations, basecamps, and checkpoints.</li>
+            </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Delivery Timelines & Mode</h2>
+            <p>
+              We maintain rigorous fulfillment schedules to ensure that every participant receives necessary documentation promptly after completing payment:
+            </p>
+            <div class="space-y-4">
+              <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">Stage 1: Immediate (0–30 Minutes) — Payment Receipt & Transaction Confirmation</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  Upon successful payment completion via our RBI-compliant payment gateway partner, <strong>Cashfree Payments India Pvt. Ltd.</strong>, an automated digital payment confirmation and transaction receipt is generated and emailed to your registered address instantly. This notification includes your unique Transaction ID, expedition name, date, and payment amount.
+                </p>
+              </div>
+
+              <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">Stage 2: Within 24 to 48 Business Hours — Official Booking Confirmation Voucher & Tax Invoice</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  Our operations team reviews your slot reservation, assigns convoy logistics, and issues your formal <strong>Expedition Booking Confirmation Voucher</strong> along with a GST-compliant Tax Invoice and comprehensive <strong>Expedition Preparation Checklist</strong> via email and WhatsApp. This document confirms your secured slot, accommodation tier, convoy vehicle allocation, and payment ledger.
+                </p>
+              </div>
+
+              <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">Stage 3: 7 Days Prior to Departure — Final Expedition Operational Dossier</h3>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  One week prior to expedition start, participants receive the comprehensive <strong>Final Expedition Operational Dossier</strong> delivered digitally. This packet contains critical operational intel:
+                </p>
+                <ul class="list-disc pl-6 space-y-1 mt-2 text-sm text-gray-700">
+                  <li class="leading-relaxed">Convoy two-way VHF/UHF radio communication frequencies and convoy protocol guides.</li>
+                  <li class="leading-relaxed">Emergency medical protocols, high-altitude acclimatization schedules, and oxygen support procedures.</li>
+                  <li class="leading-relaxed">Detailed GPX/KML trail coordinates, daily route waypoints, and fuel stop markers.</li>
+                  <li class="leading-relaxed">Basecamp and hotel stay vouchers with check-in coordinates and local property contacts.</li>
+                  <li class="leading-relaxed">Lead Marshal, Assistant Marshal, and Mechanical Sweep Crew names and 24/7 direct contact credentials.</li>
+                  <li class="leading-relaxed">Invitation link to join the secure WhatsApp Expedition Briefing Group with fellow convoy drivers and riders.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">4. Digital Permit & Documentation Submission</h2>
+            <p>
+              High-altitude overland journeys and frontier trails traverse restricted border zones and ecologically sensitive sectors that mandate statutory permits:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Required Documents:</strong> Participants must provide digital scans of valid government identification (Aadhaar Card, Voter ID, or Passport), valid Driving License (LMV/MCWG), vehicle Registration Certificate (RC), comprehensive vehicle insurance, and valid PUC certificate. For cross-border routes (Bhutan and Nepal), valid Passport copies and vehicle Carnet documents are required.</li>
+              <li class="leading-relaxed"><strong>Submission Window:</strong> All participant and vehicle documentation must be submitted via our secure portal or email at least <strong>15 to 21 business days prior to the departure date</strong>. For bookings confirmed within 30 days of departure, documentation must be submitted within 48 hours of booking.</li>
+              <li class="leading-relaxed"><strong>Permit Clearance & Delivery:</strong> Inner Line Permits (ILP), Protected Area Permits (PAP), and local environmental passes (e.g., Leh Administration, Nubra/Pangong/Hanle, Spiti Valley, Rohtang/Atal Tunnel clearances) are processed directly with relevant district administration offices. Soft copies of approved permits are shared via email and WhatsApp prior to departure, while original hard-copy permits are handed over by the Lead Marshal at the mandatory pre-expedition briefing.</li>
+            </ul>
+          </div>
+
+          <!-- Section 5 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">5. Non-Receipt of Vouchers & Escalation</h2>
+            <p>
+              In rare instances where technical delivery filters or typographical errors delay electronic transmission, please follow these resolution steps:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Step 1 — Verify Spam / Junk Folders:</strong> Check your email client's spam, junk, updates, or promotions folders for messages originating from <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:underline font-medium">{SITE_EMAIL}</a>.</li>
+              <li class="leading-relaxed"><strong>Step 2 — Verify Contact Details:</strong> Confirm that the email address and mobile number supplied during the Cashfree checkout were accurate.</li>
+              <li class="leading-relaxed"><strong>Step 3 — Immediate Helpdesk Escalation:</strong> If your booking voucher or invoice is not delivered within <strong>48 business hours</strong> of successful payment, reach out immediately to our fulfillment team via WhatsApp/Phone at <a href={`tel:${SITE_PHONE_RAW}`} class="text-orange-600 hover:underline font-medium">{SITE_PHONE}</a> or email <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:underline font-medium">{SITE_EMAIL}</a> with your Cashfree payment transaction reference.</li>
+              <li class="leading-relaxed"><strong>Turnaround Guarantee:</strong> Our dedicated logistics desk investigates all voucher escalations immediately and re-issues missing booking vouchers within <strong>4 to 6 business hours</strong>.</li>
+            </ul>
+          </div>
+
+          <!-- Section 6 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">6. Customer Support & Delivery Helpdesk</h2>
+            <p>
+              For inquiries regarding booking fulfillment, voucher delivery, invoice corrections, or permit documentation, please contact our dedicated support desk:
+            </p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-2 not-prose text-gray-700">
+              <p><strong class="text-gray-900">Legal Entity:</strong> {LEGAL_BUSINESS_NAME}</p>
+              <p><strong class="text-gray-900">Phone & WhatsApp:</strong> <a href={`tel:${SITE_PHONE_RAW}`} class="text-orange-600 hover:underline">{SITE_PHONE}</a></p>
+              <p><strong class="text-gray-900">Support & Fulfillment Email:</strong> <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:underline">{SITE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Grievance Redressal:</strong> <a href={`mailto:${GRIEVANCE_EMAIL}`} class="text-orange-600 hover:underline">{GRIEVANCE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Operational Address:</strong> {SITE_ADDRESS}</p>
+              <p class="text-sm text-gray-500 pt-2 border-t border-gray-200 mt-3">
+                Digital fulfillment inquiries are monitored 7 days a week. For urgent convoy assistance or immediate voucher verification, please connect with us via phone or WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>
