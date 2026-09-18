@@ -2,6 +2,7 @@
 import '../styles/globals.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { SITE_EMAIL, SITE_PHONE } from '../data/config';
 
 interface Props {
   title?: string;
@@ -83,7 +84,8 @@ const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "expeditions@plus530adventure.com",
+        "email": SITE_EMAIL,
+        "telephone": SITE_PHONE,
         "url": "https://plus530adventure.com/contact"
       },
       "sameAs": [

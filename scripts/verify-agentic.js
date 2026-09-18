@@ -48,15 +48,15 @@ console.log('PASS: WebSite and Organization JSON-LD schemas verified.');
 
 // 5. Verify Cashfree compliance pages
 const compliancePages = [
-  'dist/terms-and-conditions/index.html',
-  'dist/privacy-policy/index.html',
-  'dist/shipping-policy/index.html',
-  'dist/refund-policy/index.html',
-  'dist/contact/index.html',
+  { path: 'dist/terms-and-conditions/index.html', requiredPhrases: ['Bangalore, Karnataka', 'Cashfree'] },
+  { path: 'dist/privacy-policy/index.html', requiredPhrases: ['Cashfree Payments India Pvt. Ltd.', 'Zero-Card-Storage'] },
+  { path: 'dist/shipping-policy/index.html', requiredPhrases: ['24 to 48', 'expedition'] },
+  { path: 'dist/refund-policy/index.html', requiredPhrases: ['5 to 7 working days', 'original payment source'] },
+  { path: 'dist/contact/index.html', requiredPhrases: ['+91 93532 10349', 'Bangalore, Karnataka, India'] },
 ];
 
 console.log('\nVerifying Cashfree compliance pages:');
-for (const relPath of compliancePages) {
+for (const { path: relPath, requiredPhrases } of compliancePages) {
   const filePath = path.resolve(relPath);
   if (!fs.existsSync(filePath)) {
     console.error(`FAIL: Compliance page does not exist: ${relPath}`);
@@ -86,7 +86,15 @@ for (const relPath of compliancePages) {
     process.exit(1);
   }
 
-  console.log(`PASS: ${relPath} (<h1>: "${h1Title}", text: ${pageText.length} chars)`);
+  // Verify semantic phrases
+  for (const phrase of requiredPhrases) {
+    if (!pageHtml.includes(phrase)) {
+      console.error(`FAIL: Required compliance phrase "${phrase}" missing from ${relPath}`);
+      process.exit(1);
+    }
+  }
+
+  console.log(`PASS: ${relPath} (<h1>: "${h1Title}", text: ${pageText.length} chars, verified compliance clauses)`);
 }
 
 console.log('\nAll Agentic Verification Checks Passed Successfully!');
