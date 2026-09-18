@@ -4,6 +4,7 @@ import Container from '../components/ui/Container.astro';
 import { Mail, Phone, MapPin, Send } from '@lucide/astro';
 import { adventures, getTypeLabel } from '../data/adventures';
 import { getUpcomingBatchDates } from '../utils/dates';
+import { SITE_PHONE, SITE_PHONE_RAW, SITE_EMAIL, SITE_ADDRESS, LEGAL_BUSINESS_NAME } from '../data/config';
 ---
 
 
@@ -37,7 +38,7 @@ import { getUpcomingBatchDates } from '../utils/dates';
                 </div>
                 <div>
                   <h3 class="font-bold text-gray-900">Address</h3>
-                  <p class="text-gray-600">Bangalore, Karnataka, India</p>
+                  <p class="text-gray-600">{SITE_ADDRESS}</p>
                 </div>
               </div>
 
@@ -47,7 +48,7 @@ import { getUpcomingBatchDates } from '../utils/dates';
                 </div>
                 <div>
                   <h3 class="font-bold text-gray-900">Phone</h3>
-                  <p class="text-gray-600">+91 98765 43210</p>
+                  <p><a href={`tel:${SITE_PHONE_RAW}`} class="text-gray-600 hover:text-orange-600 transition-colors">{SITE_PHONE}</a></p>
                 </div>
               </div>
 
@@ -57,7 +58,7 @@ import { getUpcomingBatchDates } from '../utils/dates';
                 </div>
                 <div>
                   <h3 class="font-bold text-gray-900">Email</h3>
-                  <p class="text-gray-600">info@plus530adventure.com</p>
+                  <p><a href={`mailto:${SITE_EMAIL}`} class="text-gray-600 hover:text-orange-600 transition-colors">{SITE_EMAIL}</a></p>
                 </div>
               </div>
             </div>
@@ -104,7 +105,7 @@ import { getUpcomingBatchDates } from '../utils/dates';
                   name="phone"
                   required
                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 93532 10349"
                 />
               </div>
 

@@ -1,7 +1,7 @@
 ---
 import Container from './ui/Container.astro';
 import { Mountain, Mail, Phone, MapPin } from '@lucide/astro';
-import { WHATSAPP_COMMUNITY_URL } from '../data/config';
+import { WHATSAPP_COMMUNITY_URL, SITE_PHONE, SITE_PHONE_RAW, SITE_EMAIL, SITE_ADDRESS, LEGAL_BUSINESS_NAME } from '../data/config';
 ---
 
 <footer class="bg-gray-900 text-white pt-16 pb-8">
@@ -102,15 +102,15 @@ import { WHATSAPP_COMMUNITY_URL } from '../data/config';
         <ul class="space-y-3 text-sm">
           <li class="flex items-start space-x-3 text-gray-400">
             <MapPin class="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
-            <span>Bangalore, Karnataka, India</span>
+            <span>{SITE_ADDRESS}</span>
           </li>
           <li class="flex items-center space-x-3 text-gray-400">
             <Phone class="h-5 w-5 text-orange-500 flex-shrink-0" />
-            <span>+91 98765 43210</span>
+            <a href={`tel:${SITE_PHONE_RAW}`} class="hover:text-white transition-colors">{SITE_PHONE}</a>
           </li>
           <li class="flex items-center space-x-3 text-gray-400">
             <Mail class="h-5 w-5 text-orange-500 flex-shrink-0" />
-            <span>info@plus530adventure.com</span>
+            <a href={`mailto:${SITE_EMAIL}`} class="hover:text-white transition-colors">{SITE_EMAIL}</a>
           </li>
         </ul>
       </div>
@@ -118,11 +118,12 @@ import { WHATSAPP_COMMUNITY_URL } from '../data/config';
 
     {/* Bottom Bar */}
     <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-      <p>&copy; {new Date().getFullYear()} Plus530 Adventure. All rights reserved.</p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
+      <p>&copy; {new Date().getFullYear()} {LEGAL_BUSINESS_NAME}. All rights reserved.</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 mt-4 md:mt-0">
         <a href="/refund-policy" class="hover:text-white transition-colors">Refund Policy</a>
-        <a href="/contact" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="/contact" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/terms-and-conditions" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="/shipping-policy" class="hover:text-white transition-colors">Shipping & Delivery</a>
       </div>
     </div>
   </Container>
