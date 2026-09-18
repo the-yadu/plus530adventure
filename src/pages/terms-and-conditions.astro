@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/ui/Container.astro';
+import { LEGAL_BUSINESS_NAME, SITE_PHONE, SITE_EMAIL, SITE_ADDRESS } from '../data/config';
+---
+
+<Layout
+  title={`Terms and Conditions | ${LEGAL_BUSINESS_NAME}`}
+  description={`Terms and conditions for participating in expeditions, self-drive convoys, and booking services with ${LEGAL_BUSINESS_NAME}.`}
+>
+  <div>
+    <!-- Hero Header -->
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+          Legal Agreement & Expedition Guidelines
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Terms & Conditions</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Please read these terms and conditions carefully before booking an expedition or participating in a convoy with {LEGAL_BUSINESS_NAME}.
+        </p>
+      </Container>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <Container className="max-w-4xl">
+        <div class="prose prose-lg text-gray-800 space-y-8 max-w-4xl">
+          <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg text-sm text-gray-700 not-prose">
+            <p class="font-semibold text-gray-900 mb-1">Important Notice</p>
+            <p>
+              By accessing our website, reserving an expedition slot, paying a booking deposit, or participating in any self-drive convoy organized by <strong>{LEGAL_BUSINESS_NAME}</strong>, you agree to be bound by these Terms and Conditions.
+            </p>
+          </div>
+
+          <!-- Section 1 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Introduction & Acceptance of Terms</h2>
+            <p>
+              These Terms and Conditions ("Terms") govern the relationship between you (the "Participant", "Guest", "Driver", or "User") and <strong>{LEGAL_BUSINESS_NAME}</strong> ("Company", "we", "us", or "our"), operating overland expeditions, self-drive 4x4 convoys, guided mountain journeys, and related travel services across India and neighboring Himalayan regions (including Ladakh, Spiti Valley, Western Ghats, Rajasthan, Bhutan, and Nepal).
+            </p>
+            <p>
+              By browsing our website (<a href="https://plus530adventure.com" class="text-orange-600 hover:text-orange-700 underline font-medium">plus530adventure.com</a>), submitting an inquiry, paying a booking deposit, or participating in an expedition, you confirm that you have read, understood, and unconditionally accepted all provisions set forth herein. If you do not agree to these Terms, you must not proceed with booking or participation.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Eligibility & Expedition Participation Requirements</h2>
+            <p>
+              Overland expeditions traverse remote, wilderness, and high-altitude mountain environments. To ensure safety across the convoy, all participants must satisfy the following eligibility criteria:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Driver Age & Licensing:</strong> All drivers participating in self-drive convoys must be at least 18 years of age and hold a valid, unexpired permanent Driving License issued by the appropriate licensing authority in India (or an International Driving Permit / recognized foreign license for international guests where permitted by law).</li>
+              <li><strong>Passenger Criteria:</strong> Passengers of all ages are welcome on designated family-friendly expeditions; however, minors under 18 years of age must be accompanied by a parent or legal guardian who assumes full legal responsibility.</li>
+              <li><strong>Health & High-Altitude Declaration:</strong> High-altitude overland expeditions (such as Ladakh, Spiti, and passes exceeding 10,000–19,000 feet like Khardung La and Umling La) involve severe physical demands, cold temperatures, and thin air. Participants must disclose any pre-existing medical conditions, including cardiovascular disorders, respiratory conditions, asthma, hypertension, or pregnancy. Participants are responsible for consulting a physician regarding their fitness for high-altitude travel and carrying adequate personal prescription medications.</li>
+              <li><strong>Travel & Medical Insurance:</strong> We strongly recommend that all participants procure comprehensive medical and travel insurance covering accidental injury, hospitalization, high-altitude medical evacuation, and motor travel prior to departure.</li>
+            </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Convoy Protocols, Safety & Trail Discipline</h2>
+            <p>
+              The safety of every guest, vehicle, and crew member depends upon strict adherence to collective convoy protocols. By joining a {LEGAL_BUSINESS_NAME} convoy, you agree to:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Trail Leader Operational Authority:</strong> The designated Lead Marshal / Expedition Leader exercises complete operational authority during the expedition. All drivers must comply promptly with speed limits, driving lines, overtaking restrictions, staging instructions, and safety orders given by the Lead Marshal or sweep recovery crew.</li>
+              <li><strong>Radio Etiquette & Communications:</strong> Two-way communication radios (VHF/UHF or walkie-talkies provided or utilized during convoys) are strictly reserved for official convoy coordination, hazard warnings, route navigation, and medical/mechanical emergencies. Unauthorized transmission, non-essential chatter, or foul language on convoy channels is prohibited.</li>
+              <li><strong>Convoy Separation & Spacing:</strong> Drivers must maintain safe braking distances appropriate for the trail surface (gravel, mud, snow, river crossings, or switchbacks). Participants must not break away from the convoy formation, change convoy order without authorization, or initiate independent detours without explicit clearance from the Lead Marshal.</li>
+              <li><strong>Zero-Tolerance Alcohol & Substance Policy:</strong> Operating any motor vehicle under the influence of alcohol, narcotics, or intoxicating substances during active drive stages is strictly prohibited. Any participant found driving under the influence will be immediately removed from the convoy, their expedition terminated without refund, and law enforcement authorities may be informed in the interest of public safety.</li>
+            </ul>
+          </div>
+
+          <!-- Section 4 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">4. Booking, Pricing & Payment Terms</h2>
+            <p>
+              Clear financial agreements ensure seamless preparation, logistical coordination, hotel reservations, and permit clearances:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Currency & Pricing:</strong> All expedition prices, booking deposits, and incidental costs are quoted, invoiced, and charged in <strong>Indian Rupees (INR ₹)</strong>.</li>
+              <li><strong>Online Payment Gateway:</strong> Online payments are processed through our authorized RBI-compliant payment gateway partner, <strong>Cashfree Payments India Pvt. Ltd.</strong> We do not store or capture any sensitive debit/credit card numbers, CVVs, or online banking passwords on our servers.</li>
+              <li><strong>Booking Deposit:</strong> A booking advance deposit is required at the time of reservation to confirm your slot in the convoy. Slots are reserved on a first-come, first-served basis upon receipt of payment.</li>
+              <li><strong>Balance Payment:</strong> The remaining balance of the expedition fee must be cleared in full at least 30 days prior to the scheduled departure date. For reservations made within 30 days of departure, 100% full payment is required immediately upon confirmation.</li>
+              <li><strong>Cancellation & Refunds:</strong> Any cancellation by the participant is subject to our dedicated <a href="/refund-policy" class="text-orange-600 hover:text-orange-700 underline font-medium">Refund & Cancellation Policy</a>. Approved refunds are processed back to the original payment method within 5 to 7 working days.</li>
+            </ul>
+          </div>
+
+          <!-- Section 5 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">5. Vehicle Condition & Damage Responsibility</h2>
+            <p>
+              Overlanding imposes mechanical strain on motor vehicles. Participants bringing personal or rented vehicles must adhere to the following responsibilities:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Vehicle Fitness & Documents:</strong> All participant vehicles must be mechanically sound, recently serviced, and equipped with a functional 4x4 or AWD drivetrain (as mandated for the specific trail), all-terrain tires with adequate tread depth, and a full-size spare wheel. Vehicles must carry a valid Registration Certificate (RC), Comprehensive Motor Insurance, and a valid Pollution Under Control (PUC) certificate.</li>
+              <li><strong>Maintenance & Fuel:</strong> Fuel costs, routine maintenance, consumables, fluid top-ups, and tire repairs remain the sole responsibility of the vehicle owner or driver.</li>
+              <li><strong>Mechanical Breakdowns & Damage Liability:</strong> {LEGAL_BUSINESS_NAME} and its crew will provide field recovery assistance, winching, and basic trailside mechanical support within reasonable operational feasibility. However, {LEGAL_BUSINESS_NAME} accepts no financial or legal liability for mechanical breakdowns, component failure, underbody damage, cosmetic scratches, towage fees, spare parts, or third-party garage repair bills.</li>
+              <li><strong>Rental Vehicles:</strong> If a participant rents a vehicle from a third-party rental provider or our recommended partners, all terms of hire, security deposits, and vehicle damage liabilities are governed strictly by the rental contract between the participant and the rental vendor.</li>
+            </ul>
+          </div>
+
+          <!-- Section 6 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">6. Force Majeure & Terrain Alterations</h2>
+            <p>
+              Expeditions take place in remote mountain landscapes where conditions can shift rapidly:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Unpredictable Terrain & Weather:</strong> Mountain passes and frontier regions in Ladakh, Spiti Valley, Bhutan, and Nepal are subject to natural events including landslides, flash floods, snowdrifts, blizzards, road blockades, and sudden border or military permit restrictions.</li>
+              <li><strong>Route Modifications:</strong> In the event of impassable trails, adverse weather, or safety hazards, the Lead Marshal reserves the absolute right to alter routes, invert itineraries, substitute accommodations, or curtail drive sections for the safety of the convoy.</li>
+              <li><strong>Force Majeure Relief:</strong> {LEGAL_BUSINESS_NAME} shall not be held liable or deemed in breach of contract for failure or delay in executing any part of an expedition due to events beyond its reasonable control (including Acts of God, severe weather, natural disasters, epidemics, civil unrest, strikes, road closures, or government/military orders).</li>
+              <li><strong>Expedition Postponement Credits:</strong> If an expedition must be cancelled or aborted prior to or during travel due to Force Majeure, trip credits will be issued for future expeditions in accordance with our <a href="/refund-policy" class="text-orange-600 hover:text-orange-700 underline font-medium">Refund & Cancellation Policy</a>. Additional personal accommodation or travel expenses incurred due to unexpected road blockages are the responsibility of the participant.</li>
+            </ul>
+          </div>
+
+          <!-- Section 7 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">7. Intellectual Property & Photography Media Consent</h2>
+            <p>
+              During {LEGAL_BUSINESS_NAME} expeditions, official photographers, videographers, and drone operators document the journey:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Media Release:</strong> By participating, you grant {LEGAL_BUSINESS_NAME} a worldwide, royalty-free, perpetual license to record, use, publish, and distribute photographs, audio, and video recordings featuring convoy vehicles, participants, and activities for marketing, promotional, social media, and digital website purposes.</li>
+              <li><strong>Opt-Out Option:</strong> Participants who do not wish to have their likeness featured in public promotional materials must provide written notification to {LEGAL_BUSINESS_NAME} at <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:text-orange-700 underline font-medium">{SITE_EMAIL}</a> prior to the expedition start date.</li>
+              <li><strong>Proprietary Content:</strong> All itineraries, route maps, custom trails, logos, brand names, website copy, and collateral produced by {LEGAL_BUSINESS_NAME} are the proprietary intellectual property of the Company and may not be reproduced, copied, or exploited for commercial use without express written consent.</li>
+            </ul>
+          </div>
+
+          <!-- Section 8 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">8. Governing Law & Jurisdiction</h2>
+            <p>
+              These Terms and Conditions, all expedition booking contracts, and any legal relationship arising out of your engagement with {LEGAL_BUSINESS_NAME} shall be governed by, interpreted, and construed in accordance with the substantive laws of the <strong>Republic of India</strong>.
+            </p>
+            <p>
+              Any dispute, claim, or controversy arising out of or relating to these Terms, payments, or expedition participation that cannot be resolved through amicable mutual discussions shall be subject to the exclusive jurisdiction of the competent courts of <strong>Bangalore, Karnataka, India</strong>.
+            </p>
+          </div>
+
+          <!-- Section 9 -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">9. Contact Information & Grievances</h2>
+            <p>
+              For inquiries regarding these Terms and Conditions, booking confirmations, or grievance redressal, please reach out to our team:
+            </p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-2 not-prose text-gray-700">
+              <p><strong class="text-gray-900">Legal Entity:</strong> {LEGAL_BUSINESS_NAME}</p>
+              <p><strong class="text-gray-900">Phone:</strong> <a href={`tel:${SITE_PHONE.replace(/\s+/g, '')}`} class="text-orange-600 hover:text-orange-700 underline font-medium">{SITE_PHONE}</a></p>
+              <p><strong class="text-gray-900">Email:</strong> <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:text-orange-700 underline font-medium">{SITE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Operational Address:</strong> {SITE_ADDRESS}</p>
+              <p class="text-sm text-gray-500 pt-2 border-t border-gray-200 mt-3">
+                Grievance Resolution: All written inquiries sent to {SITE_EMAIL} will be acknowledged within 24–48 business hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>
