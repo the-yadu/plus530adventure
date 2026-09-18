@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/ui/Container.astro';
+import { LEGAL_BUSINESS_NAME, SITE_PHONE, SITE_PHONE_RAW, SITE_EMAIL, SITE_ADDRESS, GRIEVANCE_EMAIL } from '../data/config';
+---
+
+<Layout
+  title={`Privacy Policy | ${LEGAL_BUSINESS_NAME}`}
+  description={`Privacy Policy and data protection practices for ${LEGAL_BUSINESS_NAME}. Details on personal information collection, secure Cashfree payment processing, and traveler privacy rights.`}
+>
+  <div>
+    <!-- Hero Header -->
+    <section class="bg-gray-900 text-white py-16">
+      <Container className="text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+          Privacy & Data Protection
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          How {LEGAL_BUSINESS_NAME} collects, utilizes, and safeguards your personal data and payment information.
+        </p>
+      </Container>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <Container className="max-w-4xl">
+        <div class="prose prose-lg text-gray-800 space-y-8 max-w-4xl">
+          <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg text-sm text-gray-700 not-prose">
+            <p class="font-semibold text-gray-900 mb-1">Our Privacy Commitment</p>
+            <p>
+              At <strong>{LEGAL_BUSINESS_NAME}</strong>, we respect your privacy and are committed to safeguarding your personal data. We maintain a strict zero-card-storage policy and partner exclusively with authorized, PCI-DSS compliant payment aggregators to ensure your transactions are safe and encrypted.
+            </p>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Introduction & Overview</h2>
+            <p>
+              This Privacy Policy describes how <strong>{LEGAL_BUSINESS_NAME}</strong> ("Company", "we", "us", or "our"), operating overland expeditions, self-drive 4x4 convoys, and motorcycle adventure tours across India and neighboring Himalayan regions, collects, stores, uses, and safeguards personal data obtained through our website (<a href="https://plus530adventure.com" class="text-orange-600 hover:text-orange-700 underline font-medium">plus530adventure.com</a>), expedition booking forms, and direct offline communications.
+            </p>
+            <p>
+              This policy is formulated in compliance with applicable Indian data protection laws, including the <strong>Information Technology Act, 2000</strong>, the <strong>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 (SPDI Rules)</strong>, and the principles of the <strong>Digital Personal Data Protection Act (DPDP Act), 2023</strong>.
+            </p>
+            <p>
+              By accessing our website, reserving an expedition slot, or submitting personal documentation for travel clearances, you consent to the data collection and processing practices described in this Privacy Policy.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Information We Collect</h2>
+            <p>
+              To plan, coordinate, and execute expeditions across remote, high-altitude, and wilderness terrains, we collect specific categories of personal information necessary for operational safety, legal permits, and convoy coordination:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Personal Contact Information:</strong> Full legal name, email address, telephone / WhatsApp number, residential billing address, and designated emergency contact details (name, relationship, and 24/7 reachable phone number).</li>
+              <li class="leading-relaxed"><strong>Travel Permits & Regulatory Documentation:</strong> Government-issued identity proof (Aadhaar Card, Voter ID, or Passport), valid Passport and Visa copies for international cross-border expeditions (Bhutan, Nepal), and Driving License (with appropriate vehicle class endorsements: LMV for 4x4 vehicles, MCWG for motorcycles). This documentation is mandatory for obtaining Inner Line Permits (ILP) and Protected Area Permits (PAP) from district magistrates and military authorities in Ladakh (Leh, Nubra, Pangong, Changthang, Hanle, Umling La), Spiti Valley, Bhutan Green Tax clearances, and Nepal vehicle carnets.</li>
+              <li class="leading-relaxed"><strong>Vehicle Technical Details (Self-Drive Convoys & Motorcycle Tours):</strong> Vehicle Registration Certificate (RC), comprehensive motor vehicle insurance policy, valid Pollution Under Control (PUC) certificate, vehicle make/model, drivetrain specifications (4x4, AWD, low-range transfer case status), and tire condition.</li>
+              <li class="leading-relaxed"><strong>High-Altitude Medical & Health Disclosures:</strong> Overland expeditions frequently traverse extreme altitudes exceeding 10,000 to 19,000+ feet (such as Khardung La and Umling La). For expedition safety and rapid emergency medical response, we collect voluntary disclosures regarding pre-existing medical conditions (cardiovascular disorders, asthma, respiratory conditions, hypertension, allergies, recent surgeries) and dietary preferences or severe food allergies.</li>
+            </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Payment Information & Gateway Security (Cashfree Payments Disclosure)</h2>
+            <p>
+              Online booking advances, expedition reservation deposits, and slot confirmations initiated on our website are processed securely through our authorized payment aggregator partner, <strong>Cashfree Payments India Pvt. Ltd.</strong> ("Cashfree").
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Payment Gateway Security Standards:</strong> Cashfree is certified under the <strong>Payment Card Industry Data Security Standard (PCI-DSS Level 1)</strong> and adheres to bank-grade <strong>256-bit Transport Layer Security (TLS)</strong> encryption along with RBI-mandated card tokenization.</li>
+              <li class="leading-relaxed"><strong>Strict Zero-Card-Storage Policy:</strong> {LEGAL_BUSINESS_NAME} strictly adheres to a zero-card-storage policy. We do <strong>NOT</strong> collect, process, record, store, or have access to any sensitive customer payment credentials—including complete debit/credit card numbers, CVVs, card expiry dates, net banking credentials, or UPI MPINs. All payment transactions are encrypted and transmitted directly from your web browser to Cashfree's secure payment infrastructure.</li>
+              <li class="leading-relaxed"><strong>Transaction Metadata Retained:</strong> We only receive and retain non-sensitive transaction confirmation metadata provided by Cashfree (such as Cashfree Order ID, Transaction Reference ID, payment method used e.g., UPI/Card, timestamp, transaction status, and amount paid) for accounting, invoicing, and booking validation purposes.</li>
+            </ul>
+          </div>
+
+          <!-- Section 4 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">4. How We Use Your Information</h2>
+            <p>
+              We collect and process your personal information exclusively for legitimate, lawful, and expedition-critical operational purposes:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Expedition Logistics & Accommodation:</strong> Reserving handpicked accommodations, homestays, luxury glamping sites, and wilderness camps; arranging convoy staging; and managing catering requirements.</li>
+              <li class="leading-relaxed"><strong>Government & Border Permit Issuance:</strong> Submitting verified participant manifests and vehicle details to district administration offices, tourism departments, forest departments, and military checkpoints for Inner Line Permits (ILP), Protected Area Permits (PAP), and cross-border clearances.</li>
+              <li class="leading-relaxed"><strong>Emergency Radio & Medical Coordination:</strong> Maintaining convoy safety manifests, two-way radio roster assignments, medical first-aid readiness, high-altitude oxygen cylinder provisioning, and emergency evacuation coordination with local healthcare centers or military facilities.</li>
+              <li class="leading-relaxed"><strong>Invoicing & Transaction Confirmations:</strong> Generating tax invoices, sending official booking vouchers, and dispatching expedition preparation packs via email and WhatsApp.</li>
+              <li class="leading-relaxed"><strong>Briefings & Customer Support:</strong> Providing packing checklists, vehicle preparation guidelines, convoy safety protocols, and real-time updates regarding weather, trail conditions, or route adjustments.</li>
+            </ul>
+          </div>
+
+          <!-- Section 5 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">5. Information Sharing & Third Parties</h2>
+            <p>
+              We respect traveler confidentiality and uphold a strict no-sale policy. We <strong>never sell, rent, trade, or commercially monetize</strong> your personal information to third-party marketers or data brokers.
+            </p>
+            <p>
+              Information is shared strictly on a confidential, need-to-know basis with:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Statutory Authorities:</strong> District magistrates, police checkpoints, border security personnel, forest rangers, and tourism departments solely for mandatory permit clearances and security compliance.</li>
+              <li class="leading-relaxed"><strong>Hospitality & Logistics Partners:</strong> Handpicked accommodations, local expedition crew, and safari trail marshals solely for check-in registration and logistical execution.</li>
+              <li class="leading-relaxed"><strong>Authorized Payment Aggregator:</strong> Cashfree Payments India Pvt. Ltd., for secure end-to-end payment processing.</li>
+              <li class="leading-relaxed"><strong>Legal & Law Enforcement Obligations:</strong> Law enforcement agencies or judicial authorities when required by applicable law, court order, or governmental regulation to protect life, health, or convoy safety.</li>
+            </ul>
+          </div>
+
+          <!-- Section 6 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">6. Cookies & Website Analytics</h2>
+            <p>
+              Our website (<a href="https://plus530adventure.com" class="text-orange-600 hover:text-orange-700 underline font-medium">plus530adventure.com</a>) uses standard functional cookies and privacy-respecting performance analytics:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Functional Cookies:</strong> Essential cookies required for website navigation, user session security, and proper display of expedition itineraries and interactive maps.</li>
+              <li class="leading-relaxed"><strong>Anonymous Performance Analytics:</strong> Aggregated, non-personally identifiable traffic metrics (such as page view counts, browser types, and load times) used solely to optimize website performance and responsiveness.</li>
+              <li class="leading-relaxed"><strong>Cookie Control:</strong> You can manage or disable cookies through your web browser settings. Please note that disabling essential cookies may impact certain interactive features of our website.</li>
+            </ul>
+          </div>
+
+          <!-- Section 7 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">7. Data Retention & Traveler Rights</h2>
+            <p>
+              We maintain transparent data retention and traveler rights policies in accordance with Indian regulatory frameworks:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed"><strong>Retention Period:</strong> Personal data and permit documentation are retained only for the duration required to complete expedition logistics and satisfy statutory tax, accounting, and legal audit mandates under Indian law (including GST and Companies Act guidelines). Following statutory retention periods, personal records are securely archived or permanently deleted.</li>
+              <li class="leading-relaxed"><strong>Right to Review & Correction:</strong> You have the right to inspect, review, and request corrections to any personal information we hold regarding your profile or booking.</li>
+              <li class="leading-relaxed"><strong>Right to Erasure:</strong> You may request the deletion of your personal data from our active databases, subject to our statutory obligations under applicable Indian laws.</li>
+              <li class="leading-relaxed"><strong>Marketing Opt-Out:</strong> You may opt out of receiving promotional communications or revoke photography media consent at any time by sending an email to <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:text-orange-700 underline font-medium">{SITE_EMAIL}</a>.</li>
+            </ul>
+          </div>
+
+          <!-- Section 8 -->
+          <div class="space-y-3">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">8. Grievance Redressal & Contact Details</h2>
+            <p>
+              In accordance with the Information Technology Act, 2000 and the SPDI Rules, 2011, any inquiries, privacy concerns, or data protection grievances should be directed to our designated Grievance Officer:
+            </p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-2 not-prose text-gray-700">
+              <p><strong class="text-gray-900">Legal Business Entity:</strong> {LEGAL_BUSINESS_NAME}</p>
+              <p><strong class="text-gray-900">Phone:</strong> <a href={`tel:${SITE_PHONE_RAW}`} class="text-orange-600 hover:underline">{SITE_PHONE}</a></p>
+              <p><strong class="text-gray-900">Email:</strong> <a href={`mailto:${SITE_EMAIL}`} class="text-orange-600 hover:underline">{SITE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Grievance Redressal:</strong> <a href={`mailto:${GRIEVANCE_EMAIL}`} class="text-orange-600 hover:underline">{GRIEVANCE_EMAIL}</a></p>
+              <p><strong class="text-gray-900">Registered Operational Address:</strong> {SITE_ADDRESS}</p>
+              <p class="text-sm text-gray-500 pt-2 border-t border-gray-200 mt-3">
+                Grievance Resolution: All written inquiries sent to <a href={`mailto:${GRIEVANCE_EMAIL}`} class="text-orange-600 hover:underline">{GRIEVANCE_EMAIL}</a> will be acknowledged within 24–48 business hours and resolved expeditiously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </div>
+</Layout>
