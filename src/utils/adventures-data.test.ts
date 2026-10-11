@@ -84,6 +84,25 @@ describe('adventures-data utility', () => {
       const transformed = transformApiAdventure(apiItem);
       expect(transformed.nextBatchDates).toEqual(['20th Sep 2026']);
     });
+
+    it('handles null, undefined, or non-object item defensively', () => {
+      expect(transformApiAdventure(null)).toEqual({});
+      expect(transformApiAdventure(undefined)).toEqual({});
+      expect(transformApiAdventure('invalid')).toEqual({});
+    });
+
+    it('handles null batches and undefined fields safely', () => {
+      const apiItem = {
+        slug: 'minimal-adv',
+        batches: null as any,
+      };
+
+      const transformed = transformApiAdventure(apiItem);
+      expect(transformed.slug).toBe('minimal-adv');
+      expect(transformed.nextBatchDates).toEqual([]);
+      expect(transformed.type).toBe('car');
+      expect(transformed.difficulty).toBe('Moderate');
+    });
   });
 
   describe('getPublishedAdventures - static fallback', () => {
@@ -179,6 +198,29 @@ describe('adventures-data utility', () => {
         expect.anything()
       );
     });
+
+    it('filters out malformed adventure items without a slug', async () => {
+      process.env.PUBLIC_DASHBOARD_API_URL = 'https://dashboard.plus530adventure.com';
+
+      const mockApiResponse = {
+        success: true,
+        adventures: [
+          null,
+          { id: 'missing-slug', title: 'No Slug Adventure' },
+          { id: 'valid-1', slug: 'valid-adventure', title: 'Valid Adventure' },
+        ],
+      };
+
+      vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+        ok: true,
+        status: 200,
+        json: async () => mockApiResponse,
+      } as Response);
+
+      const result = await getPublishedAdventures();
+      expect(result).toHaveLength(1);
+      expect(result[0].slug).toBe('valid-adventure');
+    });
   });
 
   describe('getPublishedAdventures - graceful error handling & fallbacks', () => {
@@ -244,6 +286,27 @@ describe('adventures-data utility', () => {
 
       const result = await getPublishedAdventures();
       expect(result).toBe(adventures);
+    });
+
+    it('gracefully falls back to static adventures when API returns malformed JSON / syntax error', async () => {
+      process.env.PUBLIC_DASHBOARD_API_URL = 'https://dashboard.plus530adventure.com';
+
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+        ok: true,
+        status: 200,
+        json: async () => {
+          throw new SyntaxError('Unexpected token < in JSON at position 0');
+        },
+      } as Response);
+
+      const result = await getPublishedAdventures();
+
+      expect(result).toBe(adventures);
+      expect(warnSpy).toHaveBeenCalledWith(
+        'Dashboard API unreachable; falling back to local adventures data:',
+        expect.any(SyntaxError)
+      );
     });
   });
 });

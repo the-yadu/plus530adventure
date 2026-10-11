@@ -1,5 +1,36 @@
 import { adventures, type Adventure } from '../data/adventures';
 
+export interface ApiBatch {
+  id?: string;
+  displayLabel?: string;
+  startDate?: string;
+  endDate?: string | null;
+  status?: string;
+  seatsTotal?: number;
+  seatsBooked?: number;
+}
+
+export interface ApiAdventure {
+  id?: string;
+  slug: string;
+  type?: string;
+  title?: string;
+  description?: string;
+  longDescription?: string;
+  duration?: string;
+  difficulty?: string;
+  price?: string;
+  image?: string;
+  backgroundImage?: string;
+  featured?: boolean;
+  highlights?: string[];
+  included?: string[];
+  gallery?: string[];
+  itinerary?: Array<{ day: number; title: string; description: string }>;
+  batches?: ApiBatch[];
+  nextBatchDates?: string[];
+}
+
 /**
  * Resolves the Plus530 Adventure Dashboard App API URL from environment variables.
  */
@@ -20,32 +51,36 @@ export function getDashboardApiUrl(): string | undefined {
 /**
  * Transforms an adventure object returned by the Dashboard App API to match the website's Adventure interface.
  */
-export function transformApiAdventure(item: any): Adventure {
-  const batchDates: string[] = Array.isArray(item.batches)
-    ? item.batches
-        .filter((b: any) => !b.status || (b.status !== 'cancelled' && b.status !== 'completed'))
-        .map((b: any) => (typeof b === 'string' ? b : (b.displayLabel || b.startDate || '')))
+export function transformApiAdventure(item: unknown): Adventure {
+  if (!item || typeof item !== 'object') {
+    return {} as Adventure;
+  }
+  const adv = item as ApiAdventure;
+  const batchDates: string[] = Array.isArray(adv.batches)
+    ? adv.batches
+        .filter((b): b is ApiBatch => Boolean(b && typeof b === 'object' && (!b.status || (b.status !== 'cancelled' && b.status !== 'completed'))))
+        .map((b) => (b.displayLabel || b.startDate || ''))
         .filter(Boolean)
-    : (Array.isArray(item.nextBatchDates) ? item.nextBatchDates : []);
+    : (Array.isArray(adv.nextBatchDates) ? adv.nextBatchDates.filter(Boolean) : []);
 
   return {
-    id: String(item.id || ''),
-    slug: String(item.slug || ''),
-    type: item.type || 'car',
-    title: String(item.title || ''),
-    description: String(item.description || ''),
-    longDescription: String(item.longDescription ?? item.long_description ?? item.description ?? ''),
-    duration: String(item.duration || ''),
-    difficulty: item.difficulty || 'Moderate',
-    price: String(item.price || ''),
-    image: String(item.image || ''),
-    backgroundImage: String(item.backgroundImage ?? item.background_image ?? item.image ?? ''),
+    id: String(adv.id || ''),
+    slug: String(adv.slug || ''),
+    type: (adv.type as any) || 'car',
+    title: String(adv.title || ''),
+    description: String(adv.description || ''),
+    longDescription: String(adv.longDescription ?? (adv as any).long_description ?? adv.description ?? ''),
+    duration: String(adv.duration || ''),
+    difficulty: (adv.difficulty as any) || 'Moderate',
+    price: String(adv.price || ''),
+    image: String(adv.image || ''),
+    backgroundImage: String(adv.backgroundImage ?? (adv as any).background_image ?? adv.image ?? ''),
     nextBatchDates: batchDates,
-    highlights: Array.isArray(item.highlights) ? item.highlights : [],
-    included: Array.isArray(item.included) ? item.included : [],
-    gallery: Array.isArray(item.gallery) ? item.gallery : [],
-    itinerary: Array.isArray(item.itinerary) ? item.itinerary : [],
-    featured: Boolean(item.featured),
+    highlights: Array.isArray(adv.highlights) ? adv.highlights : [],
+    included: Array.isArray(adv.included) ? adv.included : [],
+    gallery: Array.isArray(adv.gallery) ? adv.gallery : [],
+    itinerary: Array.isArray(adv.itinerary) ? adv.itinerary : [],
+    featured: Boolean(adv.featured),
   };
 }
 
@@ -73,7 +108,10 @@ export async function getPublishedAdventures(): Promise<Adventure[]> {
 
     const data = await response.json();
     if (data && Array.isArray(data.adventures) && data.adventures.length > 0) {
-      return data.adventures.map(transformApiAdventure);
+      const validAdventures = data.adventures.filter((item: unknown) => Boolean(item && typeof item === 'object' && (item as any).slug));
+      if (validAdventures.length > 0) {
+        return validAdventures.map(transformApiAdventure);
+      }
     }
 
     return adventures;

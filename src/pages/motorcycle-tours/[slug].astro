@@ -22,12 +22,16 @@ export async function getStaticPaths() {
 const { adventure } = Astro.props;
 const upcomingBatchDates = getUpcomingBatchDates(adventure.nextBatchDates);
 
+const schemaImage = adventure.image.startsWith('http')
+  ? adventure.image
+  : `https://plus530adventure.com${adventure.image.startsWith('/') ? '' : '/'}${adventure.image}`;
+
 const adventureSchema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
   "name": adventure.title,
   "description": adventure.description,
-  "image": `https://plus530adventure.com${adventure.image}`,
+  "image": schemaImage,
   "touristType": ["Overland Travelers", "Off-Road Enthusiasts", "Adventure Travelers"],
   ...(upcomingBatchDates.length > 0 ? { "startDate": upcomingBatchDates } : {}),
   "offers": {

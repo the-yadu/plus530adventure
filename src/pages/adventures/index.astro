@@ -2,7 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Card from '../../components/ui/Card.astro';
-import Button from '../../components/ui/Button.astro';
 import { getAdventureUrl } from '../../data/adventures';
 import { getPublishedAdventures } from '../../utils/adventures-data';
 import { ArrowRight, Calendar, Clock } from '@lucide/astro';
@@ -83,9 +82,9 @@ const adventures = await getPublishedAdventures();
                       {adventure.difficulty}
                     </span>
                   </div>
-                  <Button className="w-full">
+                  <div class="w-full inline-flex items-center justify-center font-semibold rounded-lg bg-orange-600 group-hover:bg-orange-700 text-white px-6 py-3 text-base transition-colors duration-200">
                     View Details <ArrowRight class="ml-2 h-4 w-4 inline-block" />
-                  </Button>
+                  </div>
                 </div>
               </Card>
             </a>
