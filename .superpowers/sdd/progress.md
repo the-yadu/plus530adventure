@@ -10,3 +10,4 @@ Plan: docs/superpowers/plans/2026-10-10-dashboard-app.md
 - Task 5: complete (commits 2eb0ef7..ea3abdf, review clean)
 - Task 6: complete (commits 87ab501..a60024e, review clean)
 - Task 7: complete (commits c335151..3f11311, review clean)
+- Task 8: complete (commits 13ca8b1..cdb807f, review clean)
