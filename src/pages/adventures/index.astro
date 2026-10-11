@@ -3,9 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
-import { adventures, getAdventureUrl } from '../../data/adventures';
+import { getAdventureUrl } from '../../data/adventures';
+import { getPublishedAdventures } from '../../utils/adventures-data';
 import { ArrowRight, Calendar, Clock } from '@lucide/astro';
 import { getUpcomingBatchDates } from '../../utils/dates';
+
+const adventures = await getPublishedAdventures();
 ---
 
 <Layout title="All Adventures & Expeditions | Plus530 Adventure" description="Explore our catalog of car convoy expeditions and motorcycle tours across Bhutan, Nepal, Ladakh, Spiti, Rajasthan & Western Ghats.">

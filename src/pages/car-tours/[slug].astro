@@ -3,13 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import Container from '../../components/ui/Container.astro';
 import Button from '../../components/ui/Button.astro';
 import FAQAccordion from '../../components/ui/FAQAccordion.astro';
-import { adventures } from '../../data/adventures';
+import { getPublishedAdventures } from '../../utils/adventures-data';
 import { WHATSAPP_COMMUNITY_URL } from '../../data/config';
 import { Calendar, Clock, TrendingUp, BadgeInfo, Check, ArrowLeft } from '@lucide/astro';
 
 import { getUpcomingBatchDates } from '../../utils/dates';
 
 export async function getStaticPaths() {
+  const adventures = await getPublishedAdventures();
   return adventures.filter(a => a.type === 'car').map((adventure) => ({
     params: { slug: adventure.slug },
     props: { adventure },
