@@ -24,10 +24,10 @@ const MONTH_SHORT = [
   'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'
 ];
 
-export function getGroupedTimelineBatches(): MonthGroup[] {
+export function getGroupedTimelineBatches(sourceAdventures: Adventure[] = adventures): MonthGroup[] {
   const allBatchItems: TimelineBatchItem[] = [];
 
-  adventures.forEach((adv) => {
+  sourceAdventures.forEach((adv) => {
     const upcoming = getUpcomingBatchDates(adv.nextBatchDates);
     upcoming.forEach((dateStr) => {
       const parsed = parseBatchDate(dateStr);

@@ -4,9 +4,11 @@ import Container from '../components/ui/Container.astro';
 import Button from '../components/ui/Button.astro';
 import { getGroupedTimelineBatches } from '../utils/timeline';
 import { getAdventureUrl, getTypeLabel } from '../data/adventures';
+import { getPublishedAdventures } from '../utils/adventures-data';
 import { Calendar, ArrowRight, Clock, ShieldCheck } from '@lucide/astro';
 
-const monthGroups = getGroupedTimelineBatches();
+const publishedAdventures = await getPublishedAdventures();
+const monthGroups = getGroupedTimelineBatches(publishedAdventures);
 ---
 
 <Layout

@@ -1,7 +1,7 @@
 ---
 import Container from './ui/Container.astro';
 import { Menu, X, Search } from '@lucide/astro';
-import { adventures } from '../data/adventures';
+import { getPublishedAdventures } from '../utils/adventures-data';
 import { WHATSAPP_COMMUNITY_URL } from '../data/config';
 
 const navLinks = [
@@ -13,10 +13,10 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
-
+const publishedAdventures = await getPublishedAdventures();
 const currentPath = Astro.url.pathname;
 const searchDataJson = JSON.stringify(
-  adventures.map(a => ({
+  publishedAdventures.map(a => ({
     title: a.title,
     slug: a.slug,
     type: a.type,

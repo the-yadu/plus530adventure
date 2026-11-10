@@ -3,6 +3,7 @@ import { adventures } from '../data/adventures';
 import {
   getPublishedAdventures,
   getPublishedAdventureBySlug,
+  getFeaturedPublishedAdventures,
   getDashboardApiUrl,
   transformApiAdventure,
 } from './adventures-data';
@@ -307,6 +308,27 @@ describe('adventures-data utility', () => {
         'Dashboard API unreachable; falling back to local adventures data:',
         expect.any(SyntaxError)
       );
+    });
+  });
+
+  describe('getFeaturedPublishedAdventures', () => {
+    it('returns only adventures where featured is true', async () => {
+      const mockAdventures = [
+        { id: '1', slug: 'adv-1', title: 'Adv 1', featured: true },
+        { id: '2', slug: 'adv-2', title: 'Adv 2', featured: false },
+        { id: '3', slug: 'adv-3', title: 'Adv 3', featured: true },
+      ];
+
+      vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+        ok: true,
+        status: 200,
+        json: async () => ({ success: true, adventures: mockAdventures }),
+      } as Response);
+
+      process.env.PUBLIC_DASHBOARD_API_URL = 'https://dashboard.plus530adventure.com';
+      const featured = await getFeaturedPublishedAdventures();
+      expect(featured).toHaveLength(2);
+      expect(featured.map((f) => f.slug)).toEqual(['adv-1', 'adv-3']);
     });
   });
 });

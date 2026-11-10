@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://plus530adventure.com/sitemap-index.xml
+
+# LLM Machine Readable Information
+# Structured text map and summary for AI search engines & LLM web crawlers
+# See https://llmstxt.org/ for details
+LLMs-txt: https://plus530adventure.com/llms.txt
+

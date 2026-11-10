@@ -2,12 +2,13 @@
 import Container from './ui/Container.astro';
 import Card from './ui/Card.astro';
 import Button from './ui/Button.astro';
-import { getFeaturedAdventures, getAdventureUrl } from '../data/adventures';
+import { getAdventureUrl } from '../data/adventures';
+import { getFeaturedPublishedAdventures } from '../utils/adventures-data';
 import { WHATSAPP_COMMUNITY_URL } from '../data/config';
 import { ArrowRight, Mountain, Users, Shield, Calendar } from '@lucide/astro';
 import { getUpcomingBatchDates } from '../utils/dates';
 
-const featuredAdventures = getFeaturedAdventures();
+const featuredAdventures = await getFeaturedPublishedAdventures();
 ---
 
 <div>

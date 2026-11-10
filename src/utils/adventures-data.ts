@@ -128,3 +128,12 @@ export async function getPublishedAdventureBySlug(slug: string): Promise<Adventu
   const publishedAdventures = await getPublishedAdventures();
   return publishedAdventures.find((adventure) => adventure.slug === slug);
 }
+
+/**
+ * Retrieves featured published adventures from the Dashboard API with fail-safe fallback.
+ */
+export async function getFeaturedPublishedAdventures(): Promise<Adventure[]> {
+  const publishedAdventures = await getPublishedAdventures();
+  return publishedAdventures.filter((adventure) => adventure.featured);
+}
+
